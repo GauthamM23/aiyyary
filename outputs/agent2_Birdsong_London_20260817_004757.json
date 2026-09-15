@@ -1,0 +1,383 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-16T23:47:57.053464+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.98,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to better understand customer pain points and improve the overall customer experience, which is essential for growing online sales beyond the existing ethical fashion community without losing brand values (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "BSL001",
+                  "label": "Incorrect Sizing",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Unfamiliar with UK Sizing",
+                    "Did not check size chart"
+                  ]
+                },
+                {
+                  "code": "BSL002",
+                  "label": "Fabric Quality",
+                  "sub_reasons": [
+                    "Not as described",
+                    "Too thin/thick",
+                    "Uncomfortable texture",
+                    "Not suitable for intended use"
+                  ]
+                },
+                {
+                  "code": "BSL003",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as shown online",
+                    "Not as described in product details",
+                    "Not suitable for skin tone"
+                  ]
+                },
+                {
+                  "code": "BSL004",
+                  "label": "Style/Design",
+                  "sub_reasons": [
+                    "Not as expected",
+                    "Not suitable for personal style",
+                    "Not as described in product details"
+                  ]
+                },
+                {
+                  "code": "BSL005",
+                  "label": "Missing/Incorrect Item",
+                  "sub_reasons": [
+                    "Item not received",
+                    "Item received in incorrect quantity",
+                    "Item received in incorrect condition"
+                  ]
+                },
+                {
+                  "code": "BSL006",
+                  "label": "Delivery/Shipping Issues",
+                  "sub_reasons": [
+                    "Late delivery",
+                    "Item not delivered",
+                    "Delivery tracking not updated"
+                  ]
+                },
+                {
+                  "code": "BSL007",
+                  "label": "Returns Policy",
+                  "sub_reasons": [
+                    "Returns not accepted",
+                    "Returns process not clear",
+                    "Returns not processed in time"
+                  ]
+                },
+                {
+                  "code": "BSL008",
+                  "label": "Quality Control",
+                  "sub_reasons": [
+                    "Item not made with sustainable materials",
+                    "Item not made with fair labour practices",
+                    "Item not made with environmentally friendly processes"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason",
+              "description": "Please select the reason for your return. We're here to help and want to make things right.",
+              "fields": [
+                {
+                  "type": "select",
+                  "label": "What's the issue?",
+                  "name": "reason_code",
+                  "options": [
+                    {
+                      "value": "BSL001",
+                      "label": "Incorrect Sizing"
+                    },
+                    {
+                      "value": "BSL002",
+                      "label": "Fabric Quality"
+                    },
+                    {
+                      "value": "BSL003",
+                      "label": "Colour Discrepancy"
+                    },
+                    {
+                      "value": "BSL004",
+                      "label": "Style/Design"
+                    },
+                    {
+                      "value": "BSL005",
+                      "label": "Missing/Incorrect Item"
+                    },
+                    {
+                      "value": "BSL006",
+                      "label": "Delivery/Shipping Issues"
+                    },
+                    {
+                      "value": "BSL007",
+                      "label": "Returns Policy"
+                    },
+                    {
+                      "value": "BSL008",
+                      "label": "Quality Control"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "label": "More details?",
+                  "name": "sub_reason",
+                  "options": [
+                    {
+                      "value": "Too Small",
+                      "label": "Too Small"
+                    },
+                    {
+                      "value": "Too Large",
+                      "label": "Too Large"
+                    },
+                    {
+                      "value": "Unfamiliar with UK Sizing",
+                      "label": "Unfamiliar with UK Sizing"
+                    },
+                    {
+                      "value": "Did not check size chart",
+                      "label": "Did not check size chart"
+                    },
+                    {
+                      "value": "Not as described",
+                      "label": "Not as described"
+                    },
+                    {
+                      "value": "Too thin/thick",
+                      "label": "Too thin/thick"
+                    },
+                    {
+                      "value": "Uncomfortable texture",
+                      "label": "Uncomfortable texture"
+                    },
+                    {
+                      "value": "Not suitable for intended use",
+                      "label": "Not suitable for intended use"
+                    },
+                    {
+                      "value": "Not as shown online",
+                      "label": "Not as shown online"
+                    },
+                    {
+                      "value": "Not as described in product details",
+                      "label": "Not as described in product details"
+                    },
+                    {
+                      "value": "Not suitable for skin tone",
+                      "label": "Not suitable for skin tone"
+                    },
+                    {
+                      "value": "Not as expected",
+                      "label": "Not as expected"
+                    },
+                    {
+                      "value": "Not suitable for personal style",
+                      "label": "Not suitable for personal style"
+                    },
+                    {
+                      "value": "Not as described in product details",
+                      "label": "Not as described in product details"
+                    },
+                    {
+                      "value": "Item not received",
+                      "label": "Item not received"
+                    },
+                    {
+                      "value": "Item received in incorrect quantity",
+                      "label": "Item received in incorrect quantity"
+                    },
+                    {
+                      "value": "Item received in incorrect condition",
+                      "label": "Item received in incorrect condition"
+                    },
+                    {
+                      "value": "Late delivery",
+                      "label": "Late delivery"
+                    },
+                    {
+                      "value": "Item not delivered",
+                      "label": "Item not delivered"
+                    },
+                    {
+                      "value": "Delivery tracking not updated",
+                      "label": "Delivery tracking not updated"
+                    },
+                    {
+                      "value": "Returns not accepted",
+                      "label": "Returns not accepted"
+                    },
+                    {
+                      "value": "Returns process not clear",
+                      "label": "Returns process not clear"
+                    },
+                    {
+                      "value": "Returns not processed in time",
+                      "label": "Returns not processed in time"
+                    },
+                    {
+                      "value": "Item not made with sustainable materials",
+                      "label": "Item not made with sustainable materials"
+                    },
+                    {
+                      "value": "Item not made with fair labour practices",
+                      "label": "Item not made with fair labour practices"
+                    },
+                    {
+                      "value": "Item not made with environmentally friendly processes",
+                      "label": "Item not made with environmentally friendly processes"
+                    }
+                  ]
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Unfortunately, the detected platform is Wix, which is not supported by this guide. Please refer to Wix's official documentation for integrating a returns reason capture form."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Birdsong London\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to collect and showcase customer reviews, which is crucial for building trust and credibility with a wider audience, and ultimately driving online sales growth (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to provide a seamless and personalized shopping experience for customers, which is essential for growing online sales beyond the existing ethical fashion community without losing brand values (data_foundations pillar score: 3.97).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to streamline and personalize its email marketing efforts, which is crucial for driving online sales growth and building customer loyalty (ai_tool_experience pillar score: 3.3).",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The score gap in AI tool experience is too high, requiring a minimum score of 5.0 to deploy this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The score gap in data foundations is too high, requiring a minimum score of 6.0 to deploy this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The score gap in technology infrastructure is too high, requiring a minimum score of 7.0 to deploy this opportunity.",
+      "unlock_condition": "technology_infrastructure pillar score needs to reach 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The score gap in data foundations is too high, requiring a minimum score of 7.0 to deploy this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) this week to start collecting valuable customer feedback and improve the overall customer experience.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260817_004757.json"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-07T11:25:00.807965+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 5.78,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 5.78,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 5.22,
+      "stream_b_score": 8.0,
+      "stream_c_reconciled": 6.3,
+      "final_score": 6.16,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[google_profile] 103 Google reviews (score=8)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 5.22 carries more weight due to its internal operational data, but Stream B's public data score of 8.0 is high because it reflects a strong online presence with 103 Google reviews. However, I've adjusted the reconciled score downward slightly from the Stream A score to reflect that the owner interview may not fully capture the business's digital capabilities. The reconciled score balances the two perspectives."
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 4.66,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.06,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No recognized e-commerce platform detected (score=4)",
+        "[website] Fast page load: 1.04s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.36,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~2,855 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.34,
+      "stream_b_score": 3.25,
+      "stream_c_reconciled": 5.45,
+      "final_score": 5.32,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)",
+        "[companies_house] No filings in 3950 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": "Stream A score carries more weight, but Stream B evidence contradicts some of the owner's claims. The lack of a privacy policy and no recent filings at Companies House are significant concerns. However, HTTPS is enabled, which suggests some level of security awareness. Balancing these factors, I've reduced the Stream A score by 0.89 to account for the discrepancies."
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.97,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 2.97,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 4.94,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Gudrun Sj\u00f6d\u00e9n UK faces significant challenges in modernising its digital customer experience while maintaining loyalty of an older customer base, with a notable public data enrichment finding that their social media presence is underutilised.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 2.97,
+      "dominant_stream": "A",
+      "impact": "Difficulty in leveraging AI tools may hinder digital transformation efforts and customer experience improvements."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 4.36,
+      "dominant_stream": "A",
+      "impact": "Limited staff digital literacy may slow down the adoption of new technologies and processes."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 5.06,
+      "dominant_stream": "A",
+      "impact": "Outdated technology infrastructure may compromise data security and hinder scalability."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "process_digitisation",
+      "score": 6.16,
+      "dominant_stream": "C",
+      "advantage": "Strong process digitisation capabilities can be leveraged to streamline operations and improve customer experience."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 5.78,
+      "dominant_stream": "A",
+      "advantage": "Robust data foundations enable informed decision-making and can support future digital transformation initiatives."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to multiple enrichment sources available (7/7) and Stream C reconciliations performed.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can better leverage AI for demand forecasting and inventory management, which is critical in the fast-paced fashion industry.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's pillar scores indicate a relatively high process digitisation score (6.16), suggesting some level of maturity in their seasonal buying cycle. However, this is not reflected in their AI tool experience score (2.97), indicating potential challenges in implementing and integrating AI solutions for demand forecasting and inventory management."
+    },
+    {
+      "signal": "Sizing Data Structure",
+      "relevance": "Accurate sizing data is crucial in fashion retail to ensure correct fit and reduce returns. AI can help analyse and improve sizing data, but requires a well-structured data foundation.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's data foundations score (5.78) suggests some level of maturity in their data management practices, but it is not clear if they have a robust sizing data structure in place."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers with high return rates can benefit from AI-driven analysis to identify patterns and optimise product offerings. However, this requires visibility into returns data.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's overall score (4.94) suggests some level of maturity in their business practices, but without specific information on returns data management, it is unclear if they have visibility into returns patterns."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": false,
+    "privacy_policy_mentions_ai": false,
+    "cookie_consent_found": false,
+    "cookie_consent_provider": null,
+    "marketing_automation_detected": false,
+    "marketing_automation_tools": [],
+    "analytics_tools_detected": [],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3950,
+    "google_review_count": 103,
+    "has_active_fb_ads": false
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 8.17
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 8,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Gudrun_Sj\u00f6d\u00e9n_UK_20260807_122500.json"
+  }
+}

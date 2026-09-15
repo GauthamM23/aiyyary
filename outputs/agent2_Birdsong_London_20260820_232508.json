@@ -1,0 +1,415 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-20T22:25:08.255303+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.98,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to better understand customer pain points and improve the overall customer experience, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZ001",
+                  "label": "Incorrect Sizing",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Unfitted",
+                    "Unflattering Silhouette"
+                  ]
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Fabric Quality Issue",
+                  "sub_reasons": [
+                    "Pilling or Fuzzing",
+                    "Shrinkage or Loss of Shape",
+                    "Uncomfortable Texture",
+                    "Allergic Reaction"
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Fading or Bleeding",
+                    "Unexpected Shade",
+                    "Not Suitable for Skin Tone"
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "Style or Design Issue",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Poor Construction",
+                    "Unflattering Design",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "FIT001",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    "Unflattering Silhouette",
+                    "Uncomfortable Seams",
+                    "Unsuitable for Body Type",
+                    "Not Suitable for Lifestyle"
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "Material Issue",
+                  "sub_reasons": [
+                    "Not Sustainable",
+                    "Not Eco-Friendly",
+                    "Not Cruelty-Free",
+                    "Not Vegan-Friendly"
+                  ]
+                },
+                {
+                  "code": "DEL001",
+                  "label": "Delivery or Packaging Issue",
+                  "sub_reasons": [
+                    "Late Delivery",
+                    "Damaged Packaging",
+                    "Missing Items",
+                    "Incorrect Items"
+                  ]
+                },
+                {
+                  "code": "PRC001",
+                  "label": "Price or Promotion Issue",
+                  "sub_reasons": [
+                    "Incorrect Price",
+                    "Misleading Promotion",
+                    "Unfair Pricing",
+                    "Not as Advertised"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason",
+              "description": "Please select the reason for returning your item.",
+              "fields": [
+                {
+                  "type": "select",
+                  "label": "What's the issue?",
+                  "name": "reason_code",
+                  "options": [
+                    {
+                      "value": "SIZ001",
+                      "label": "Incorrect Sizing"
+                    },
+                    {
+                      "value": "FAB001",
+                      "label": "Fabric Quality Issue"
+                    },
+                    {
+                      "value": "COL001",
+                      "label": "Colour Discrepancy"
+                    },
+                    {
+                      "value": "STY001",
+                      "label": "Style or Design Issue"
+                    },
+                    {
+                      "value": "FIT001",
+                      "label": "Fit Issue"
+                    },
+                    {
+                      "value": "MAT001",
+                      "label": "Material Issue"
+                    },
+                    {
+                      "value": "DEL001",
+                      "label": "Delivery or Packaging Issue"
+                    },
+                    {
+                      "value": "PRC001",
+                      "label": "Price or Promotion Issue"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "label": "Is there something specific that's not quite right?",
+                  "name": "sub_reason",
+                  "options": [
+                    {
+                      "value": "SIZ001",
+                      "label": "Too Small"
+                    },
+                    {
+                      "value": "SIZ001",
+                      "label": "Too Large"
+                    },
+                    {
+                      "value": "SIZ001",
+                      "label": "Unfitted"
+                    },
+                    {
+                      "value": "SIZ001",
+                      "label": "Unflattering Silhouette"
+                    },
+                    {
+                      "value": "FAB001",
+                      "label": "Pilling or Fuzzing"
+                    },
+                    {
+                      "value": "FAB001",
+                      "label": "Shrinkage or Loss of Shape"
+                    },
+                    {
+                      "value": "FAB001",
+                      "label": "Uncomfortable Texture"
+                    },
+                    {
+                      "value": "FAB001",
+                      "label": "Allergic Reaction"
+                    },
+                    {
+                      "value": "COL001",
+                      "label": "Not as Described"
+                    },
+                    {
+                      "value": "COL001",
+                      "label": "Fading or Bleeding"
+                    },
+                    {
+                      "value": "COL001",
+                      "label": "Unexpected Shade"
+                    },
+                    {
+                      "value": "COL001",
+                      "label": "Not Suitable for Skin Tone"
+                    },
+                    {
+                      "value": "STY001",
+                      "label": "Not as Expected"
+                    },
+                    {
+                      "value": "STY001",
+                      "label": "Poor Construction"
+                    },
+                    {
+                      "value": "STY001",
+                      "label": "Unflattering Design"
+                    },
+                    {
+                      "value": "STY001",
+                      "label": "Not Suitable for Occasion"
+                    },
+                    {
+                      "value": "FIT001",
+                      "label": "Unflattering Silhouette"
+                    },
+                    {
+                      "value": "FIT001",
+                      "label": "Uncomfortable Seams"
+                    },
+                    {
+                      "value": "FIT001",
+                      "label": "Unsuitable for Body Type"
+                    },
+                    {
+                      "value": "FIT001",
+                      "label": "Not Suitable for Lifestyle"
+                    },
+                    {
+                      "value": "MAT001",
+                      "label": "Not Sustainable"
+                    },
+                    {
+                      "value": "MAT001",
+                      "label": "Not Eco-Friendly"
+                    },
+                    {
+                      "value": "MAT001",
+                      "label": "Not Cruelty-Free"
+                    },
+                    {
+                      "value": "MAT001",
+                      "label": "Not Vegan-Friendly"
+                    },
+                    {
+                      "value": "DEL001",
+                      "label": "Late Delivery"
+                    },
+                    {
+                      "value": "DEL001",
+                      "label": "Damaged Packaging"
+                    },
+                    {
+                      "value": "DEL001",
+                      "label": "Missing Items"
+                    },
+                    {
+                      "value": "DEL001",
+                      "label": "Incorrect Items"
+                    },
+                    {
+                      "value": "PRC001",
+                      "label": "Incorrect Price"
+                    },
+                    {
+                      "value": "PRC001",
+                      "label": "Misleading Promotion"
+                    },
+                    {
+                      "value": "PRC001",
+                      "label": "Unfair Pricing"
+                    },
+                    {
+                      "value": "PRC001",
+                      "label": "Not as Advertised"
+                    }
+                  ]
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Log in to your Wix website editor and navigate to the \"Site\" menu. Select \"Settings\" and then \"Advanced Settings\". Scroll down to the \"Code\" section and click on \"Add a new site section\". Choose \"HTML/CSS\" as the section type. Paste the following code into the editor: `<form id='returns-reason-form'> <label for='reason'>Reason for Return:</label> <select id='reason' name='reason'> <option value='defective'>Defective</option> <option value='not-as-described'>Not as described</option> <option value='change-of-mind'>Change of mind</option> <option value='other'>Other (please specify)</option> </select> <input type='text' id='other-reason' name='other-reason' placeholder='Please specify reason for return' style='display:none;'> <button type='submit'>Submit</button> </form>`",
+                "Click on the \"Save\" button to save the changes. Then, navigate to the \"Settings\" menu and select \"Payment & Shipping\". Scroll down to the \"Returns\" section and click on the \"Edit\" button next to \"Returns form\". Select \"Custom form\" as the returns form type. In the \"Custom form code\" field, paste the following code: `<script> document.addEventListener('DOMContentLoaded', function() { const form = document.getElementById('returns-reason-form'); form.addEventListener('submit', function(event) { event.preventDefault(); const reason = document.getElementById('reason').value; const otherReason = document.getElementById('other-reason').value; // Send the form data to your server using AJAX or fetch API // For example: fetch('/returns', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reason: reason, otherReason: otherReason }) }); }); }); </script>",
+                "Click on the \"Save\" button to save the changes. Now, when a customer initiates a return, they will be presented with the returns reason capture form. The form data will be sent to your server for processing."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Birdsong London\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the embed code to your returns page on Wix",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will help the company to collect and showcase customer reviews, which is essential for building trust and credibility with a wider audience, thereby supporting the company's goal of growing online sales (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will provide customers with a convenient and easy-to-use way to find their size, which is critical for reducing returns and improving the overall customer experience, thereby supporting the company's goal of growing online sales (data_foundations pillar score: 3.97).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Birdsong London right now because it will enable the company to create targeted and personalized email campaigns, which is essential for engaging with a wider audience and driving online sales, thereby supporting the company's goal of growing online sales (ai_tool_experience pillar score: 3.3).",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The score gap in AI tool experience is too high, preventing deployment.",
+      "unlock_condition": "ai_tool_experience pillar score needs to reach 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The score gap in data foundations is too high, preventing deployment.",
+      "unlock_condition": "data_foundations pillar score needs to reach 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The score gap in technology infrastructure is too high, preventing deployment.",
+      "unlock_condition": "technology_infrastructure pillar score needs to reach 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The score gap in data foundations is too high, preventing deployment.",
+      "unlock_condition": "data_foundations pillar score needs to reach 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) by the end of the week to start collecting valuable customer feedback and improving the overall customer experience.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260820_232508.json"
+  }
+}

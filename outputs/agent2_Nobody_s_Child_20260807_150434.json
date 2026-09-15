@@ -1,0 +1,138 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-07T14:04:34.185140+00:00",
+  "company_name": "Nobody's Child",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.57,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by capturing reasons for returns, addressing their primary challenge.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "failed",
+        "deliverables": [],
+        "missing_prerequisites": [],
+        "next_steps": [],
+        "estimated_activation_time": "",
+        "market_tools_recommended": [],
+        "llm_calls_made": 2,
+        "error": "LLM structured_chat failed after repair attempt.\nOriginal response:\n{\"instructions\": [\n\"Log in to your Shopify admin panel and navigate to \\\"Settings\\\" > \\\"Apps\\\".\",\n\"Click on \\\"Get apps or themes\\\" and search for a returns management app that supports custom forms, such as Re:amaze or AfterShip.\",\n\"Install the chosen app and follow its setup instructions to integrate it with your Shopify store.\",\n\"In the Shopify admin panel, go to \\\"Settings\\\" > \\\"Policies\\\" and click on the \\\"Return policy\\\" tab.\",\n\"Scroll down to the \\\"Return reasons\\\" section and add a new return reason by clicking the \\\"Add return reason\\\" button.\",\n\"Configure the return reason settings as desired (e.g., set a default reason or require customers to select one).\",\n\"In your Shopify theme's liquid files, locate the returns page template (usually named \\\"returns.liquid\\\") and open it for editing.\",\n\"Insert the following code snippet into the template where you want the returns reason capture form to appear: `{% render 'custom-form' %}`\",\n\"This will load a custom form block that contains the returns reason capture form. You can customize its appearance by modifying the form's CSS classes or adding custom HTML elements.\",\n\"In your Shopify theme's settings, go to \\\"Themes\\\" > \\\"Actions\\\" and click on \\\"Edit code\\\".\",\n\"Open the \\\"config.json\\\" file and add the following code snippet: `{\"custom_forms\": {\"returns_reason\": {\"enabled\": true}}}`,\n\"This will enable the returns reason capture form on the returns page. Save the changes to your theme's code.\",\n\"Clear your Shopify store's cache by clicking on the \\\"Actions\\\" dropdown menu in the top-right corner of the admin panel and selecting \\\"Theme actions\\\" > \\\"Clear theme cache\\\".\",\n\"Test the returns flow by initiating a return from your store's frontend, ensuring that the returns reason capture form is displayed correctly and functions as expected.\"]}\nRepair attempt response:\n{\"instructions\": [\n\"Log in to your Shopify admin panel and navigate to \\\"Settings\\\" > \\\"Apps\\\".\",\n\"Click on \\\"Get apps or themes\\\" and search for a returns management app that supports custom forms, such as Re:amaze or AfterShip.\",\n\"Install the chosen app and follow its setup instructions to integrate it with your Shopify store.\",\n\"In the Shopify admin panel, go to \\\"Settings\\\" > \\\"Policies\\\" and click on the \\\"Return policy\\\" tab.\",\n\"Scroll down to the \\\"Return reasons\\\" section and add a new return reason by clicking the \\\"Add return reason\\\" button.\",\n\"Configure the return reason settings as desired (e.g., set a default reason or require customers to select one).\",\n\"In your Shopify theme's liquid files, locate the returns page template (usually named \\\"returns.liquid\\\") and open it for editing.\",\n\"Insert the following code snippet into the template where you want the returns reason capture form to appear: `{% render 'custom-form' %}`\",\n\"This will load a custom form block that contains the returns reason capture form. You can customize its appearance by modifying the form's CSS classes or adding custom HTML elements.\",\n\"In your Shopify theme's settings, go to \\\"Themes\\\" > \\\"Actions\\\" and click on \\\"Edit code\\\".\",\n\"Open the \\\"config.json\\\" file and add the following code snippet: `{\"custom_forms\": {\"returns_reason\": {\"enabled\": true}}}`,\n\"This will enable the returns reason capture form on the returns page. Save the changes to your theme's code.\",\n\"Clear your Shopify store's cache by clicking on the \\\"Actions\\\" dropdown menu in the top-right corner of the admin panel and selecting \\\"Theme actions\\\" > \\\"Clear theme cache\\\".\",\n\"Test the returns flow by initiating a return from your store's frontend, ensuring that the returns reason capture form is displayed correctly and functions as expected.\"]"
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by leveraging customer reviews, addressing their primary challenge.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_002",
+      "title": "Abandoned Cart Recovery Emails",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help reduce returns by recovering abandoned carts, addressing their primary challenge.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-500",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by providing real-time chat support, addressing their primary challenge.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by automating email marketing flows, addressing their primary challenge.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by leveraging AI demand forecasting, addressing their primary challenge.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online by leveraging dynamic pricing, addressing their primary challenge.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, requiring an improvement of at least 7.0.",
+      "unlock_condition": "data_foundations: 7.0"
+    }
+  ],
+  "quick_win_summary": "Start implementing 'Returns Reason Capture' (uc_001) this week by assigning a team member to configure and deploy the solution within the next two weeks.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 2
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Nobody_s_Child_20260807_150434.json"
+  }
+}

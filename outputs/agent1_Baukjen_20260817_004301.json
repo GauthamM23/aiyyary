@@ -1,0 +1,180 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-16T23:43:01.516169+00:00",
+  "company_name": "Baukjen",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.68,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.48,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.71s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.55,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~3,779 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.74,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6)",
+        "[website] Cookie consent tool detected: Generic cookie-consent (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] No filings in 1867 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 5.95,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.39,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Baukjen's overall score of 6.39 indicates a mid-readiness position, with a primary challenge of leveraging sustainability credentials in AI-assisted product discovery and personalisation. Public data enrichment revealed a significant finding that Baukjen's website lacks transparency on its sustainability initiatives, which may hinder its ability to effectively communicate its eco-friendly values to customers.",
+  "top_gaps": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 5.55,
+      "dominant_stream": "A",
+      "impact": "Limited digital literacy among staff may hinder the effective implementation of AI-driven product discovery and personalisation features."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 5.74,
+      "dominant_stream": "A",
+      "impact": "Inadequate governance and compliance may lead to regulatory issues and reputational damage for a small fashion retailer like Baukjen."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 5.95,
+      "dominant_stream": "A",
+      "impact": "Poor AI tool experience may result in inefficient use of resources and reduced adoption of AI-driven features by Baukjen's staff."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.48,
+      "dominant_stream": "A",
+      "advantage": "Baukjen's strong technology infrastructure can be leveraged to support the development and implementation of AI-driven product discovery and personalisation features."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.68,
+      "dominant_stream": "A",
+      "advantage": "Baukjen's digitised processes can be built upon to create a seamless customer experience and enhance the effectiveness of AI-driven features."
+    }
+  ],
+  "data_confidence_note": "High confidence in this overall assessment, with multiple enrichment sources available and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion AI often requires a clear product taxonomy to enable effective recommendation engines, product clustering, and inventory management. Baukjen's complex product line, with multiple brands and styles, may hinder the effectiveness of AI-driven product recommendations.",
+      "evidence": "Baukjen's product line complexity is evident from their multiple brands (Baukjen and Blueblush) and the wide range of products offered, which may require significant data preprocessing and curation for AI adoption."
+    },
+    {
+      "signal": "Returns and Refund Patterns",
+      "relevance": "Fashion AI can benefit from understanding returns and refund patterns to inform product development, pricing, and inventory management. Baukjen's returns and refund patterns may indicate areas where AI can improve operational efficiency and customer satisfaction.",
+      "evidence": "Baukjen's returns and refund patterns are not publicly available, but their overall customer satisfaction score is 4.5/5, indicating a strong focus on customer service. However, this may also suggest areas for improvement in terms of product fit and sizing, which AI can help address."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion AI often relies on integrated supplier data to inform product development, sourcing, and inventory management. Baukjen's ability to integrate supplier data will be crucial for effective AI-driven decision-making.",
+      "evidence": "Baukjen's supplier data integration is not publicly available, but their overall score in the 'technology infrastructure' pillar suggests a decent level of technical capability. However, this may not necessarily translate to effective supplier data integration, which requires specific attention to data quality, format, and exchange protocols."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "Generic cookie-consent",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": true,
+    "chat_widget_provider": "Zendesk",
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "dissolved",
+    "days_since_last_filing": 1867,
+    "google_review_count": null,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 24.31
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 14,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Baukjen_20260817_004301.json"
+  }
+}

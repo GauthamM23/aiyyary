@@ -1,0 +1,149 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-31T13:44:27.049564+00:00",
+  "company_name": "Birdsong London",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 3.53,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 3.97,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 3.53,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 3.53,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 3.81,
+      "stream_b_score": 6.5,
+      "stream_c_reconciled": 4.2,
+      "final_score": 4.66,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Wix (score=5.0)",
+        "[website] Fast page load: 1.05s (score=8)"
+      ],
+      "stream_c_reasoning": "The owner interview score carries more weight, but the public data from Stream B provides additional information that suggests a higher level of technology infrastructure maturity than indicated by the owner's self-assessment. The e-commerce platform detected is Wix (score=5.0), which is a relatively basic platform, and the page load time is 1.05s (score=8), which is not exceptional. Considering these factors, I have reconciled the scores to reflect a moderate level of technology infrastructure maturity."
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 4.09,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 4.09,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 4.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.06,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.69,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 3.2,
+      "final_score": 3.43,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 2.69 is given more weight, but the public data from Stream B indicates a high level of AI tool experience with both Google Analytics 4 and Klaviyo detected on the website. However, this contradicts the lower score from the owner interview, suggesting that the business may be overestimating its capabilities. To reconcile these scores, I have taken an average of the two, but reduced it slightly to reflect the discrepancy between the owner's self-assessment and the objective evidence."
+    }
+  },
+  "overall_score": 3.96,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Birdsong London's overall score of 3.96 indicates a strong foundation for digital transformation, but areas such as AI tool experience and process digitisation require improvement to support growth beyond the existing ethical fashion community.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 3.43,
+      "dominant_stream": "C",
+      "impact": "Inefficient use of AI tools may hinder Birdsong London's ability to scale digital operations."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 3.53,
+      "dominant_stream": "A",
+      "impact": "Limited process digitisation may lead to manual workarounds and decreased productivity in a small fashion retailer."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 3.97,
+      "dominant_stream": "A",
+      "impact": "Insufficient data foundations may compromise Birdsong London's ability to make informed business decisions."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 4.66,
+      "dominant_stream": "C",
+      "advantage": "Birdsong London can leverage its strong technology infrastructure to support the development of new digital channels and services."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 4.06,
+      "dominant_stream": "A",
+      "advantage": "The company's robust governance and compliance framework provides a solid foundation for navigating regulatory requirements in the fashion industry."
+    }
+  ],
+  "data_confidence_note": "Medium confidence due to limited enrichment sources available (2 out of 5) and Stream C reconciliations performed (2 out of 3).",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce waste, and improve sales forecasting.",
+      "evidence": "Birdsong London's overall score indicates a relatively high level of digital maturity. However, the process digitisation pillar score (3.53) suggests that while they have made progress in this area, there may be opportunities for further improvement in managing seasonal buying cycles."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion retailers often rely on multiple suppliers with varying levels of data quality and availability. AI can help integrate supplier data to improve supply chain visibility and decision-making.",
+      "evidence": "Birdsong London's technology infrastructure pillar score (4.66) suggests that they have invested in robust systems, which could support supplier data integration. However, the AI tool experience pillar score (3.43) indicates a need for further development in this area."
+    },
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion retailers with complex product lines can benefit from AI-driven product recommendation and personalisation to improve customer engagement and sales.",
+      "evidence": "Birdsong London's data foundations pillar score (3.97) suggests that they have a solid foundation for managing product information, but the relatively low AI tool experience pillar score (3.43) indicates potential challenges in leveraging this data for advanced applications like product recommendation."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house",
+      "instagram"
+    ],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 34.58
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 7,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Birdsong_London_20260731_144427.json"
+  }
+}

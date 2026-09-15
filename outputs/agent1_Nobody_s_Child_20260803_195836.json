@@ -1,0 +1,176 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-03T18:58:36.137116+00:00",
+  "company_name": "Nobody's Child",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 6.72,
+      "final_score": 6.65,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 7.47 carries more weight due to internal operational data not being visible from outside the business. However, Stream B's score of 5.0 is based on a factual claim that Google Analytics 4 is detected on the website, which directly contradicts the owner's potential claims of strong governance and data foundations. Therefore, I've reduced the reconciled score by approximately 1 point to reflect this discrepancy."
+    },
+    "process_digitisation": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 7.72,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Yotpo (score=6)",
+        "[google_profile] 51 Google reviews (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 2.04s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 6.8,
+      "final_score": 6.49,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~6,320 posts) (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 7.19 carries more weight due to its internal operational data perspective. However, the Stream B evidence from public Instagram presence suggests a moderate level of digital literacy among staff, which is reflected in the active posting (~6,320 posts). Although this contradicts the higher score from Stream A, it's not a direct contradiction of factual claims, so I've taken a balanced approach to reconcile the scores. The reconciled score of 6.8 reflects a moderate level of digital literacy among staff."
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": null,
+      "final_score": 6.86,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: OneTrust (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.99,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Nobody's Child faces significant challenges in improving their digital foundations to support better size guidance online, with a mid-readiness score indicating they are at risk of falling behind competitors.",
+  "top_gaps": [
+    {
+      "pillar": "data_foundations",
+      "score": 6.65,
+      "dominant_stream": "C",
+      "impact": "Difficulty in integrating and analyzing customer data may hinder the development of accurate size guidance algorithms."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.49,
+      "dominant_stream": "C",
+      "impact": "Limited digital literacy among staff may slow down the implementation of new technology solutions."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Poor experience with AI tools may lead to inefficient use of resources and delayed innovation."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Strong technology infrastructure can be leveraged to support the development of data-driven size guidance solutions."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.72,
+      "dominant_stream": "A",
+      "advantage": "Efficient processes and digitized workflows can facilitate the integration of new technologies and improve operational efficiency."
+    }
+  ],
+  "data_confidence_note": "High confidence in this assessment due to multiple enrichment sources available and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce stockouts and overstocking, and improve sales forecasting.",
+      "evidence": "Nobody's Child has a moderate overall score (6.99), but its 'process digitisation' pillar score is high (7.72). This suggests that the company may have some level of digital process maturity, which could be beneficial for seasonal buying cycle management."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers with clear returns patterns can use AI to predict and prevent returns, reducing costs and improving customer satisfaction.",
+      "evidence": "Nobody's Child's 'data foundations' pillar score is moderate (6.65), which may indicate that the company has some level of data collection and storage capabilities. However, without further information on returns pattern visibility, it is unclear whether this data is being used effectively to inform AI-driven decisions."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion retailers with integrated supplier data can leverage AI to optimize supply chain operations, improve inventory management, and reduce lead times.",
+      "evidence": "Nobody's Child's 'technology infrastructure' pillar score is high (7.87), which suggests that the company has a solid foundation for integrating supplier data into its systems. However, without further information on the extent of this integration, it is unclear whether AI can be effectively applied to optimize supply chain operations."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "OneTrust",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 80,
+    "google_review_count": 51,
+    "has_active_fb_ads": false
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 9.32
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 12,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Nobody_s_Child_20260803_195836.json"
+  }
+}

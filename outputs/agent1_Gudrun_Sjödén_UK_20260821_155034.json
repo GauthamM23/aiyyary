@@ -1,0 +1,169 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-21T14:50:34.579598+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 5.78,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 5.78,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 4.66,
+      "stream_b_score": 6.5,
+      "stream_c_reconciled": null,
+      "final_score": 5.21,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[google_profile] 103 Google reviews (score=8)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.66,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No recognized e-commerce platform detected (score=4)",
+        "[website] Fast page load: 0.75s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 3.81,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.17,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~2,868 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 3.25,
+      "stream_c_reconciled": 4.21,
+      "final_score": 4.86,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)",
+        "[companies_house] No filings in 3964 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": "Stream A score (5.78) carries more weight, but Stream B scores indicate governance and compliance issues. Stream B score (3.25) is reduced due to the direct contradiction with the owner's claim of strong governance (no privacy policy found). The reconciled score is a weighted average of the two streams, with Stream A contributing 70% and Stream B contributing 30%. This is because Stream A provides more accurate information about internal operations, but Stream B provides some objective evidence of governance and compliance issues."
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.41,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 3.0,
+      "final_score": 3.25,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": "Stream A (owner interview) score carries more weight, but Stream B (public data) score indicates active Facebook ads, which suggests some level of AI tool experience. However, the significant difference between the two scores suggests that the owner may not be fully aware of or utilizing AI tools effectively. A reconciled score of 3.0 reflects a moderate level of AI tool experience, acknowledging the presence of active Facebook ads but also considering the owner's reported level of experience."
+    }
+  },
+  "overall_score": 4.66,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Gudrun Sj\u00f6d\u00e9n UK faces significant challenges in modernising its digital customer experience, with a notable gap in leveraging AI tools to enhance customer engagement. The company's older customer base presents a loyalty risk, exacerbated by a relatively weak technology infrastructure. Public data enrichment highlighted a concerning trend of declining social media engagement.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 3.25,
+      "dominant_stream": "C",
+      "impact": "A small fashion retailer like Gudrun Sj\u00f6d\u00e9n UK may struggle to integrate AI tools effectively, hindering its ability to personalise customer experiences and drive sales."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 4.17,
+      "dominant_stream": "A",
+      "impact": "Inadequate staff digital literacy may hinder the successful implementation of digital transformation initiatives, impacting customer service and overall business performance."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 4.66,
+      "dominant_stream": "A",
+      "impact": "A subpar technology infrastructure may limit the company's ability to scale digital initiatives, compromising customer experience and business growth."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "governance_compliance",
+      "score": 4.86,
+      "dominant_stream": "C",
+      "advantage": "Gudrun Sj\u00f6d\u00e9n UK's strong governance and compliance framework can serve as a foundation for future digital transformation initiatives, ensuring regulatory adherence and risk mitigation."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 5.78,
+      "dominant_stream": "A",
+      "advantage": "The company's robust data foundations can be leveraged to inform data-driven decision-making, supporting the development of targeted digital marketing campaigns and customer engagement strategies."
+    }
+  ],
+  "data_confidence_note": "Due to the presence of 2 Stream C reconciliations, affecting the 'governance_compliance' and 'ai_tool_experience' pillars, moderate confidence should be placed in this overall assessment.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce waste, and improve sales forecasting. This signal matters because it directly impacts the retailer's ability to respond to changing fashion trends and consumer demand.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's overall score suggests a moderate level of digital maturity, but its low score in 'AI Tool Experience' (3.25) indicates a potential gap in leveraging AI for seasonal buying cycle optimization. Further investigation is needed to determine the retailer's current seasonal buying cycle maturity."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion retailers often rely on multiple suppliers with varying data structures and quality. AI can help integrate and analyze supplier data to improve supply chain visibility, reduce lead times, and enhance product quality. This signal matters because it directly impacts the retailer's ability to respond to changing fashion trends and consumer demand.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's low score in 'Technology Infrastructure' (4.66) suggests potential challenges in integrating supplier data. However, its moderate score in 'Data Foundations' (5.78) indicates a decent foundation for data integration. Further investigation is needed to determine the retailer's current supplier data integration capabilities."
+    },
+    {
+      "signal": "Product Sizing and Fit Data Structure",
+      "relevance": "Fashion retailers often struggle with product sizing and fit issues, which can lead to returns and customer dissatisfaction. AI can help analyze product sizing and fit data to improve product offerings and reduce returns. This signal matters because it directly impacts the retailer's ability to provide accurate product information and improve customer satisfaction.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's low score in 'AI Tool Experience' (3.25) suggests a potential gap in leveraging AI for product sizing and fit optimization. However, its moderate score in 'Data Foundations' (5.78) indicates a decent foundation for product data management. Further investigation is needed to determine the retailer's current product sizing and fit data structure."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": false,
+    "privacy_policy_mentions_ai": false,
+    "cookie_consent_found": false,
+    "cookie_consent_provider": null,
+    "marketing_automation_detected": false,
+    "marketing_automation_tools": [],
+    "analytics_tools_detected": [],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3964,
+    "google_review_count": 103,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 9.4
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 10,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Gudrun_Sj\u00f6d\u00e9n_UK_20260821_155034.json"
+  }
+}

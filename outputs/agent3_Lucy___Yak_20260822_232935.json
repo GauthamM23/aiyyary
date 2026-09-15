@@ -1,0 +1,379 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-22T22:29:35.626857+00:00",
+  "company_name": "Lucy & Yak",
+  "overall_score": 5.77,
+  "readiness_tier": "Mid-Readiness",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "MEDIUM",
+      "pillar": "data_foundations",
+      "pillar_score": 5.95,
+      "trigger_reason": "data_foundations final_score=5.95 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Lucy & Yak will implement data validation checks on their Shopify platform to ensure data quality meets their required standards.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.88,
+      "trigger_reason": "governance_compliance final_score=5.88 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Lucy & Yak will review and update their governance and compliance policies to ensure they align with current regulatory requirements, particularly in relation to AI usage.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "MEDIUM",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 5.5,
+      "trigger_reason": "staff_digital_literacy final_score=5.5 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Lucy & Yak will provide regular digital literacy training sessions for staff to improve their understanding and adoption of the Shopify platform and its features.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "HIGH",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 5.75,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Shopify",
+      "mitigation": "Lucy & Yak will conduct a thorough review of their marketing automation tools, specifically Klaviyo, to ensure it is properly integrated with their Shopify platform and meets their business needs.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.88,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=True, ai_tool_experience final_score=5.75",
+      "mitigation": "Lucy & Yak will implement a content review process for their chat widget to ensure that AI-generated content is accurate and compliant with their brand guidelines.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.88,
+      "trigger_reason": "privacy_policy_mentions_ai=True, governance_compliance final_score=5.88",
+      "mitigation": "Lucy & Yak will review and update their privacy policy to explicitly address AI usage and ensure transparency with their customers.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 4,
+  "low_severity_count": 1,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "vendor_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "ai_tool_experience"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "Lucy & Yak can improve their customer engagement and online reputation by automating review collection, which is particularly relevant given their primary challenge of customer retention (primary challenge: 5).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": {
+          "mode": "market_connect",
+          "status": "connected",
+          "deliverables": [
+            {
+              "name": "configuration_guide_judge.me",
+              "type": "markdown",
+              "content": "To configure Judge.me for Lucy & Yak, navigate to the Shopify app store, search for Judge.me, and click 'Add app'. Then, follow the in-app instructions to connect your store and set up the automated review collection sequence.",
+              "instructions": "Configuration guide for Judge.me, ranked #1 for this business."
+            },
+            {
+              "name": "configuration_guide_trustpilot",
+              "type": "markdown",
+              "content": "To configure Judge.me for Lucy & Yak, navigate to the Shopify app store, search for Judge.me, and click 'Add app'. Then, follow the in-app instructions to connect your store and set up the automated review collection sequence.",
+              "instructions": "Configuration guide for Trustpilot, ranked #2 for this business."
+            },
+            {
+              "name": "configuration_guide_yotpo",
+              "type": "markdown",
+              "content": "To configure Judge.me for Lucy & Yak, navigate to the Shopify app store, search for Judge.me, and click 'Add app'. Then, follow the in-app instructions to connect your store and set up the automated review collection sequence.",
+              "instructions": "Configuration guide for Yotpo, ranked #3 for this business."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Step 1: Install the Judge.me app from the Shopify app store and connect your store to the app.",
+            "Step 2: Set up the automated review collection sequence by configuring the email or SMS triggers and review request templates.",
+            "Step 3: Test the review collection sequence by sending a test review request to a customer and verifying that it is delivered correctly."
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [
+            {
+              "rank": 1,
+              "tool_name": "Judge.me",
+              "why_this_business": "Lucy & Yak can leverage Judge.me's lightweight and budget-friendly approach to automate review collection, which aligns with their moderate budget and Shopify setup.",
+              "free_tier_available": true,
+              "estimated_monthly_cost_gbp": "\u00a329",
+              "shopify_native": true
+            },
+            {
+              "rank": 2,
+              "tool_name": "Trustpilot",
+              "why_this_business": "Trustpilot's independent review platform and low setup complexity make it a suitable choice for Lucy & Yak, who can benefit from its trust-signal-focused approach to review collection.",
+              "free_tier_available": true,
+              "estimated_monthly_cost_gbp": "\u00a349",
+              "shopify_native": true
+            },
+            {
+              "rank": 3,
+              "tool_name": "Yotpo",
+              "why_this_business": "Although Yotpo offers a full-featured reviews and loyalty platform, its medium setup complexity and lack of free tier may make it less suitable for Lucy & Yak, who are looking for a more streamlined solution.",
+              "free_tier_available": false,
+              "estimated_monthly_cost_gbp": "\u00a399",
+              "shopify_native": true
+            }
+          ],
+          "llm_calls_made": 1,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_003",
+        "title": "AI Product Description Writing",
+        "justification": "Lucy & Yak can enhance their product listings and improve customer experience with AI-generated product descriptions, which aligns with their mid-readiness tier and primary challenge of customer retention.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-100",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_002",
+        "title": "Abandoned Cart Recovery Emails",
+        "justification": "Lucy & Yak can reduce cart abandonment and improve sales with AI-driven abandoned cart recovery emails, which is a suitable opportunity given their mid-readiness tier and primary challenge of customer retention.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-500",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "Lucy & Yak can improve customer experience and reduce returns with a size guide chatbot, which is relevant given their mid-readiness tier and primary challenge of customer retention.",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 5,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "Lucy & Yak can enhance their email marketing strategy and improve customer engagement with AI-driven automation flows, which is suitable given their mid-readiness tier and primary challenge of customer retention.",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The opportunity is currently deferred due to a score gap of 0.05 in the data_foundations pillar, which needs to reach a minimum score of 6.0.",
+        "unlock_condition": "data_foundations pillar score of 6.0 or higher"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The opportunity is currently deferred due to a significant score gap of 1.05 in the data_foundations pillar, which needs to reach a minimum score of 7.0.",
+        "unlock_condition": "data_foundations pillar score of 7.0 or higher"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Vendor Risk Mitigation",
+      "timeframe_weeks": 2,
+      "description": "Mitigate vendor risk by deploying Loop Returns and Mailchimp",
+      "deliverables": [
+        "Deploy Loop Returns",
+        "Set up Mailchimp"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Helps fashion SMEs reduce refund leakage and gain structured returns data",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Adoption Risk Mitigation",
+      "timeframe_weeks": 1,
+      "description": "Mitigate adoption risk by implementing Lyro by Tidio and Minami AI",
+      "deliverables": [
+        "Implement Lyro by Tidio",
+        "Deploy Minami AI"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id_1",
+      "recommended_ai_agents": [
+        {
+          "name": "Lyro by Tidio",
+          "what_it_does_here": "Trains staff on existing FAQ and knowledge base in under 10 minutes",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Paid from \u00a329/month"
+        },
+        {
+          "name": "Minami AI",
+          "what_it_does_here": "Replaces up to 95% of support workload in fashion brands",
+          "effort": "medium",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Pricing on request \u2014 positioned for mid-size fashion brands"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Hallucination Risk Mitigation",
+      "timeframe_weeks": 6,
+      "description": "Mitigate hallucination risk by deploying Gorgias AI Agent and Fin by Intercom",
+      "deliverables": [
+        "Deploy Gorgias AI Agent",
+        "Set up Fin by Intercom"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id_2",
+      "recommended_ai_agents": [
+        {
+          "name": "Gorgias AI Agent",
+          "what_it_does_here": "Prevents AI size advice errors from reaching customers",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a310/month for starter; scales with ticket volume"
+        },
+        {
+          "name": "Fin by Intercom",
+          "what_it_does_here": "Grounds AI agent responses in retrieved knowledge base content",
+          "effort": "medium",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a374/month for Intercom Starter"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Ethical Risk Mitigation",
+      "timeframe_weeks": 3,
+      "description": "Mitigate ethical risk by deploying ViSenze and Iubenda",
+      "deliverables": [
+        "Deploy ViSenze",
+        "Use Iubenda"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id_3",
+      "recommended_ai_agents": [
+        {
+          "name": "Iubenda",
+          "what_it_does_here": "Informs customers when AI is used in decisions affecting them",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year per site"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 12,
+  "roi_summary": "Lucy & Yak can expect to see significant commercial improvements across customer engagement, retention, and revenue growth. By implementing the full roadmap, they will see a substantial increase in customer reviews, improved product descriptions, enhanced email marketing automation, and increased sales through WhatsApp. The benefits will be delivered in the following timeframe: automated review collection and AI product description writing within 1 week, abandoned cart recovery emails within 1 week, size guide chatbot within 3 weeks, email marketing automation flows within 2 weeks, and WhatsApp styling assistant within 4 weeks. The total 12-month commercial outcome is expected to be substantial, with the following headline metric: \u00a3123,000 additional annual revenue.",
+  "headline_metric": "\u00a3123,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 6,
+    "free_tier_agents_count": 2,
+    "estimated_total_monthly_cost_gbp": "\u00a3143/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": true,
+    "cookie_consent_found": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 79
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Lucy___Yak_20260822_232935.json"
+  }
+}

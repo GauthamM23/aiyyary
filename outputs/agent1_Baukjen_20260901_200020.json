@@ -1,0 +1,180 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-09-01T19:00:20.765070+00:00",
+  "company_name": "Baukjen",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.68,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.48,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.47s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.55,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~3,796 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.74,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6)",
+        "[website] Cookie consent tool detected: Generic cookie-consent (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] No filings in 1883 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 5.95,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.39,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Baukjen's overall score of 6.39 indicates a mid-readiness position, with strengths in technology infrastructure and data foundations, but challenges in staff digital literacy and governance compliance. The company's primary challenge of leveraging sustainability credentials in AI-assisted product discovery and personalisation is hindered by limited public data on their sustainability initiatives.",
+  "top_gaps": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 5.55,
+      "dominant_stream": "A",
+      "impact": "A small fashion retailer like Baukjen may struggle to upskill staff to effectively utilise AI tools, hindering their ability to provide seamless customer experiences."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 5.74,
+      "dominant_stream": "A",
+      "impact": "Baukjen may face difficulties in ensuring compliance with evolving regulations and industry standards, potentially leading to reputational damage."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 5.95,
+      "dominant_stream": "A",
+      "impact": "Baukjen's customers may not fully benefit from AI-powered product discovery and personalisation due to a lack of intuitive and engaging user experiences."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.48,
+      "dominant_stream": "A",
+      "advantage": "Baukjen can leverage their robust technology infrastructure to drive innovation and efficiency in AI-assisted product discovery and personalisation."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 6.94,
+      "dominant_stream": "A",
+      "advantage": "Baukjen's strong data foundations enable them to make informed decisions and drive business growth through data-driven insights."
+    }
+  ],
+  "data_confidence_note": "High confidence can be placed in this overall assessment, as multiple enrichment sources were available and no Stream C reconciliations were required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers often have complex seasonal buying cycles, with multiple product lines and styles. AI can help optimize these cycles by predicting demand, identifying trends, and streamlining inventory management.",
+      "evidence": "Baukjen's pillar scores suggest some maturity in process digitisation (6.68), but a lower score in staff digital literacy (5.55) may indicate a need to develop skills in data-driven decision making, which is critical for effective seasonal buying cycle management."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Returns can be a significant challenge for fashion retailers, with high returns rates often indicating issues with sizing, quality, or fit. AI can help analyze returns patterns to identify areas for improvement and optimize product offerings.",
+      "evidence": "Baukjen's overall score (6.39) suggests some readiness for AI adoption, but a lower score in governance and compliance (5.74) may indicate a need to develop more robust processes for managing returns and customer data."
+    },
+    {
+      "signal": "Sizing Data Structure",
+      "relevance": "Fashion retailers often struggle with accurate sizing, which can lead to returns and customer dissatisfaction. AI can help analyze sizing data to identify patterns and optimize product offerings.",
+      "evidence": "Baukjen's technology infrastructure score (7.48) suggests some investment in data management, but a lower score in staff digital literacy (5.55) may indicate a need to develop skills in data analysis and interpretation, which is critical for optimizing sizing data structures."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "Generic cookie-consent",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": true,
+    "chat_widget_provider": "Zendesk",
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "dissolved",
+    "days_since_last_filing": 1883,
+    "google_review_count": null,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 13.73
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 14,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Baukjen_20260901_200020.json"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-26T13:38:45.367456+00:00",
+  "company_name": "Nobody's Child",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "groq",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 6.48,
+      "final_score": 6.63,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": "[LLM reconciliation failed (Error code: 404 - {'error': {'message': 'The model `meta-llama/llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}); used a weighted Stream A/B fallback]"
+    },
+    "process_digitisation": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": 7.22,
+      "final_score": 7.34,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Yotpo (score=6)"
+      ],
+      "stream_c_reasoning": "[LLM reconciliation failed (Error code: 404 - {'error': {'message': 'The model `meta-llama/llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}); used a weighted Stream A/B fallback]"
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 2.14s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 6.31,
+      "final_score": 6.45,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~6,311 posts) (score=5)"
+      ],
+      "stream_c_reasoning": "[LLM reconciliation failed (Error code: 404 - {'error': {'message': 'The model `meta-llama/llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}); used a weighted Stream A/B fallback]"
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: OneTrust (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.93,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "[LLM verdict call failed: Error code: 404 - {'error': {'message': 'The model `meta-llama/llama-4-scout-17b-16e-instruct` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}]",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Not available"
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.45,
+      "dominant_stream": "C",
+      "impact": "Not available"
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 6.63,
+      "dominant_stream": "C",
+      "impact": "Not available"
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "process_digitisation",
+      "score": 7.34,
+      "dominant_stream": "C",
+      "advantage": "Not available"
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Not available"
+    }
+  ],
+  "data_confidence_note": "LLM verdict call failed; confidence assessment unavailable.",
+  "fashion_signals": [],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house"
+    ],
+    "stream_c_reconciliations": 3,
+    "enrichment_duration_seconds": 6.35
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 10,
+    "llm_calls_made": 5,
+    "output_file": "./outputs\\agent1_Nobody_s_Child_20260726_143845.json"
+  }
+}

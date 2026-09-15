@@ -1,0 +1,171 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-08-07",
+  "research_sources": [
+    "robylon.ai/blog/12-best-retail-ai-agents-2026 (March 2026)",
+    "minami.ai/blog/best-ai-agents-fashion-brands (February 2026)",
+    "gominimal.ai/blog/best-ai-returns-management-tools-ecommerce (2026)",
+    "consently.net/blog/best-cookie-consent-tools (July 2026)",
+    "cybernews.com/privacy-compliance-tools/best-gdpr-software (April 2026)",
+    "fin.ai/learn/best-ai-agents-shopify (2026)",
+    "polaranalytics.com/post/ai-tools-for-ecommerce (July 2026)",
+    "kore.ai/blog/best-agentic-ai-platforms-for-retail-and-ecommerce (June 2026)"
+  ],
+  "agents_by_risk_category": {
+    "data_risk": [
+      {
+        "name": "Prediko",
+        "category": "AI inventory management and forecasting",
+        "what_it_does": "AI-powered inventory forecasting for Shopify brands. Provides accurate stock predictions, automated purchase order recommendations, real-time restock alerts, and inventory reports. Reduces overstock and stockout through data-driven buying decisions.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "Paid plans from approximately £30-£100/month depending on SKU count",
+        "best_for": "Fashion SMEs on Shopify with inconsistent stock data and manual replenishment processes",
+        "effort_to_deploy": "low",
+        "source_verified": "polaranalytics.com/post/ai-tools-for-ecommerce (July 2026)"
+      },
+      {
+        "name": "Gorgias AI Agent",
+        "category": "Customer data unification and support automation",
+        "what_it_does": "Ecommerce-focused helpdesk with deep Shopify admin integration. Unifies order history, customer records, and returns data into a single queryable system. AI agent handles post-purchase queries and creates structured data from previously unstructured interactions.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "From £10/month for starter; scales with ticket volume",
+        "best_for": "Fashion SMEs whose customer data is fragmented across email, phone, and Shopify orders",
+        "effort_to_deploy": "low",
+        "source_verified": "fin.ai/learn/best-ai-agents-shopify (2026)"
+      }
+    ],
+    "regulatory_risk": [
+      {
+        "name": "CookieYes",
+        "category": "Cookie consent and GDPR compliance",
+        "what_it_does": "Automated cookie consent management platform powering over 1.5 million websites. Handles GDPR, CCPA, and Google Consent Mode v2. Auto-blocks scripts before consent. Maintains a clean consent log. Free tier available for small sites.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Free tier available. Pro plans from £10/month per domain",
+        "best_for": "Fashion SMEs with no cookie consent mechanism detected on their website",
+        "effort_to_deploy": "low",
+        "source_verified": "consently.net/blog/best-cookie-consent-tools (July 2026); cybernews.com/privacy-compliance-tools/best-gdpr-software (April 2026)"
+      },
+      {
+        "name": "Termly",
+        "category": "Privacy policy and compliance document generation",
+        "what_it_does": "Automated compliance platform generating GDPR-compliant privacy policies, cookie policies, and terms of service. Scans website for compliance gaps. Embeds compliance widgets directly on site. Best for businesses that need legal documents without hiring a solicitor.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Free plan available with watermark. Paid from £14/month",
+        "best_for": "Fashion SMEs whose privacy policy is outdated, does not mention AI processing, or was never updated since site launch",
+        "effort_to_deploy": "low",
+        "source_verified": "cybernews.com/privacy-compliance-tools/best-gdpr-software (April 2026)"
+      },
+      {
+        "name": "Iubenda",
+        "category": "Comprehensive legal compliance platform",
+        "what_it_does": "All-in-one compliance tool with 2,400+ lawyer-drafted legal clauses covering GDPR, CCPA, and UK data protection law. Automated website scanning for privacy gaps. Cookie consent banner with auto-blocking. Specifically strong for AI processing disclosure requirements.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Free plan available. Pro from £27/year per site",
+        "best_for": "Fashion SMEs that need their privacy policy to explicitly cover AI data processing — directly relevant to UK AI Bill 2026 obligations",
+        "effort_to_deploy": "low",
+        "source_verified": "consently.net/blog/best-cookie-consent-tools (July 2026)"
+      }
+    ],
+    "adoption_risk": [
+      {
+        "name": "Lyro by Tidio",
+        "category": "AI customer service agent with staff-assistance mode",
+        "what_it_does": "AI agent for Shopify stores that handles order status, returns, and product questions. Critically for adoption risk, Lyro trains on your existing FAQ and knowledge base in under 10 minutes and improves from human agent responses — meaning staff see it as a tool that learns from them rather than replacing them. Smart escalation to human agents when needed.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Free plan available. Paid from £29/month",
+        "best_for": "Fashion SMEs where staff resistance to AI is linked to fear of replacement — Lyro's collaborative learning model reduces this friction",
+        "effort_to_deploy": "low",
+        "source_verified": "lindy.ai/blog/best-ai-agents-small-business (August 2026)"
+      },
+      {
+        "name": "Minami AI",
+        "category": "Fully autonomous fashion operations agent",
+        "what_it_does": "Purpose-built for fashion and apparel brands. Autonomous operations agent covering returns, exchanges, sizing issues, and post-purchase workflows. Claims to replace up to 95% of support workload in fashion brands. Built around fashion-specific pain points so staff onboarding is faster than general-purpose tools.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "Pricing on request — positioned for mid-size fashion brands",
+        "best_for": "Fashion SMEs in Mid-Readiness tier where staff resistance is the primary adoption blocker — fashion-specific context reduces the learning curve",
+        "effort_to_deploy": "medium",
+        "source_verified": "minami.ai/blog/best-ai-agents-fashion-brands (February 2026)"
+      }
+    ],
+    "vendor_risk": [
+      {
+        "name": "Loop Returns",
+        "category": "Returns management — revenue retention over refunds",
+        "what_it_does": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "From £59/month. Scales with return volume",
+        "best_for": "Fashion SMEs currently using only Shopify's native returns flow — Loop diversifies beyond the single Shopify vendor dependency for post-purchase",
+        "effort_to_deploy": "low",
+        "source_verified": "gominimal.ai/blog/best-ai-returns-management-tools-ecommerce (2026)"
+      },
+      {
+        "name": "Klaviyo + Mailchimp dual deployment",
+        "category": "Marketing automation vendor diversification strategy",
+        "what_it_does": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV — satisfying Data (Use and Access) Act 2025 portability requirements.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts",
+        "best_for": "Fashion SMEs with only Klaviyo active — adding Mailchimp as a backup is a same-week vendor risk mitigation with no cost for most small brands",
+        "effort_to_deploy": "low",
+        "source_verified": "Research synthesis — Data (Use and Access) Act 2025 portability provisions"
+      }
+    ],
+    "hallucination_risk": [
+      {
+        "name": "Gorgias AI Agent (human-in-the-loop mode)",
+        "category": "AI support with mandatory human review for sensitive outputs",
+        "what_it_does": "Gorgias's 2026 update introduced configurable human oversight controls — the AI drafts responses and flags them for human review before sending for defined categories (size advice, refund decisions, complaints). This is the practical implementation of hallucination risk mitigation for a fashion SME's customer service stack.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "From £10/month",
+        "best_for": "Fashion SMEs deploying AI customer responses for the first time — human review mode prevents AI size advice errors from reaching customers",
+        "effort_to_deploy": "low",
+        "source_verified": "fin.ai/learn/best-ai-agents-shopify (2026)"
+      },
+      {
+        "name": "Fin by Intercom",
+        "category": "RAG-grounded AI agent with 76% resolution rate",
+        "what_it_does": "AI agent using custom-trained retrieval and reranking models (fin-cx-retrieval and fin-cx-reranker) purpose-built for customer service. Answers are grounded in retrieved knowledge base content rather than generated from parametric memory — directly reducing hallucination risk. Achieves 76% average resolution rate with ecommerce brands achieving 70-84%.",
+        "shopify_native": true,
+        "free_tier": false,
+        "pricing": "From £74/month for Intercom Starter",
+        "best_for": "Fashion SMEs that have activated a chat widget but are concerned about AI generating incorrect size or returns advice — Fin's RAG architecture grounds responses in verified product data",
+        "effort_to_deploy": "medium",
+        "source_verified": "fin.ai/learn/best-ai-agents-shopify (2026)"
+      }
+    ],
+    "ethical_risk": [
+      {
+        "name": "ViSenze",
+        "category": "Visual AI search with inclusive sizing support",
+        "what_it_does": "Visual search and product discovery AI for fashion ecommerce. Relevant to ethical risk because ViSenze's visual search engine can be configured to surface size-inclusive alternatives alongside standard results — directly addressing sizing bias risk. Used by ASOS and other fashion retailers.",
+        "shopify_native": false,
+        "free_tier": false,
+        "pricing": "Enterprise pricing — more relevant for Phase 4 deployment",
+        "best_for": "Fashion SMEs in High-Readiness tier deploying AI product discovery where sizing bias is a documented ethical risk",
+        "effort_to_deploy": "high",
+        "source_verified": "kore.ai/blog/best-agentic-ai-platforms-for-retail-and-ecommerce (June 2026)"
+      },
+      {
+        "name": "Iubenda (AI processing disclosure)",
+        "category": "AI ethics and transparency compliance",
+        "what_it_does": "Iubenda's AI processing disclosure templates specifically cover the UK AI Bill 2026 transparency requirements — informing customers when AI is used in decisions affecting them. For fashion SMEs deploying sizing or recommendation AI, this is the lowest-cost path to meeting transparency obligations.",
+        "shopify_native": true,
+        "free_tier": true,
+        "pricing": "Free plan available. Pro from £27/year",
+        "best_for": "Any fashion SME deploying customer-facing AI where the UK AI Bill 2026 transparency obligations apply",
+        "effort_to_deploy": "low",
+        "source_verified": "consently.net/blog/best-cookie-consent-tools (July 2026)"
+      }
+    ]
+  }
+}

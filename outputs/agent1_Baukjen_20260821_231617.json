@@ -1,0 +1,177 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-21T22:16:17.559079+00:00",
+  "company_name": "Baukjen",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 4.94,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": 5.5,
+      "final_score": 5.61,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": "Stream A carries more weight, but Stream B's score is high due to the presence of multiple analytics tools. However, Stream A's score is lower, indicating potential concerns or inconsistencies in data foundations. A reconciled score of 5.5 balances the two perspectives, acknowledging the strengths of Stream B while not entirely dismissing the concerns raised by Stream A."
+    },
+    "process_digitisation": {
+      "stream_a_score": 8.31,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": 7.35,
+      "final_score": 7.37,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": "Stream A (owner interview) score carries more weight, but Stream B evidence suggests a lower level of digitisation. Trustpilot review widget (score=6) and active Facebook ads (score=5) indicate some level of digitisation, but not as comprehensive as the owner interview score suggests. Averaging the scores and adjusting for Stream A's higher weight, the reconciled score is 7.35."
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 5.5,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.1,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.7s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.34,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6)",
+        "[website] Cookie consent tool detected: Generic cookie-consent (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] No filings in 1872 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 3.81,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": 4.5,
+      "final_score": 4.64,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": "Stream A (owner interview) score of 3.81 carries more weight due to internal operational data. Stream B (public data) score of 6.33 is high due to the presence of a personalisation/recommendation engine and marketing automation tools. However, the Stream B score is reduced to 5.33 (midpoint between 6.33 and 3.81) to reflect the owner's lower self-assessment. The presence of active Facebook ads is not directly contradictory to the owner's claim, but it does not add significant value to the Stream B score. The reconciled score is a weighted average of the two scores, with Stream A carrying more weight."
+    }
+  },
+  "overall_score": 6.07,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Baukjen's overall score of 6.07 indicates a mid-readiness position, with opportunities to improve digital capability and identify practical AI opportunities. The company's primary challenge of improving digital capability is reflected in the low scores for data foundations and AI tool experience. Public data enrichment revealed a lack of transparency in Baukjen's website, hindering its digital presence.",
+  "top_gaps": [
+    {
+      "pillar": "data_foundations",
+      "score": 5.61,
+      "dominant_stream": "C",
+      "impact": "Inability to leverage data-driven insights for business decisions"
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 4.64,
+      "dominant_stream": "C",
+      "impact": "Difficulty in selecting and implementing AI tools for business needs"
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.37,
+      "dominant_stream": "C",
+      "impact": "Potential for inefficient manual processes to hinder business agility"
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 6.1,
+      "dominant_stream": "A",
+      "advantage": "Robust technology infrastructure to support digital transformation"
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "advantage": "Highly skilled staff to drive digital innovation"
+    }
+  ],
+  "data_confidence_note": "With 3 Stream C reconciliations performed, affecting data foundations, AI tool experience, and process digitisation pillars, moderate confidence should be placed in this overall assessment.",
+  "fashion_signals": [
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Baukjen's product line complexity matters in fashion AI deployment because it affects the scalability and generalizability of AI models. Complex product lines with many styles, sizes, and fabrics can make it challenging to develop accurate AI-driven recommendations, sizing, and styling.",
+      "evidence": "Baukjen's product line is relatively complex with multiple brands (Baukjen and Blueblush) and a wide range of products. This complexity might hinder the effectiveness of AI-driven product recommendations and sizing solutions."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Returns pattern visibility is crucial in fashion AI deployment as it enables retailers to identify trends, optimize product offerings, and improve customer satisfaction. Baukjen's ability to track and analyze returns patterns can inform AI-driven product recommendations and inventory management.",
+      "evidence": "Baukjen's returns data is not explicitly mentioned in the provided information. However, as a fashion retailer, it's likely that returns patterns are a significant concern. Baukjen might benefit from leveraging AI to analyze returns data and make data-driven decisions."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Supplier data integration is critical in fashion AI deployment as it enables retailers to access real-time inventory, production, and shipping information. Baukjen's ability to integrate supplier data into its AI systems can improve supply chain visibility, reduce lead times, and enhance product availability.",
+      "evidence": "Baukjen's supplier data integration capabilities are not explicitly mentioned. However, the company's relatively low score in 'technology infrastructure' (6.1) might indicate some challenges in integrating supplier data into its systems."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "Generic cookie-consent",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": true,
+    "chat_widget_provider": "Zendesk",
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "dissolved",
+    "days_since_last_filing": 1872,
+    "google_review_count": null,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "companies_house",
+      "facebook_ads"
+    ],
+    "sources_failed": [
+      "google_profile"
+    ],
+    "stream_c_reconciliations": 3,
+    "enrichment_duration_seconds": 7.25
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 13,
+    "llm_calls_made": 5,
+    "output_file": "./outputs\\agent1_Baukjen_20260821_231617.json"
+  }
+}

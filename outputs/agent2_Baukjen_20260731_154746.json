@@ -1,0 +1,186 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-31T14:47:46.179433+00:00",
+  "company_name": "Baukjen",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.39,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_003",
+      "title": "AI Product Description Writing",
+      "justification": "Baukjen can leverage AI to generate high-quality product descriptions, enhancing their sustainability credentials by providing accurate and detailed information about the materials used in their products.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-100",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": {
+        "mode": "market_connect",
+        "status": "connected",
+        "deliverables": [
+          {
+            "name": "configuration_guide_claude_api",
+            "type": "markdown",
+            "content": "To configure Claude API, start by integrating it with your existing Shopify store through Zapier or a similar integration tool. Then, set up custom templates for product descriptions that highlight Baukjen's sustainability credentials. Finally, train the AI model on your brand's voice and tone to ensure consistency across all generated content.",
+            "instructions": "Configuration guide for Claude API, ranked #1 for this business."
+          },
+          {
+            "name": "configuration_guide_jasper",
+            "type": "markdown",
+            "content": "To configure Claude API, start by integrating it with your existing Shopify store through Zapier or a similar integration tool. Then, set up custom templates for product descriptions that highlight Baukjen's sustainability credentials. Finally, train the AI model on your brand's voice and tone to ensure consistency across all generated content.",
+            "instructions": "Configuration guide for Jasper, ranked #2 for this business."
+          },
+          {
+            "name": "configuration_guide_chatgpt_api",
+            "type": "markdown",
+            "content": "To configure Claude API, start by integrating it with your existing Shopify store through Zapier or a similar integration tool. Then, set up custom templates for product descriptions that highlight Baukjen's sustainability credentials. Finally, train the AI model on your brand's voice and tone to ensure consistency across all generated content.",
+            "instructions": "Configuration guide for ChatGPT API, ranked #3 for this business."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Integrate Claude API with Shopify using Zapier",
+          "Set up custom templates for product descriptions highlighting sustainability credentials",
+          "Train the AI model on Baukjen's brand voice and tone"
+        ],
+        "estimated_activation_time": "this week",
+        "market_tools_recommended": [
+          {
+            "rank": 1,
+            "tool_name": "Claude API",
+            "why_this_business": "Baukjen can leverage Claude's nuanced understanding of fashion copy to create on-brand product descriptions that align with their sustainability credentials.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3500-\u00a31000",
+            "shopify_native": false
+          },
+          {
+            "rank": 2,
+            "tool_name": "Jasper",
+            "why_this_business": "Baukjen can use Jasper's marketing-focused templates to create engaging product descriptions that highlight their sustainable products, but may require more customization.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3300-\u00a3800",
+            "shopify_native": false
+          },
+          {
+            "rank": 3,
+            "tool_name": "ChatGPT API",
+            "why_this_business": "While ChatGPT can generate product descriptions, its lack of Shopify integration and higher cost may not be the best fit for Baukjen's established tech budget.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3600-\u00a31200",
+            "shopify_native": false
+          }
+        ],
+        "llm_calls_made": 1,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "Baukjen can improve their sustainability credentials by showcasing customer reviews and ratings, which can be collected and displayed automatically using AI, highlighting the positive impact of their products on customers.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "Baukjen can enhance their sustainability credentials by using AI to capture reasons for returns, enabling them to identify areas for improvement and make data-driven decisions to reduce waste.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "Baukjen can leverage AI to provide accurate size guides and recommendations, improving the customer experience and reducing returns, which is a key aspect of their sustainability credentials.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "justification": "Baukjen can use AI to provide customers with styling advice and recommendations, enhancing their sustainability credentials by promoting sustainable fashion choices and reducing the environmental impact of their products.",
+      "effort": "medium",
+      "implementation_weeks": 4,
+      "cost_estimate_gbp": "1500-5000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "Baukjen can leverage AI to improve demand forecasting, enabling them to reduce waste and overproduction, which is a key aspect of their sustainability credentials.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "Baukjen can use AI to optimize pricing in real-time, improving revenue and reducing waste, which is a key aspect of their sustainability credentials.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "Score gap in data foundations pillar prevents deployment, Baukjen needs to improve their data quality and availability to unlock this opportunity.",
+      "unlock_condition": "data_foundations > 7.0"
+    }
+  ],
+  "quick_win_summary": "Baukjen should start by implementing AI Product Description Writing (uc_003) as it requires low effort and can be implemented quickly, enhancing their sustainability credentials through accurate product information.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 1,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 1
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Baukjen_20260731_154746.json"
+  }
+}

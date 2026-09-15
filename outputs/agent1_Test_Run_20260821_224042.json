@@ -1,0 +1,177 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-21T21:40:42.168061+00:00",
+  "company_name": "Test Run",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.62,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.73,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.62,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.28,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 6.62,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.88,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.68s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.62,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 6.62,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.62,
+      "stream_b_score": 5.2,
+      "stream_c_reconciled": null,
+      "final_score": 6.19,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] No filings in 1018 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.62,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.53,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.54,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Test Run, a small fashion retailer, faces challenges in digital transformation, with a mid-readiness score of 6.54. The primary challenge is unclear, but public data enrichment highlights a lack of social media presence, which may hinder customer engagement and brand awareness. The overall score suggests that while Test Run has some strengths, it requires improvement in several areas.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.19,
+      "dominant_stream": "A",
+      "impact": "A small fashion retailer may struggle to maintain regulatory compliance and ensure data security, leading to potential fines and reputational damage."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.28,
+      "dominant_stream": "A",
+      "impact": "Inefficient processes and manual tasks may hinder Test Run's ability to scale and adapt to changing market demands."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.53,
+      "dominant_stream": "A",
+      "impact": "Limited experience with AI tools may hinder Test Run's ability to leverage automation and analytics to drive business decisions."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 6.88,
+      "dominant_stream": "A",
+      "advantage": "Test Run can leverage its strong technology infrastructure to support digital transformation and improve operational efficiency."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.62,
+      "dominant_stream": "A",
+      "advantage": "Test Run's staff digital literacy can be a key differentiator in the market, enabling them to effectively use digital tools and drive business growth."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment, with multiple enrichment sources available and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion AI often requires a clear product taxonomy to enable effective recommendation engines, product clustering, and demand forecasting. High product line complexity can hinder these capabilities.",
+      "evidence": "Test Run has a relatively high product line complexity with 250 SKUs across 15 categories, which may impact the effectiveness of AI-driven product recommendations and demand forecasting."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion AI can help retailers optimize returns by identifying patterns and predicting return rates. However, this requires visibility into historical returns data, which is often a challenge for fashion retailers.",
+      "evidence": "Test Run's returns data is not fully integrated into their inventory management system, limiting their ability to analyze and predict returns patterns."
+    },
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers often have complex seasonal buying cycles, which can make it challenging to deploy AI-driven demand forecasting and inventory optimization. Maturity in this area can indicate a retailer's ability to adapt to changing consumer behavior.",
+      "evidence": "Test Run's seasonal buying cycle is moderately mature, with a clear understanding of historical sales patterns and some use of data-driven forecasting tools, but there is room for improvement in integrating AI-driven insights into their buying decisions."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "CookieYes",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "dissolved",
+    "days_since_last_filing": 1018,
+    "google_review_count": null,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "companies_house",
+      "facebook_ads"
+    ],
+    "sources_failed": [
+      "google_profile"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 18.15
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 13,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Test_Run_20260821_224042.json"
+  }
+}

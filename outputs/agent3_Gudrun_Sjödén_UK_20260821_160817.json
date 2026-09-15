@@ -1,0 +1,622 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-21T15:08:17.077711+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "overall_score": 4.66,
+  "readiness_tier": "Early-Stage",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "MEDIUM",
+      "pillar": "data_foundations",
+      "pillar_score": 5.78,
+      "trigger_reason": "data_foundations final_score=5.78 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will implement data validation checks on their custom platform to ensure accurate and consistent data entry, particularly for customer information and order history.",
+      "regulatory_ref": "GDPR Article 5: Data Quality and Integrity",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_found=False or cookie_consent_found=False confirmed by live website scan",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will update their website to include a clear and accessible privacy policy and obtain explicit cookie consent from users, in compliance with UK GDPR regulations.",
+      "regulatory_ref": "UK GDPR: Article 5(3) - Information to be provided where personal data are collected from the data subject",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "MEDIUM",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 4.17,
+      "trigger_reason": "staff_digital_literacy final_score=4.17 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will provide regular digital literacy training sessions for staff, focusing on the specific needs of their older customer base and the custom platform's features and functionality.",
+      "regulatory_ref": "Equality Act 2010: Duty to Make Reasonable Adjustments",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "LOW",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 3.25,
+      "trigger_reason": "marketing_automation_tools=[], platform_detected=custom_or_unknown",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will conduct a thorough review of their marketing automation tools and consider implementing a third-party platform to enhance their digital customer experience and improve data-driven decision making.",
+      "regulatory_ref": "ISO 27001: Information Security Management",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=False, ai_tool_experience final_score=3.25",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will integrate a reputable AI-powered chat widget on their website to provide accurate and helpful customer support, while also monitoring and addressing any potential AI-related issues.",
+      "regulatory_ref": "GDPR Article 22: Automated Decision-Making",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_mentions_ai=False, governance_compliance final_score=4.86",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK will review and update their privacy policy to explicitly mention the use of AI and ensure compliance with relevant regulations, while also conducting regular bias and fairness assessments on their AI-driven systems.",
+      "regulatory_ref": "UK Equality Act 2010: Duty to Promote Equality of Opportunity",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 3,
+  "low_severity_count": 2,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "regulatory_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "governance_compliance"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "Capturing returns reasons will help Gudrun Sj\u00f6d\u00e9n UK to understand customer pain points and improve their digital customer experience, which is crucial for modernising their digital presence while maintaining loyalty of an older customer base (process_digitisation pillar score: 5.21).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "complete",
+          "deliverables": [
+            {
+              "name": "returns_reason_codes",
+              "type": "json",
+              "content": {
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      "Too Small",
+                      "Too Large",
+                      "Uncomfortable Fit",
+                      "Runs Small",
+                      "Runs Large"
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality",
+                    "sub_reasons": [
+                      "Pilling or Fuzzing",
+                      "Shrinking or Loss of Shape",
+                      "Uncomfortable Texture",
+                      "Not as Described"
+                    ]
+                  },
+                  {
+                    "code": "COLOUR",
+                    "label": "Colour Issue",
+                    "sub_reasons": [
+                      "Not as Expected",
+                      "Not Matching Product Image",
+                      "Fading or Discolouration"
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style or Design Issue",
+                    "sub_reasons": [
+                      "Not as Described",
+                      "Not Suitable for Occasion",
+                      "Not Flattering"
+                    ]
+                  },
+                  {
+                    "code": "STYLING",
+                    "label": "Styling or Care Instructions",
+                    "sub_reasons": [
+                      "Not Clear or Accurate",
+                      "Not Suitable for Customer's Needs"
+                    ]
+                  },
+                  {
+                    "code": "PACKAGING",
+                    "label": "Packaging Issue",
+                    "sub_reasons": [
+                      "Damaged or Defective",
+                      "Not as Expected"
+                    ]
+                  },
+                  {
+                    "code": "DELIVERY",
+                    "label": "Delivery Issue",
+                    "sub_reasons": [
+                      "Late or Missed Delivery",
+                      "Incorrect or Missing Items"
+                    ]
+                  },
+                  {
+                    "code": "AUTHENTICATION",
+                    "label": "Product Authentication",
+                    "sub_reasons": [
+                      "Counterfeit or Fake Product",
+                      "Not Genuine Gudrun Sj\u00f6d\u00e9n Product"
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Import these reason codes into your returns form or helpdesk tool."
+            },
+            {
+              "name": "customer_form_structure",
+              "type": "json",
+              "content": {
+                "title": "Return Reason",
+                "description": "Please select the reason for your return. We're here to help and want to make things right.",
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      {
+                        "code": "SIZE_TOO_SMALL",
+                        "label": "Too Small"
+                      },
+                      {
+                        "code": "SIZE_TOO_LARGE",
+                        "label": "Too Large"
+                      },
+                      {
+                        "code": "SIZE_UNCOMFORTABLE",
+                        "label": "Uncomfortable Fit"
+                      },
+                      {
+                        "code": "SIZE_RUNS_SMALL",
+                        "label": "Runs Small"
+                      },
+                      {
+                        "code": "SIZE_RUNS_LARGE",
+                        "label": "Runs Large"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality",
+                    "sub_reasons": [
+                      {
+                        "code": "FABRIC_PILLING",
+                        "label": "Pilling or Fuzzing"
+                      },
+                      {
+                        "code": "FABRIC_SHRINKAGE",
+                        "label": "Shrinking or Loss of Shape"
+                      },
+                      {
+                        "code": "FABRIC_TEXTURE",
+                        "label": "Uncomfortable Texture"
+                      },
+                      {
+                        "code": "FABRIC_DESCRIPTION",
+                        "label": "Not as Described"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "COLOUR",
+                    "label": "Colour Issue",
+                    "sub_reasons": [
+                      {
+                        "code": "COLOUR_NOT_AS_EXPECTED",
+                        "label": "Not as Expected"
+                      },
+                      {
+                        "code": "COLOUR_IMAGE_MATCH",
+                        "label": "Not Matching Product Image"
+                      },
+                      {
+                        "code": "COLOUR_FADED",
+                        "label": "Fading or Discolouration"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style or Design Issue",
+                    "sub_reasons": [
+                      {
+                        "code": "STYLE_DESCRIPTION",
+                        "label": "Not as Described"
+                      },
+                      {
+                        "code": "STYLE_OCCASION",
+                        "label": "Not Suitable for Occasion"
+                      },
+                      {
+                        "code": "STYLE_FLATTERING",
+                        "label": "Not Flattering"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "STYLING",
+                    "label": "Styling or Care Instructions",
+                    "sub_reasons": [
+                      {
+                        "code": "STYLING_INSTRUCTIONS",
+                        "label": "Not Clear or Accurate"
+                      },
+                      {
+                        "code": "STYLING_SUITABILITY",
+                        "label": "Not Suitable for Customer's Needs"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "PACKAGING",
+                    "label": "Packaging Issue",
+                    "sub_reasons": [
+                      {
+                        "code": "PACKAGING_DAMAGE",
+                        "label": "Damaged or Defective"
+                      },
+                      {
+                        "code": "PACKAGING_DESCRIPTION",
+                        "label": "Not as Expected"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "DELIVERY",
+                    "label": "Delivery Issue",
+                    "sub_reasons": [
+                      {
+                        "code": "DELIVERY_LATENESS",
+                        "label": "Late or Missed Delivery"
+                      },
+                      {
+                        "code": "DELIVERY_ITEMS",
+                        "label": "Incorrect or Missing Items"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "AUTHENTICATION",
+                    "label": "Product Authentication",
+                    "sub_reasons": [
+                      {
+                        "code": "AUTHENTICATION_COUNTERFEIT",
+                        "label": "Counterfeit or Fake Product"
+                      },
+                      {
+                        "code": "AUTHENTICATION_GENUINENESS",
+                        "label": "Not Genuine Gudrun Sj\u00f6d\u00e9n Product"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+            },
+            {
+              "name": "shopify_integration_guide",
+              "type": "markdown",
+              "content": {
+                "instructions": [
+                  "Log in to the custom_or_unknown admin interface and navigate to the 'Settings' section.",
+                  "Click on 'Custom Code' and then select 'Add a new code snippet'.",
+                  "In the 'Code snippet' field, paste the following HTML code to embed the returns reason capture form:",
+                  "<form id='returns-reason-form'>",
+                  "  <label for='returns-reason'>Returns Reason:</label>",
+                  "  <select id='returns-reason' name='returns-reason'>",
+                  "    <option value='defective'>Defective</option>",
+                  "    <option value='not-as-described'>Not as described</option>",
+                  "    <option value='change-of-mind'>Change of mind</option>",
+                  "    <option value='other'>Other (please specify)</option>",
+                  "  </select>",
+                  "  <textarea id='returns-reason-comment' name='returns-reason-comment'></textarea>",
+                  "  <button type='submit'>Submit</button>",
+                  "</form>",
+                  "In the 'JavaScript' field, paste the following code to handle form submission:",
+                  "<script>",
+                  "  const returnsReasonForm = document.getElementById('returns-reason-form');",
+                  "  returnsReasonForm.addEventListener('submit', (e) => {",
+                  "    e.preventDefault();",
+                  "    const returnsReason = document.getElementById('returns-reason').value;",
+                  "    const returnsReasonComment = document.getElementById('returns-reason-comment').value;",
+                  "    // Send the returns reason and comment to your server-side logic for processing",
+                  "  });",
+                  "</script>",
+                  "Save the code snippet and navigate to the 'Returns' section of the custom_or_unknown interface.",
+                  "In the 'Returns flow' settings, select the code snippet you just created and click 'Save'.",
+                  "The returns reason capture form should now be embedded in the returns flow."
+                ]
+              },
+              "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+            },
+            {
+              "name": "weekly_summary_template",
+              "type": "markdown",
+              "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+              "instructions": "Use this template for a weekly email reviewing returns data."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Create Typeform account at typeform.com",
+            "Copy the form structure JSON below into a new form",
+            "Add the embed code to your returns page on custom_or_unknown",
+            "Set up a weekly calendar reminder to review the summary report"
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [],
+          "llm_calls_made": 3,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "Automated review collection will help Gudrun Sj\u00f6d\u00e9n UK to gather customer feedback and improve their digital customer experience, which is crucial for modernising their digital presence while maintaining loyalty of an older customer base (process_digitisation pillar score: 5.21).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "Email marketing automation flows will help Gudrun Sj\u00f6d\u00e9n UK to improve their customer engagement and loyalty, which is crucial for maintaining the loyalty of an older customer base (ai_tool_experience pillar score: 3.25).",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "A size guide chatbot will help Gudrun Sj\u00f6d\u00e9n UK to improve their customer experience and provide better support to their older customer base (data_foundations pillar score: 5.78).",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The actual score for data_foundations pillar is 5.78, which is below the required minimum score of 6.0.",
+        "unlock_condition": "data_foundations pillar score needs to reach 6.0"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The actual score for data_foundations pillar is 5.78, which is below the required minimum score of 7.0.",
+        "unlock_condition": "data_foundations pillar score needs to reach 7.0"
+      },
+      {
+        "id": "uc_007",
+        "title": "WhatsApp Styling Assistant",
+        "reason": "The actual score for ai_tool_experience pillar is 3.25, which is below the required minimum score of 5.0.",
+        "unlock_condition": "ai_tool_experience pillar score needs to reach 5.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The actual score for technology_infrastructure pillar is 4.66, which is below the required minimum score of 7.0.",
+        "unlock_condition": "technology_infrastructure pillar score needs to reach 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Risk Remediation",
+      "timeframe_weeks": 2,
+      "description": "Address the 1 HIGH-severity risk(s) identified in the risk register before any Agent 2 executor output goes live. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is the roadmap for the Fashion SME's AI adoption:\n\n**Phase 1: Readiness Assessment (Weeks 1-4)**\n\n1. **Vendor Risk Mitigation**: Deploy Loop Returns to reduce refund leakage and provide structured returns data.\n2. **Adoption Risk Mitigation**: Implement Lyro by Tidio to address staff resistance to AI, using its collaborative learning model.\n3. **Hallucination Risk Mitigation**: Deploy Gorgias AI Agent in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\n4. **Ethical Risk Mitigation**: Configure ViSenze's visual search engine to surface size-inclusive alternatives.\n\n**Phase 2: Compliance and Transparency (Weeks 5-8)**\n\n1. **Compliance**: Deploy Termly or Iubenda to generate GDPR-compliant privacy policies, cookie policies, and terms of service.\n2. **Transparency**: Use Iubenda's AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. **AI Agent Deployment**: Deploy Fin by Intercom, using its RAG-grounded architecture to reduce hallucination risk.\n2. **Vendor Diversification**: Deploy Klaviyo + Mailchimp dual deployment to ensure no single marketing automation vendor holds all customer communication.\n\n**Phase 4: Enterprise-Scale Deployment (After Week 12)**\n\n1. **Enterprise-Scale Deployment**: Deploy Minami AI, a fully autonomous fashion operations agent, to replace up to 95% of support workload.\n2. **Vendor Risk Mitigation**: Consider deploying Loop Returns at an enterprise scale to further reduce refund leakage.\n\nThis roadmap assumes a phased approach to AI adoption, starting with readiness assessment and vendor risk mitigation, followed by compliance and transparency measures, AI agent deployment, and finally, enterprise-scale deployment. The phases are designed to be completed within a 12-week period, with the option to extend the timeline as needed.\nRepair attempt response:\nHere is the JSON response:\n\n```json\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate HIGH-severity risks to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\n        \"Vendor risk mitigation\",\n        \"Adoption risk mitigation\",\n        \"Hallucination risk mitigation\",\n        \"Ethical risk mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Mitigate vendor risk by reducing refund leakage and providing structured returns data.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Mitigate adoption risk by addressing staff resistance to AI using its collaborative learning model.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Mitigate hallucination risk by deploying in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Mitigate ethical risk by configuring its visual search engine to surface size-inclusive alternatives.\",\n          \"effort\": \"low\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate executor outputs already built to ensure a smooth transition to AI adoption.\",\n      \"deliverables\": [\n        \"Compliance\",\n        \"Transparency\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Termly\",\n          \"what_it_does_here\": \"Generate GDPR-compliant privacy policies, cookie policies, and terms of service.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"49\"\n        },\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Use AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy remaining executable opportunities to maximize AI adoption.\",\n      \"deliverables\": [\n        \"AI Agent Deployment\",\n        \"Vendor Diversification\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy AI agent using its RAG-grounded architecture to reduce hallucination risk.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Deploy marketing automation vendor to ensure no single vendor holds all customer communication.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 8,\n      \"description\": \"Deploy deferred opportunities once unlock conditions are met.\",\n      \"deliverables\": [\n        \"Enterprise-Scale Deployment\",\n        \"Vendor Risk Mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Minami AI\",\n          \"what_it_does_here\": \"Deploy fully autonomous fashion operations agent to replace up to 95% of support workload.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"499\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Deploy at an enterprise scale to further reduce refund leakage.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 20\n}\n```)]",
+      "deliverables": [
+        "Remediation of regulatory_risk"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "CookieYes",
+          "what_it_does_here": "Automated cookie consent management platform powering over 1.5 million websites. Handles GDPR, CCPA, and Google Consent Mode v2. Auto-blocks scripts before consent. Maintains a clean consent log. Free tier available for small sites.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free tier available. Pro plans from \u00a310/month per domain"
+        },
+        {
+          "name": "Termly",
+          "what_it_does_here": "Automated compliance platform generating GDPR-compliant privacy policies, cookie policies, and terms of service. Scans website for compliance gaps. Embeds compliance widgets directly on site. Best for businesses that need legal documents without hiring a solicitor.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available with watermark. Paid from \u00a314/month"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Activate Built Executor Outputs",
+      "timeframe_weeks": 1,
+      "description": "Go live with the 1 opportunity(ies) Agent 2 has already built and connected. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is the roadmap for the Fashion SME's AI adoption:\n\n**Phase 1: Readiness Assessment (Weeks 1-4)**\n\n1. **Vendor Risk Mitigation**: Deploy Loop Returns to reduce refund leakage and provide structured returns data.\n2. **Adoption Risk Mitigation**: Implement Lyro by Tidio to address staff resistance to AI, using its collaborative learning model.\n3. **Hallucination Risk Mitigation**: Deploy Gorgias AI Agent in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\n4. **Ethical Risk Mitigation**: Configure ViSenze's visual search engine to surface size-inclusive alternatives.\n\n**Phase 2: Compliance and Transparency (Weeks 5-8)**\n\n1. **Compliance**: Deploy Termly or Iubenda to generate GDPR-compliant privacy policies, cookie policies, and terms of service.\n2. **Transparency**: Use Iubenda's AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. **AI Agent Deployment**: Deploy Fin by Intercom, using its RAG-grounded architecture to reduce hallucination risk.\n2. **Vendor Diversification**: Deploy Klaviyo + Mailchimp dual deployment to ensure no single marketing automation vendor holds all customer communication.\n\n**Phase 4: Enterprise-Scale Deployment (After Week 12)**\n\n1. **Enterprise-Scale Deployment**: Deploy Minami AI, a fully autonomous fashion operations agent, to replace up to 95% of support workload.\n2. **Vendor Risk Mitigation**: Consider deploying Loop Returns at an enterprise scale to further reduce refund leakage.\n\nThis roadmap assumes a phased approach to AI adoption, starting with readiness assessment and vendor risk mitigation, followed by compliance and transparency measures, AI agent deployment, and finally, enterprise-scale deployment. The phases are designed to be completed within a 12-week period, with the option to extend the timeline as needed.\nRepair attempt response:\nHere is the JSON response:\n\n```json\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate HIGH-severity risks to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\n        \"Vendor risk mitigation\",\n        \"Adoption risk mitigation\",\n        \"Hallucination risk mitigation\",\n        \"Ethical risk mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Mitigate vendor risk by reducing refund leakage and providing structured returns data.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Mitigate adoption risk by addressing staff resistance to AI using its collaborative learning model.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Mitigate hallucination risk by deploying in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Mitigate ethical risk by configuring its visual search engine to surface size-inclusive alternatives.\",\n          \"effort\": \"low\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate executor outputs already built to ensure a smooth transition to AI adoption.\",\n      \"deliverables\": [\n        \"Compliance\",\n        \"Transparency\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Termly\",\n          \"what_it_does_here\": \"Generate GDPR-compliant privacy policies, cookie policies, and terms of service.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"49\"\n        },\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Use AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy remaining executable opportunities to maximize AI adoption.\",\n      \"deliverables\": [\n        \"AI Agent Deployment\",\n        \"Vendor Diversification\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy AI agent using its RAG-grounded architecture to reduce hallucination risk.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Deploy marketing automation vendor to ensure no single vendor holds all customer communication.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 8,\n      \"description\": \"Deploy deferred opportunities once unlock conditions are met.\",\n      \"deliverables\": [\n        \"Enterprise-Scale Deployment\",\n        \"Vendor Risk Mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Minami AI\",\n          \"what_it_does_here\": \"Deploy fully autonomous fashion operations agent to replace up to 95% of support workload.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"499\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Deploy at an enterprise scale to further reduce refund leakage.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 20\n}\n```)]",
+      "deliverables": [
+        "Returns Reason Capture"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001",
+      "recommended_ai_agents": [
+        {
+          "name": "Lyro by Tidio",
+          "what_it_does_here": "AI agent for Shopify stores that handles order status, returns, and product questions. Critically for adoption risk, Lyro trains on your existing FAQ and knowledge base in under 10 minutes and improves from human agent responses \u2014 meaning staff see it as a tool that learns from them rather than replacing them. Smart escalation to human agents when needed.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Paid from \u00a329/month"
+        },
+        {
+          "name": "Gorgias AI Agent (human-in-the-loop mode)",
+          "what_it_does_here": "Gorgias's 2026 update introduced configurable human oversight controls \u2014 the AI drafts responses and flags them for human review before sending for defined categories (size advice, refund decisions, complaints). This is the practical implementation of hallucination risk mitigation for a fashion SME's customer service stack.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a310/month"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Deploy Remaining Executable Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Build out the remaining 3 executable opportunity(ies) survivors identified by Agent 2. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is the roadmap for the Fashion SME's AI adoption:\n\n**Phase 1: Readiness Assessment (Weeks 1-4)**\n\n1. **Vendor Risk Mitigation**: Deploy Loop Returns to reduce refund leakage and provide structured returns data.\n2. **Adoption Risk Mitigation**: Implement Lyro by Tidio to address staff resistance to AI, using its collaborative learning model.\n3. **Hallucination Risk Mitigation**: Deploy Gorgias AI Agent in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\n4. **Ethical Risk Mitigation**: Configure ViSenze's visual search engine to surface size-inclusive alternatives.\n\n**Phase 2: Compliance and Transparency (Weeks 5-8)**\n\n1. **Compliance**: Deploy Termly or Iubenda to generate GDPR-compliant privacy policies, cookie policies, and terms of service.\n2. **Transparency**: Use Iubenda's AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. **AI Agent Deployment**: Deploy Fin by Intercom, using its RAG-grounded architecture to reduce hallucination risk.\n2. **Vendor Diversification**: Deploy Klaviyo + Mailchimp dual deployment to ensure no single marketing automation vendor holds all customer communication.\n\n**Phase 4: Enterprise-Scale Deployment (After Week 12)**\n\n1. **Enterprise-Scale Deployment**: Deploy Minami AI, a fully autonomous fashion operations agent, to replace up to 95% of support workload.\n2. **Vendor Risk Mitigation**: Consider deploying Loop Returns at an enterprise scale to further reduce refund leakage.\n\nThis roadmap assumes a phased approach to AI adoption, starting with readiness assessment and vendor risk mitigation, followed by compliance and transparency measures, AI agent deployment, and finally, enterprise-scale deployment. The phases are designed to be completed within a 12-week period, with the option to extend the timeline as needed.\nRepair attempt response:\nHere is the JSON response:\n\n```json\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate HIGH-severity risks to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\n        \"Vendor risk mitigation\",\n        \"Adoption risk mitigation\",\n        \"Hallucination risk mitigation\",\n        \"Ethical risk mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Mitigate vendor risk by reducing refund leakage and providing structured returns data.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Mitigate adoption risk by addressing staff resistance to AI using its collaborative learning model.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Mitigate hallucination risk by deploying in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Mitigate ethical risk by configuring its visual search engine to surface size-inclusive alternatives.\",\n          \"effort\": \"low\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate executor outputs already built to ensure a smooth transition to AI adoption.\",\n      \"deliverables\": [\n        \"Compliance\",\n        \"Transparency\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Termly\",\n          \"what_it_does_here\": \"Generate GDPR-compliant privacy policies, cookie policies, and terms of service.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"49\"\n        },\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Use AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy remaining executable opportunities to maximize AI adoption.\",\n      \"deliverables\": [\n        \"AI Agent Deployment\",\n        \"Vendor Diversification\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy AI agent using its RAG-grounded architecture to reduce hallucination risk.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Deploy marketing automation vendor to ensure no single vendor holds all customer communication.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 8,\n      \"description\": \"Deploy deferred opportunities once unlock conditions are met.\",\n      \"deliverables\": [\n        \"Enterprise-Scale Deployment\",\n        \"Vendor Risk Mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Minami AI\",\n          \"what_it_does_here\": \"Deploy fully autonomous fashion operations agent to replace up to 95% of support workload.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"499\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Deploy at an enterprise scale to further reduce refund leakage.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 20\n}\n```)]",
+      "deliverables": [
+        "Automated Review Collection",
+        "Email Marketing Automation Flows",
+        "Size Guide Chatbot"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_004",
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        },
+        {
+          "name": "Klaviyo + Mailchimp dual deployment",
+          "what_it_does_here": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV \u2014 satisfying Data (Use and Access) Act 2025 portability requirements.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Future Opportunities (Deferred)",
+      "timeframe_weeks": 6,
+      "description": "4 opportunity(ies) remain deferred until prerequisite pillar scores improve. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is the roadmap for the Fashion SME's AI adoption:\n\n**Phase 1: Readiness Assessment (Weeks 1-4)**\n\n1. **Vendor Risk Mitigation**: Deploy Loop Returns to reduce refund leakage and provide structured returns data.\n2. **Adoption Risk Mitigation**: Implement Lyro by Tidio to address staff resistance to AI, using its collaborative learning model.\n3. **Hallucination Risk Mitigation**: Deploy Gorgias AI Agent in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\n4. **Ethical Risk Mitigation**: Configure ViSenze's visual search engine to surface size-inclusive alternatives.\n\n**Phase 2: Compliance and Transparency (Weeks 5-8)**\n\n1. **Compliance**: Deploy Termly or Iubenda to generate GDPR-compliant privacy policies, cookie policies, and terms of service.\n2. **Transparency**: Use Iubenda's AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. **AI Agent Deployment**: Deploy Fin by Intercom, using its RAG-grounded architecture to reduce hallucination risk.\n2. **Vendor Diversification**: Deploy Klaviyo + Mailchimp dual deployment to ensure no single marketing automation vendor holds all customer communication.\n\n**Phase 4: Enterprise-Scale Deployment (After Week 12)**\n\n1. **Enterprise-Scale Deployment**: Deploy Minami AI, a fully autonomous fashion operations agent, to replace up to 95% of support workload.\n2. **Vendor Risk Mitigation**: Consider deploying Loop Returns at an enterprise scale to further reduce refund leakage.\n\nThis roadmap assumes a phased approach to AI adoption, starting with readiness assessment and vendor risk mitigation, followed by compliance and transparency measures, AI agent deployment, and finally, enterprise-scale deployment. The phases are designed to be completed within a 12-week period, with the option to extend the timeline as needed.\nRepair attempt response:\nHere is the JSON response:\n\n```json\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate HIGH-severity risks to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\n        \"Vendor risk mitigation\",\n        \"Adoption risk mitigation\",\n        \"Hallucination risk mitigation\",\n        \"Ethical risk mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Mitigate vendor risk by reducing refund leakage and providing structured returns data.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Mitigate adoption risk by addressing staff resistance to AI using its collaborative learning model.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Mitigate hallucination risk by deploying in human-in-the-loop mode to prevent AI-generated errors from reaching customers.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Mitigate ethical risk by configuring its visual search engine to surface size-inclusive alternatives.\",\n          \"effort\": \"low\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate executor outputs already built to ensure a smooth transition to AI adoption.\",\n      \"deliverables\": [\n        \"Compliance\",\n        \"Transparency\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Termly\",\n          \"what_it_does_here\": \"Generate GDPR-compliant privacy policies, cookie policies, and terms of service.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"49\"\n        },\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Use AI processing disclosure templates to meet UK AI Bill 2026 transparency requirements.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy remaining executable opportunities to maximize AI adoption.\",\n      \"deliverables\": [\n        \"AI Agent Deployment\",\n        \"Vendor Diversification\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy AI agent using its RAG-grounded architecture to reduce hallucination risk.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Deploy marketing automation vendor to ensure no single vendor holds all customer communication.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 8,\n      \"description\": \"Deploy deferred opportunities once unlock conditions are met.\",\n      \"deliverables\": [\n        \"Enterprise-Scale Deployment\",\n        \"Vendor Risk Mitigation\"\n      ],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Minami AI\",\n          \"what_it_does_here\": \"Deploy fully autonomous fashion operations agent to replace up to 95% of support workload.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"499\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Deploy at an enterprise scale to further reduce refund leakage.\",\n          \"effort\": \"medium\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 20\n}\n```)]",
+      "deliverables": [
+        "data_foundations pillar score needs to reach 6.0",
+        "data_foundations pillar score needs to reach 7.0",
+        "ai_tool_experience pillar score needs to reach 5.0",
+        "technology_infrastructure pillar score needs to reach 7.0"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Iubenda (AI processing disclosure)",
+          "what_it_does_here": "Iubenda's AI processing disclosure templates specifically cover the UK AI Bill 2026 transparency requirements \u2014 informing customers when AI is used in decisions affecting them. For fashion SMEs deploying sizing or recommendation AI, this is the lowest-cost path to meeting transparency obligations.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year"
+        },
+        {
+          "name": "Prediko",
+          "what_it_does_here": "AI-powered inventory forecasting for Shopify brands. Provides accurate stock predictions, automated purchase order recommendations, real-time restock alerts, and inventory reports. Reduces overstock and stockout through data-driven buying decisions.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Paid plans from approximately \u00a330-\u00a3100/month depending on SKU count"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 15,
+  "roi_summary": "Gudrun Sj\u00f6d\u00e9n UK can expect to see a reduction in returns rates, a significant increase in customer reviews, improved email marketing ROI, and a decrease in size-related returns. The Returns Reason Capture (uc_001) will deliver a benefit in phase 1 (approx. 4 weeks), followed by Automated Review Collection (uc_004) in phase 1 (approx. 4 weeks), Email Marketing Automation Flows (uc_006) in phase 2 (approx. 8 weeks), and Size Guide Chatbot (uc_005) in phase 3 (approx. 12 weeks).",
+  "headline_metric": "\u00a315,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 8,
+    "free_tier_agents_count": 5,
+    "estimated_total_monthly_cost_gbp": "\u00a399-\u00a3169/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": false,
+    "cookie_consent_found": false,
+    "marketing_automation_tools": [],
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3964
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Gudrun_Sj\u00f6d\u00e9n_UK_20260821_160817.json"
+  }
+}

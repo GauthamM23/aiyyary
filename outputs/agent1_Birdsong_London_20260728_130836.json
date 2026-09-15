@@ -1,0 +1,149 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-28T12:08:36.898844+00:00",
+  "company_name": "Birdsong London",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 3.53,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 3.97,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 3.53,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 3.53,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 3.81,
+      "stream_b_score": 6.5,
+      "stream_c_reconciled": 4.2,
+      "final_score": 4.66,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Wix (score=5.0)",
+        "[website] Fast page load: 0.96s (score=8)"
+      ],
+      "stream_c_reasoning": "The owner interview score from Stream A carries more weight, but the public data from Stream B provides additional insight into the technology infrastructure. The website's e-commerce platform is detected as Wix, which scores 5.0, and the page load speed is 0.96s, scoring 8. However, since the owner interview score is higher than both of these individual scores, it will be given more weight. A reconciled score of 4.2 is chosen to reflect a balance between the owner's self-assessment and the publicly available data."
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 4.09,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 4.09,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 4.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.06,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.69,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 3.25,
+      "final_score": 3.44,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 2.69 from Stream A carries more weight due to its internal operational data. However, the public data from Stream B indicates a higher level of AI tool experience with the presence of Google Analytics 4 and Klaviyo. To reconcile these scores, I've taken a weighted average, giving more emphasis to the owner interview score (60% weight) and adjusting it slightly upwards to reflect the positive indicators in Stream B."
+    }
+  },
+  "overall_score": 3.96,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Birdsong London's overall score of 3.96 indicates a solid foundation for digital transformation, but they must balance online growth with brand values to reach a broader audience.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 3.44,
+      "dominant_stream": "C",
+      "impact": "Inefficient AI tool adoption may hinder data-driven decision-making and automation opportunities."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 3.53,
+      "dominant_stream": "A",
+      "impact": "Limited process digitization may lead to manual workarounds and decreased productivity for small fashion retailers."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 3.97,
+      "dominant_stream": "A",
+      "impact": "Insufficient data quality and governance may compromise business intelligence and future-proofing efforts."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "governance_compliance",
+      "score": 4.06,
+      "dominant_stream": "A",
+      "advantage": "Strong governance and compliance practices can be leveraged to inform data-driven decision-making and risk management."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 4.66,
+      "dominant_stream": "C",
+      "advantage": "Robust technology infrastructure can support scalable e-commerce growth and enhance customer experiences."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to sufficient enrichment sources (2/5 available) and minimal Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce stockouts and overstocking, and improve sales forecasting.",
+      "evidence": "Birdsong London's overall score of 3.96 suggests a relatively high level of digital maturity, but the Process Digitisation pillar score of 3.53 indicates some room for improvement in streamlining seasonal buying processes."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Effective integration with suppliers is crucial in fashion to ensure accurate product information, timely inventory updates, and efficient supply chain management.",
+      "evidence": "Birdsong London's Technology Infrastructure pillar score of 4.66 suggests a strong foundation for integrating supplier data, but the AI Tool Experience pillar score of 3.44 indicates some challenges in effectively utilising this capability."
+    },
+    {
+      "signal": "Product Sizing and Fit Data Quality",
+      "relevance": "Accurate product sizing and fit information is critical in fashion to reduce returns and improve customer satisfaction.",
+      "evidence": "Birdsong London's Data Foundations pillar score of 3.97 suggests a good foundation for data quality, but the absence of specific evidence on product sizing and fit data quality means this signal requires further investigation."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house",
+      "instagram"
+    ],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 38.06
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 7,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Birdsong_London_20260728_130836.json"
+  }
+}

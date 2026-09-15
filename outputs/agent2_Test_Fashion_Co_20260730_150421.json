@@ -1,0 +1,107 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-30T14:04:21.055737+00:00",
+  "company_name": "Test Fashion Co",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 5.45,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is right for Test Fashion Co now because it can help identify the root causes of returns, which will inform improvements to size guidance and reduce future returns. (process_digitisation pillar score: 5.5)",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is right for Test Fashion Co now because it can help collect more accurate and comprehensive customer feedback, which will inform improvements to size guidance. (process_digitisation pillar score: 5.5)",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is right for Test Fashion Co now because it can provide real-time size guidance and recommendations to customers, addressing their primary challenge of reducing returns. (data_foundations pillar score: 5.5)",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is right for Test Fashion Co now because it can help improve customer engagement and retention through targeted email campaigns, which will indirectly support the primary challenge of reducing returns. (ai_tool_experience pillar score: 4.94)",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The opportunity is currently not executable due to a small score gap in the ai_tool_experience pillar.",
+      "unlock_condition": "ai_tool_experience pillar needs to reach at least 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the data_foundations pillar.",
+      "unlock_condition": "data_foundations pillar needs to reach at least 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the technology_infrastructure pillar.",
+      "unlock_condition": "technology_infrastructure pillar needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the data_foundations pillar.",
+      "unlock_condition": "data_foundations pillar needs to reach at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) within the next week, which requires low effort and can provide immediate insights into return causes.",
+  "executor_summary": {
+    "total_executors_run": 0,
+    "full_builds_completed": 0,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 0
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Test_Fashion_Co_20260730_150421.json"
+  }
+}

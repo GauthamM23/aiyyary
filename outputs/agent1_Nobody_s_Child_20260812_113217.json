@@ -1,0 +1,177 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-12T10:32:17.273701+00:00",
+  "company_name": "Nobody's Child",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.74,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Yotpo (score=6)",
+        "[google_profile] 51 Google reviews (score=8)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.64s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 7.2,
+      "final_score": 6.7,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~6,328 posts) (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score carries more weight in this pillar. However, the Stream B score is not directly contradictory to any factual claim made by the owner. The public Instagram presence suggests a moderate level of digital literacy among staff, but it does not necessarily indicate high levels of proficiency or strategic use of social media. Therefore, I have taken a conservative approach and adjusted the reconciled score downward slightly from the Stream A score."
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": null,
+      "final_score": 6.07,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: OneTrust (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": null,
+      "final_score": 5.7,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.57,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Nobody's Child faces challenges in leveraging AI tools to drive digital transformation, with a primary challenge of increasing repeat purchase rate and reducing returns through better size guidance online. The company has shown strong foundations for technology infrastructure but struggles with staff digital literacy. Public data enrichment revealed that Nobody's Child's website lacks clear product information, hindering customer decision-making.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 5.7,
+      "dominant_stream": "A",
+      "impact": "Difficulty in implementing AI-driven solutions may hinder the company's ability to improve size guidance and reduce returns."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 6.07,
+      "dominant_stream": "A",
+      "impact": "Inadequate governance and compliance processes may lead to inefficient use of resources and increased risk for a small fashion retailer."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.7,
+      "dominant_stream": "C",
+      "impact": "Limited staff digital literacy may hinder the effective adoption and utilization of new technologies, impacting customer service and experience."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "The company's strong technology infrastructure can be leveraged to improve data-driven decision-making and enhance the overall customer experience."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.74,
+      "dominant_stream": "A",
+      "advantage": "Efficient processes and digitization efforts can be built upon to streamline operations and reduce costs."
+    }
+  ],
+  "data_confidence_note": "Due to the presence of Stream C reconciliations (1 reconciliation on staff_digital_literacy), moderate confidence should be placed in this overall assessment, with a note that the reconciliation may have impacted the accuracy of the score.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce stockouts and overstocking, and improve sales forecasting.",
+      "evidence": "Nobody's Child has a moderate process digitisation score (6.74), indicating some level of digital transformation in their buying processes. However, the overall score is not high enough to suggest they have fully matured their seasonal buying cycle."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers with clear returns patterns can use AI to identify trends and make data-driven decisions on inventory management, product development, and customer service.",
+      "evidence": "Nobody's Child has a relatively low governance compliance score (6.07), which may indicate some lack of visibility into their returns patterns. This could hinder their ability to leverage AI for informed decision-making."
+    },
+    {
+      "signal": "Product Information Management (PIM) Data Quality",
+      "relevance": "Fashion retailers with high-quality PIM data can use AI to enhance product recommendations, improve search functionality, and enable omnichannel experiences.",
+      "evidence": "Nobody's Child has a moderate data foundations score (6.34), which may suggest some level of data quality issues in their product information management systems."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "OneTrust",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 89,
+    "google_review_count": 51,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 1,
+    "enrichment_duration_seconds": 11.54
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 13,
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent1_Nobody_s_Child_20260812_113217.json"
+  }
+}

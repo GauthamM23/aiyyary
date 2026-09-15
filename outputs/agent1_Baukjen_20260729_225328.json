@@ -1,0 +1,155 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-29T21:53:28.356194+00:00",
+  "company_name": "Baukjen",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.64,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.09,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.94s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.55,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~3,754 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.34,
+      "stream_b_score": 6.67,
+      "stream_c_reconciled": null,
+      "final_score": 6.44,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6)",
+        "[website] Cookie consent tool detected: Generic cookie-consent (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 5.33,
+      "stream_c_reconciled": null,
+      "final_score": 5.65,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Chat widget detected: Zendesk (score=4)",
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.39,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Baukjen's overall score of 6.39 indicates a mid-readiness position for leveraging sustainability credentials in AI-assisted product discovery and personalisation, with strengths in technology infrastructure but challenges in staff digital literacy and AI tool experience.",
+  "top_gaps": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 5.55,
+      "dominant_stream": "A",
+      "impact": "May struggle to effectively integrate new technologies without adequate staff training."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 5.65,
+      "dominant_stream": "A",
+      "impact": "Could face difficulties in selecting and implementing suitable AI tools due to limited experience."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 6.94,
+      "dominant_stream": "A",
+      "impact": "May not be able to fully capitalise on data-driven insights without robust data foundations."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.09,
+      "dominant_stream": "A",
+      "advantage": "Can leverage strong technology infrastructure to support AI-assisted product discovery and personalisation."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.64,
+      "dominant_stream": "A",
+      "advantage": "Has a solid foundation for process digitisation, enabling efficient integration of new technologies."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to availability of multiple enrichment sources and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce stockouts and overstocking, and improve sales forecasting.",
+      "evidence": "Baukjen's overall score suggests a moderate level of digital maturity. However, the relatively low score in 'staff_digital_literacy' (5.55) may indicate that Baukjen's buying team might not be fully equipped to effectively utilize AI-driven insights for seasonal planning and inventory management."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion retailers often rely on suppliers for product data, pricing, and lead times. Effective integration of supplier data with internal systems is crucial for AI-driven demand forecasting and supply chain optimization.",
+      "evidence": "Baukjen's score in 'technology_infrastructure' (7.09) suggests a relatively strong foundation for integrating external data sources. However, the lack of specific information about supplier data integration practices makes it difficult to assess Baukjen's readiness on this signal."
+    },
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion retailers with complex product lines (e.g., multiple styles, sizes, and colors) require AI solutions that can handle nuanced product relationships and attribute hierarchies.",
+      "evidence": "Baukjen's score in 'data_foundations' (6.94) suggests a relatively strong data foundation. However, the absence of specific information about Baukjen's product line complexity makes it challenging to assess their readiness on this signal."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 4.21
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 11,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Baukjen_20260729_225328.json"
+  }
+}

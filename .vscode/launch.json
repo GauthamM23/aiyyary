@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test Agent 1 (Stream A only)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/test_agent1.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Test Agent 1 (Stream A + live enrichment)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/test_agent1.py",
+            "args": [
+                "--enrich",
+                "--url", "https://example.com",
+                "--name", "Example Boutique",
+                "--location", "London"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Demo: Five Companies",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/demo_five_companies.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug agents.enrichment (as module)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "agents.enrichment",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

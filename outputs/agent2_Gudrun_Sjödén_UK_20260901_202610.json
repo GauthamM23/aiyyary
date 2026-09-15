@@ -1,0 +1,498 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-09-01T19:26:10.998137+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 4.59,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by reducing returns, which is a key challenge for the company's older, less digitally native customer base, and its actual score of 4.86 in process digitisation indicates a strong foundation for implementation.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Incorrect Sizing",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Runs Small",
+                    "Runs Large"
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Quality/Type",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Too Thin/Thick",
+                    "Not Suitable for Season",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as Shown",
+                    "Not as Expected",
+                    "Too Light/Dark",
+                    "Not Suitable for Skin Tone"
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style/Design Discrepancy",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Not Suitable for Body Type",
+                    "Not Suitable for Occasion",
+                    "Not Suitable for Lifestyle"
+                  ]
+                },
+                {
+                  "code": "FIT",
+                  "label": "Fit Issues",
+                  "sub_reasons": [
+                    "Too Tight",
+                    "Too Loose",
+                    "Not Flattering",
+                    "Not Suitable for Body Type"
+                  ]
+                },
+                {
+                  "code": "NEEDLEWORK",
+                  "label": "Needlework/Seam Quality",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Not Secure",
+                    "Not Even",
+                    "Not Suitable for Garment Type"
+                  ]
+                },
+                {
+                  "code": "BUTTONS",
+                  "label": "Button Quality/Type",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Not Secure",
+                    "Not Functional",
+                    "Not Suitable for Garment Type"
+                  ]
+                },
+                {
+                  "code": "ZIPS",
+                  "label": "Zip Quality/Type",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Not Secure",
+                    "Not Functional",
+                    "Not Suitable for Garment Type"
+                  ]
+                },
+                {
+                  "code": "LABELS",
+                  "label": "Label Quality/Type",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Not Clear",
+                    "Not Visible",
+                    "Not Suitable for Garment Type"
+                  ]
+                },
+                {
+                  "code": "PACKAGING",
+                  "label": "Packaging Issues",
+                  "sub_reasons": [
+                    "Damaged",
+                    "Missing",
+                    "Not Suitable for Garment Type",
+                    "Not Secure"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "form_structure": {
+                "title": "Return or Exchange Your Order",
+                "questions": [
+                  {
+                    "id": "order_number",
+                    "type": "text",
+                    "prompt": "Order Number",
+                    "options": []
+                  },
+                  {
+                    "id": "item_to_return",
+                    "type": "text",
+                    "prompt": "Item(s) to Return",
+                    "options": []
+                  },
+                  {
+                    "id": "reason_code",
+                    "type": "select",
+                    "prompt": "What's not quite right?",
+                    "options": [
+                      {
+                        "label": "Incorrect Sizing",
+                        "value": "SIZE"
+                      },
+                      {
+                        "label": "Fabric Quality/Type",
+                        "value": "FABRIC"
+                      },
+                      {
+                        "label": "Colour Discrepancy",
+                        "value": "COLOUR"
+                      },
+                      {
+                        "label": "Style/Design Discrepancy",
+                        "value": "STYLE"
+                      },
+                      {
+                        "label": "Fit Issues",
+                        "value": "FIT"
+                      },
+                      {
+                        "label": "Needlework/Seam Quality",
+                        "value": "NEEDLEWORK"
+                      },
+                      {
+                        "label": "Button Quality/Type",
+                        "value": "BUTTONS"
+                      },
+                      {
+                        "label": "Zip Quality/Type",
+                        "value": "ZIPS"
+                      },
+                      {
+                        "label": "Label Quality/Type",
+                        "value": "LABELS"
+                      },
+                      {
+                        "label": "Packaging Issues",
+                        "value": "PACKAGING"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "sub_reason",
+                    "type": "select",
+                    "prompt": "Please select the specific issue you're experiencing",
+                    "options": [
+                      {
+                        "label": "Too Small",
+                        "value": "SIZE|Too Small"
+                      },
+                      {
+                        "label": "Too Large",
+                        "value": "SIZE|Too Large"
+                      },
+                      {
+                        "label": "Runs Small",
+                        "value": "SIZE|Runs Small"
+                      },
+                      {
+                        "label": "Runs Large",
+                        "value": "SIZE|Runs Large"
+                      },
+                      {
+                        "label": "Not as Described",
+                        "value": "FABRIC|Not as Described"
+                      },
+                      {
+                        "label": "Too Thin/Thick",
+                        "value": "FABRIC|Too Thin/Thick"
+                      },
+                      {
+                        "label": "Not Suitable for Season",
+                        "value": "FABRIC|Not Suitable for Season"
+                      },
+                      {
+                        "label": "Not Suitable for Occasion",
+                        "value": "FABRIC|Not Suitable for Occasion"
+                      },
+                      {
+                        "label": "Not as Shown",
+                        "value": "COLOUR|Not as Shown"
+                      },
+                      {
+                        "label": "Not as Expected",
+                        "value": "COLOUR|Not as Expected"
+                      },
+                      {
+                        "label": "Too Light/Dark",
+                        "value": "COLOUR|Too Light/Dark"
+                      },
+                      {
+                        "label": "Not Suitable for Skin Tone",
+                        "value": "COLOUR|Not Suitable for Skin Tone"
+                      },
+                      {
+                        "label": "Not as Described",
+                        "value": "STYLE|Not as Described"
+                      },
+                      {
+                        "label": "Not Suitable for Body Type",
+                        "value": "STYLE|Not Suitable for Body Type"
+                      },
+                      {
+                        "label": "Not Suitable for Occasion",
+                        "value": "STYLE|Not Suitable for Occasion"
+                      },
+                      {
+                        "label": "Not Suitable for Lifestyle",
+                        "value": "STYLE|Not Suitable for Lifestyle"
+                      },
+                      {
+                        "label": "Too Tight",
+                        "value": "FIT|Too Tight"
+                      },
+                      {
+                        "label": "Too Loose",
+                        "value": "FIT|Too Loose"
+                      },
+                      {
+                        "label": "Not Flattering",
+                        "value": "FIT|Not Flattering"
+                      },
+                      {
+                        "label": "Not Suitable for Body Type",
+                        "value": "FIT|Not Suitable for Body Type"
+                      },
+                      {
+                        "label": "Not as Expected",
+                        "value": "NEEDLEWORK|Not as Expected"
+                      },
+                      {
+                        "label": "Not Secure",
+                        "value": "NEEDLEWORK|Not Secure"
+                      },
+                      {
+                        "label": "Not Even",
+                        "value": "NEEDLEWORK|Not Even"
+                      },
+                      {
+                        "label": "Not Suitable for Garment Type",
+                        "value": "NEEDLEWORK|Not Suitable for Garment Type"
+                      },
+                      {
+                        "label": "Not as Expected",
+                        "value": "BUTTONS|Not as Expected"
+                      },
+                      {
+                        "label": "Not Secure",
+                        "value": "BUTTONS|Not Secure"
+                      },
+                      {
+                        "label": "Not Functional",
+                        "value": "BUTTONS|Not Functional"
+                      },
+                      {
+                        "label": "Not Suitable for Garment Type",
+                        "value": "BUTTONS|Not Suitable for Garment Type"
+                      },
+                      {
+                        "label": "Not as Expected",
+                        "value": "ZIPS|Not as Expected"
+                      },
+                      {
+                        "label": "Not Secure",
+                        "value": "ZIPS|Not Secure"
+                      },
+                      {
+                        "label": "Not Functional",
+                        "value": "ZIPS|Not Functional"
+                      },
+                      {
+                        "label": "Not Suitable for Garment Type",
+                        "value": "ZIPS|Not Suitable for Garment Type"
+                      },
+                      {
+                        "label": "Not as Expected",
+                        "value": "LABELS|Not as Expected"
+                      },
+                      {
+                        "label": "Not Clear",
+                        "value": "LABELS|Not Clear"
+                      },
+                      {
+                        "label": "Not Visible",
+                        "value": "LABELS|Not Visible"
+                      },
+                      {
+                        "label": "Not Suitable for Garment Type",
+                        "value": "LABELS|Not Suitable for Garment Type"
+                      },
+                      {
+                        "label": "Damaged",
+                        "value": "PACKAGING|Damaged"
+                      },
+                      {
+                        "label": "Missing",
+                        "value": "PACKAGING|Missing"
+                      },
+                      {
+                        "label": "Not Suitable for Garment Type",
+                        "value": "PACKAGING|Not Suitable for Garment Type"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "To embed a returns reason capture form on your website, follow these steps:",
+                "1. Create a new HTML file and add the following code to capture the returns reason:",
+                "<form id='returns-reason-form'>",
+                "  <label for='returns-reason'>Returns Reason:</label>",
+                "  <textarea id='returns-reason' name='returns-reason'></textarea>",
+                "  <button type='submit'>Submit</button>",
+                "</form>",
+                "2. Add a JavaScript file to handle the form submission and send the returns reason to your server:",
+                "const form = document.getElementById('returns-reason-form');",
+                "form.addEventListener('submit', (e) => {",
+                "  e.preventDefault();",
+                "  const reason = document.getElementById('returns-reason').value;",
+                "  // Send the returns reason to your server using an API call or fetch",
+                "  // For example: fetch('/api/returns-reason', { method: 'POST', body: JSON.stringify({ reason }) });",
+                "});",
+                "3. On your server, create an API endpoint to receive the returns reason and store it in your database.",
+                "4. In your website's returns flow, include a link to the returns reason capture form and ensure the form is submitted before proceeding with the returns process."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the embed code to your returns page on your website",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by automating review collection, which is a key challenge for the company's older, less digitally native customer base, and its actual score of 4.86 in process digitisation indicates a strong foundation for implementation.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by automating email marketing, which is a key challenge for the company's older, less digitally native customer base, and its actual score of 3.19 in AI tool experience indicates a need for improvement.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by providing a chatbot for size guides, which is a key challenge for the company's older, less digitally native customer base, and its actual score of 5.78 in data foundations indicates a strong foundation for implementation.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The score gap of 0.22 in data foundations is preventing deployment, and the company needs to improve its data foundations to a minimum score of 6.0.",
+      "unlock_condition": "data_foundations: 6.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The score gap of 1.22 in data foundations is preventing deployment, and the company needs to improve its data foundations to a minimum score of 7.0.",
+      "unlock_condition": "data_foundations: 7.0"
+    },
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The score gap of 1.81 in AI tool experience is preventing deployment, and the company needs to improve its AI tool experience to a minimum score of 5.0.",
+      "unlock_condition": "ai_tool_experience: 5.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The score gap of 2.34 in technology infrastructure is preventing deployment, and the company needs to improve its technology infrastructure to a minimum score of 7.0.",
+      "unlock_condition": "technology_infrastructure: 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) to improve the digital customer experience and reduce returns, which is a key challenge for Gudrun Sj\u00f6d\u00e9n UK's older, less digitally native customer base.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Gudrun_Sj\u00f6d\u00e9n_UK_20260901_202610.json"
+  }
+}

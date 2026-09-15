@@ -1,0 +1,154 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-28T12:12:39.139348+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 7.03,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.1s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,592 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.15,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.04,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.73,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Lucy & Yak's overall score of 6.73 indicates a mid-readiness position for digital transformation, with strengths in technology infrastructure but challenges in staff digital literacy and governance compliance.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.15,
+      "dominant_stream": "A",
+      "impact": "Inefficient governance processes may hinder Lucy & Yak's ability to scale sustainably."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Limited digital literacy among staff may impede the adoption of new technologies and processes."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.04,
+      "dominant_stream": "A",
+      "impact": "Poor AI tool experience may hinder Lucy & Yak's ability to leverage data-driven insights for informed decision-making."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Lucy & Yak can leverage its strong technology infrastructure to drive digital transformation and improve operational efficiency."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.03,
+      "dominant_stream": "A",
+      "advantage": "The company's well-digitised processes provide a solid foundation for future growth and scalability."
+    }
+  ],
+  "data_confidence_note": "High confidence in this assessment due to the availability of multiple enrichment sources (3/5) and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Lucy & Yak's seasonal buying cycle maturity is crucial for effective AI deployment in the fashion industry, where timely and accurate inventory management is vital.",
+      "evidence": "Given their overall score of 6.73, Lucy & Yak may struggle with adapting to changing consumer trends and demand fluctuations, which could impact the effectiveness of AI-driven inventory management and forecasting."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Understanding returns patterns is essential in fashion retail, where high return rates can significantly impact profitability. Lucy & Yak's ability to leverage AI for returns analysis and prediction will be critical.",
+      "evidence": "Lucy & Yak's staff digital literacy score of 6.34 suggests they may need support in analyzing and interpreting data on returns patterns, which could hinder their ability to make informed decisions using AI-driven insights."
+    },
+    {
+      "signal": "Sizing Data Structure",
+      "relevance": "Accurate sizing is a significant challenge in the fashion industry, where incorrect sizes can lead to high return rates. Lucy & Yak's ability to leverage AI for size recommendation and fit analysis will depend on their data structure.",
+      "evidence": "Lucy & Yak's technology infrastructure score of 7.87 suggests they have invested in robust systems, but without specific information on their sizing data structure, it is unclear whether this investment has been utilized effectively."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 7.71
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 10,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260728_131239.json"
+  }
+}

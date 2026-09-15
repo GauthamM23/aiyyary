@@ -1,0 +1,163 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-16T23:37:45.717626+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.74,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)",
+        "[google_profile] 229 Google reviews (score=8)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.09,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 2.17s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 8.31,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 6.99,
+      "final_score": 7.18,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,611 posts) (score=5)"
+      ],
+      "stream_c_reasoning": "[LLM reconciliation failed (('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))); used a weighted Stream A/B fallback]"
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.34,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": null,
+      "final_score": 6.46,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.93,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.89,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "[LLM verdict call failed: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))]",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.46,
+      "dominant_stream": "A",
+      "impact": "Not available"
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.74,
+      "dominant_stream": "A",
+      "impact": "Not available"
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.93,
+      "dominant_stream": "A",
+      "impact": "Not available"
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.09,
+      "dominant_stream": "A",
+      "advantage": "Not available"
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 7.18,
+      "dominant_stream": "C",
+      "advantage": "Not available"
+    }
+  ],
+  "data_confidence_note": "LLM verdict call failed; confidence assessment unavailable.",
+  "fashion_signals": [],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "CookieYes",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 74,
+    "google_review_count": 229,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 1,
+    "enrichment_duration_seconds": 41.24
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 14,
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260817_003745.json"
+  }
+}

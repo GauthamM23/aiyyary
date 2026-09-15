@@ -1,0 +1,444 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-05T14:42:06.813228+00:00",
+  "company_name": "Nobody's Child",
+  "overall_score": 6.99,
+  "readiness_tier": "Mid-Readiness",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "LOW",
+      "pillar": "data_foundations",
+      "pillar_score": 6.65,
+      "trigger_reason": "data_foundations final_score=6.65 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Nobody's Child will implement a data validation process on Shopify to ensure accurate size guidance is provided online.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 6.86,
+      "trigger_reason": "governance_compliance final_score=6.86 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Nobody's Child will review and update their governance compliance policies to reflect the use of AI in marketing automation tools like Klaviyo.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "LOW",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 6.5,
+      "trigger_reason": "staff_digital_literacy final_score=6.5 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Nobody's Child will provide regular training sessions for staff on Shopify's digital features to improve adoption rates.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "HIGH",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 6.34,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Shopify",
+      "mitigation": "Nobody's Child will conduct a thorough review of their marketing automation tools, starting with Klaviyo, to ensure they meet business needs and mitigate vendor dependency risk.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 6.86,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=True, ai_tool_experience final_score=6.34",
+      "mitigation": "Nobody's Child will implement AI model explainability features in their chat widget to reduce the risk of AI hallucinations.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 6.86,
+      "trigger_reason": "privacy_policy_mentions_ai=True, governance_compliance final_score=6.86",
+      "mitigation": "Nobody's Child will review and update their privacy policy to explicitly mention the use of AI in marketing automation tools like Klaviyo, ensuring transparency with customers.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 0,
+  "low_severity_count": 5,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "vendor_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "ai_tool_experience"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online, addressing their primary challenge of reducing returns.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "complete",
+          "deliverables": [
+            {
+              "name": "returns_reason_codes",
+              "type": "json",
+              "content": {
+                "reason_codes": [
+                  {
+                    "code": "SZ001",
+                    "label": "Incorrect Size",
+                    "sub_reasons": [
+                      "Too Small",
+                      "Too Large"
+                    ]
+                  },
+                  {
+                    "code": "FAB001",
+                    "label": "Fabric Quality Issue",
+                    "sub_reasons": [
+                      "Pilling",
+                      "Shrinkage",
+                      "Uncomfortable Texture"
+                    ]
+                  },
+                  {
+                    "code": "COL001",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      "Not as Expected",
+                      "Different Shade",
+                      "Fading"
+                    ]
+                  },
+                  {
+                    "code": "STY001",
+                    "label": "Style/Design Issue",
+                    "sub_reasons": [
+                      "Unflattering Fit",
+                      "Poor Construction",
+                      "Not As Described"
+                    ]
+                  },
+                  {
+                    "code": "SZ002",
+                    "label": "Size Chart Inaccuracy",
+                    "sub_reasons": [
+                      "Incorrect Measurement",
+                      "Outdated Size Chart"
+                    ]
+                  },
+                  {
+                    "code": "FAB002",
+                    "label": "Fabric Content Issue",
+                    "sub_reasons": [
+                      "Not as Described",
+                      "Allergic Reaction",
+                      "Sensitive Skin"
+                    ]
+                  },
+                  {
+                    "code": "COL002",
+                    "label": "Colour Washing/Fading",
+                    "sub_reasons": [
+                      "Unusual Colour Change",
+                      "Fading Faster Than Expected"
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Import these reason codes into your returns form or helpdesk tool."
+            },
+            {
+              "name": "customer_form_structure",
+              "type": "json",
+              "content": {
+                "title": "Return Reason Form",
+                "description": "Please select the reason for your return. We value your feedback and would love to hear about any issues you've experienced.",
+                "fields": [
+                  {
+                    "type": "select",
+                    "label": "What's gone wrong?",
+                    "name": "reason_code",
+                    "options": [
+                      {
+                        "value": "SZ001",
+                        "label": "Incorrect Size"
+                      },
+                      {
+                        "value": "FAB001",
+                        "label": "Fabric Quality Issue"
+                      },
+                      {
+                        "value": "COL001",
+                        "label": "Colour Discrepancy"
+                      },
+                      {
+                        "value": "STY001",
+                        "label": "Style/Design Issue"
+                      },
+                      {
+                        "value": "SZ002",
+                        "label": "Size Chart Inaccuracy"
+                      },
+                      {
+                        "value": "FAB002",
+                        "label": "Fabric Content Issue"
+                      },
+                      {
+                        "value": "COL002",
+                        "label": "Colour Washing/Fading"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "select",
+                    "label": "Please select a sub-reason (if applicable)",
+                    "name": "sub_reason",
+                    "options": [
+                      {
+                        "value": "",
+                        "label": ""
+                      }
+                    ],
+                    "conditional": {
+                      "parent": "reason_code",
+                      "values": [
+                        "SZ001",
+                        "FAB001",
+                        "COL001",
+                        "STY001",
+                        "SZ002",
+                        "FAB002",
+                        "COL002"
+                      ]
+                    }
+                  },
+                  {
+                    "type": "textarea",
+                    "label": "Additional comments (optional)",
+                    "name": "comments"
+                  }
+                ]
+              },
+              "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+            },
+            {
+              "name": "shopify_integration_guide",
+              "type": "markdown",
+              "content": {
+                "instructions": [
+                  "Log in to your Shopify admin panel and navigate to Settings > Checkout.",
+                  "In the checkout settings, click on 'Additional content' under the 'Order information' section.",
+                  "Click on the '+ Add block' button and select 'HTML' from the dropdown menu.",
+                  "Paste the following code into the HTML block: <form id='returns-reason-form'>\n  <label for='reason'>Reason for return:</label>\n  <select id='reason' name='reason'>\n    <option value='defective'>Defective</option>\n    <option value='not-as-described'>Not as described</option>\n    <option value='changed-my-mind'>Changed my mind</option>\n    <option value='other'>Other (please specify)</option>\n  </select>\n  <input type='text' id='reason-other' name='reason-other' placeholder='Please specify reason for return' style='display:none;'>\n  <button type='submit'>Submit</button>\n</form>",
+                  "Click on the 'Save' button to save the changes.",
+                  "In your Shopify theme's liquid files, navigate to templates/returns.liquid and add the following code: {{ form['returns-reason-form'] | raw }}",
+                  "Save the changes to the returns.liquid file.",
+                  "To capture the selected reason for return in your Shopify returns flow, you'll need to create an API webhook that listens for 'order.update' events. Navigate to Settings > Apps and then click on 'Manage webhooks'. Click on the '+ Add webhook' button and select 'Order updated' as the event type. In the 'Webhook URL' field, enter a URL that points to your server-side endpoint where you'll handle the webhook request.",
+                  "Save the changes to create the webhook."
+                ]
+              },
+              "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+            },
+            {
+              "name": "weekly_summary_template",
+              "type": "markdown",
+              "content": "# Weekly Returns Summary \u2014 Nobody's Child\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+              "instructions": "Use this template for a weekly email reviewing returns data."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Create Typeform account at typeform.com",
+            "Copy the form structure JSON below into a new form",
+            "Add the Shopify embed code to your returns page",
+            "Set up a weekly calendar reminder to review the summary report"
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [],
+          "llm_calls_made": 3,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve the accuracy of size guidance online, addressing their primary challenge of reducing returns.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_002",
+        "title": "Abandoned Cart Recovery Emails",
+        "justification": "This opportunity is not directly related to Nobody's Child's primary challenge, but can still contribute to improving customer engagement and potentially increasing repeat purchases.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-500",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "This opportunity is specifically right for Nobody's Child now because it can provide real-time size guidance and recommendations, addressing their primary challenge of improving size accuracy online.",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 5,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "This opportunity is specifically right for Nobody's Child now because it can help improve customer engagement and potentially increase repeat purchases, although its impact on size guidance is indirect.",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "Score gap in data foundations pillar prevents deployment, requiring a minimum score of 7.0 to unlock this opportunity.",
+        "unlock_condition": "data_foundations > 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Remediation of High-Risk Vendor Risk",
+      "timeframe_weeks": 2,
+      "description": "Address high-risk vendor risk by implementing necessary security measures and ensuring compliance with data protection regulations.",
+      "deliverables": [
+        "Vendor risk assessment report",
+        "Updated vendor contracts with enhanced security clauses"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null
+    },
+    {
+      "phase": 2,
+      "title": "Activation of Agent 2 Executor Outputs",
+      "timeframe_weeks": 1,
+      "description": "Activate the Returns Reason Capture (uc_001) executor output to start improving size guidance online and addressing returns.",
+      "deliverables": [
+        "Activated uc_001 executor output",
+        "Integration with existing marketing automation tools"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001"
+    },
+    {
+      "phase": 3,
+      "title": "Deployment of Remaining Executable Opportunities",
+      "timeframe_weeks": 8,
+      "description": "Deploy the remaining executable opportunities, including Automated Review Collection (uc_004), Abandoned Cart Recovery Emails (uc_002), Size Guide Chatbot (uc_005), and Email Marketing Automation Flows (uc_006).",
+      "deliverables": [
+        "Activated uc_004 executor output",
+        "Activated uc_002 executor output",
+        "Activated uc_005 executor output",
+        "Activated uc_006 executor output"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null
+    },
+    {
+      "phase": 4,
+      "title": "Deferred Opportunities",
+      "timeframe_weeks": 0,
+      "description": "Unlock the Personalised Outfit Recommender (uc_009) opportunity once data foundations exceed a score of 7.0.",
+      "deliverables": [
+        "Updated data foundations report",
+        "Activated uc_009 executor output"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null
+    }
+  ],
+  "total_roadmap_weeks": 11,
+  "roi_summary": "Nobody's Child can expect a 12-month commercial outcome of \u00a31.36-\u00a34.20 return per \u00a31 spent, with a total revenue uplift of \u00a3236,000 - \u00a3742,000, driven by improved customer experience, reduced returns and optimized pricing.",
+  "headline_metric": "\u00a3236,000 - \u00a3742,000 Revenue Uplift",
+  "enrichment_signals_used": {
+    "privacy_policy_found": true,
+    "cookie_consent_found": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 81
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Nobody_s_Child_20260805_154206.json"
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-22T22:15:58.442094+00:00",
+  "company_name": "Aspiga",
+  "overall_score": 6.07,
+  "readiness_tier": "Mid-Readiness",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "LOW",
+      "pillar": "data_foundations",
+      "pillar_score": 6.94,
+      "trigger_reason": "data_foundations final_score=6.94 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Aspiga should implement data validation checks on the Shopify platform to ensure data accuracy and completeness.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.76,
+      "trigger_reason": "governance_compliance final_score=4.76 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Aspiga should conduct a thorough review of its governance and compliance policies to ensure alignment with regulatory requirements, particularly in light of its Klaviyo marketing automation tool integration with Shopify.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "LOW",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 7.47,
+      "trigger_reason": "staff_digital_literacy final_score=7.47 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Aspiga should provide regular digital literacy training sessions for staff to enhance their understanding of the Shopify platform and its features.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "HIGH",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 5.5,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Shopify",
+      "mitigation": "Aspiga should negotiate a service-level agreement with Klaviyo to ensure timely support and minimize potential disruptions to its Shopify operations.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.76,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=True, ai_tool_experience final_score=5.5",
+      "mitigation": "Aspiga should implement AI model monitoring and logging on the Shopify platform to detect and prevent potential hallucinations caused by its marketing automation tools.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.76,
+      "trigger_reason": "privacy_policy_mentions_ai=True, governance_compliance final_score=4.76",
+      "mitigation": "Aspiga should review and update its privacy policy to ensure transparency around its AI usage and data collection practices, particularly given its integration with Klaviyo and Google Analytics 4.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 2,
+  "low_severity_count": 3,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "vendor_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "ai_tool_experience"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "Automated Review Collection is specifically right for Aspiga right now as it can help improve sustainability credibility by digitizing and streamlining the review collection process, addressing their primary challenge.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": {
+          "mode": "market_connect",
+          "status": "connected",
+          "deliverables": [
+            {
+              "name": "configuration_guide_trustpilot",
+              "type": "markdown",
+              "content": "To configure Trustpilot on Aspiga's Shopify store, navigate to the 'Apps' section, search for 'Trustpilot', and click 'Install'. Then, follow the in-app setup wizard to connect your store and configure review collection settings.",
+              "instructions": "Configuration guide for Trustpilot, ranked #1 for this business."
+            },
+            {
+              "name": "configuration_guide_judge.me",
+              "type": "markdown",
+              "content": "To configure Trustpilot on Aspiga's Shopify store, navigate to the 'Apps' section, search for 'Trustpilot', and click 'Install'. Then, follow the in-app setup wizard to connect your store and configure review collection settings.",
+              "instructions": "Configuration guide for Judge.me, ranked #2 for this business."
+            },
+            {
+              "name": "configuration_guide_yotpo",
+              "type": "markdown",
+              "content": "To configure Trustpilot on Aspiga's Shopify store, navigate to the 'Apps' section, search for 'Trustpilot', and click 'Install'. Then, follow the in-app setup wizard to connect your store and configure review collection settings.",
+              "instructions": "Configuration guide for Yotpo, ranked #3 for this business."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Step 1: Set up the Trustpilot review collection email sequence to send to customers after purchase, using Aspiga's existing email marketing platform.",
+            "Step 2: Configure Trustpilot's review display settings to showcase reviews on Aspiga's product pages and improve online visibility.",
+            "Step 3: Monitor and respond to customer reviews on Trustpilot to demonstrate Aspiga's commitment to sustainability and customer satisfaction."
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [
+            {
+              "rank": 1,
+              "tool_name": "Trustpilot",
+              "why_this_business": "Aspiga can leverage Trustpilot's independent review platform to improve credibility and trust with UK shoppers, who are familiar with the brand.",
+              "free_tier_available": true,
+              "estimated_monthly_cost_gbp": "\u00a349",
+              "shopify_native": true
+            },
+            {
+              "rank": 2,
+              "tool_name": "Judge.me",
+              "why_this_business": "Judge.me's automated review collection feature can help Aspiga gather more reviews from customers, improving sustainability credibility and online visibility.",
+              "free_tier_available": true,
+              "estimated_monthly_cost_gbp": "\u00a329",
+              "shopify_native": true
+            },
+            {
+              "rank": 3,
+              "tool_name": "Yotpo",
+              "why_this_business": "Yotpo's full-featured reviews and loyalty platform may be overkill for Aspiga's needs, given its moderate budget and focus on sustainability credibility.",
+              "free_tier_available": false,
+              "estimated_monthly_cost_gbp": "\u00a399",
+              "shopify_native": true
+            }
+          ],
+          "llm_calls_made": 1,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "Returns Reason Capture is specifically right for Aspiga right now as it can help improve sustainability credibility by digitizing and streamlining the returns process, addressing their primary challenge.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "Size Guide Chatbot is specifically right for Aspiga right now as it can help improve customer experience and reduce returns, which is a key aspect of sustainability credibility.",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "Email Marketing Automation Flows is specifically right for Aspiga right now as it can help improve customer engagement and reduce email fatigue, which can contribute to sustainability credibility.",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The Personalised Outfit Recommender is currently deferred due to a score gap of 0.06 in the data_foundations pillar.",
+        "unlock_condition": "data_foundations pillar score must reach 7.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The Dynamic Pricing Engine is currently deferred due to a score gap of 0.9 in the technology_infrastructure pillar.",
+        "unlock_condition": "technology_infrastructure pillar score must reach 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Remediation of HIGH-severity Risks",
+      "timeframe_weeks": 2,
+      "description": "Remediate HIGH-severity risks to ensure business continuity and compliance.",
+      "deliverables": [
+        "Risk assessment report",
+        "Mitigation plan document",
+        "Deployed mitigation measures"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Termly",
+          "what_it_does_here": "Provides GDPR compliance and AI processing disclosure tools to address regulatory risk.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available with watermark. Paid from \u00a314/month"
+        },
+        {
+          "name": "Iubenda",
+          "what_it_does_here": "Offers comprehensive legal compliance and AI processing disclosure tools to address regulatory risk.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year per site"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Activation of Agent 2 Executor Outputs",
+      "timeframe_weeks": 1,
+      "description": "Activate the executor output already built to improve customer service and product discovery.",
+      "deliverables": [
+        "Activated AI-powered customer service agents",
+        "Configured AI-powered product discovery",
+        "Monitored and optimized AI performance"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id",
+      "recommended_ai_agents": [
+        {
+          "name": "Gorgias AI Agent",
+          "what_it_does_here": "Provides AI support with mandatory human review to address adoption risk.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a310/month for starter; scales with ticket volume"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Deployment of Remaining Executable Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Deploy remaining executable opportunities to improve customer service, product discovery, and revenue retention.",
+      "deliverables": [
+        "Deployed AI-powered customer service agents",
+        "Configured AI-powered product discovery",
+        "Monitored and optimized AI performance"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id",
+      "recommended_ai_agents": [
+        {
+          "name": "Fin by Intercom",
+          "what_it_does_here": "Provides RAG-grounded AI agent with 76% resolution rate to address adoption risk.",
+          "effort": "medium",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a374/month for Intercom Starter"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Deferred Opportunities",
+      "timeframe_weeks": 3,
+      "description": "Address deferred opportunities to improve customer service, product discovery, and revenue retention.",
+      "deliverables": [
+        "Addressed deferred personalisation",
+        "Addressed deferred demand forecasting"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": "executor_id",
+      "recommended_ai_agents": [
+        {
+          "name": "Prediko",
+          "what_it_does_here": "Provides demand forecasting tools to address adoption risk.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Paid plans from approximately \u00a330-\u00a3100/month depending on SKU count"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 12,
+  "roi_summary": "Aspiga can expect to see significant commercial improvements across customer experience, returns management, and marketing efficiency. Automated Review Collection and Returns Reason Capture will be implemented in the first week, generating an immediate increase in reviews and returns data. The Size Guide Chatbot will be implemented in week 4, reducing size-related returns by up to 25%. Email Marketing Automation Flows will be implemented in week 6, increasing email marketing returns. The WhatsApp Styling Assistant will be implemented in week 8, enhancing customer engagement. Finally, AI Demand Forecasting will be implemented in week 12, optimizing inventory and reducing lost sales.",
+  "headline_metric": "\u00a383,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 5,
+    "free_tier_agents_count": 2,
+    "estimated_total_monthly_cost_gbp": "\u00a3114-\u00a3184/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": true,
+    "cookie_consent_found": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 85
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Aspiga_20260822_231558.json"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "business_name": "Baukjen",
+  "assessment_timestamp": "2026-08-12T10:34:56.418819+00:00",
+  "stream_b_signals": {
+    "data_foundations": {
+      "signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_b_score": 7.0
+    },
+    "process_digitisation": {
+      "signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_b_score": 5.5
+    },
+    "technology_infrastructure": {
+      "signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.01s (score=8)"
+      ],
+      "stream_b_score": 7.5
+    },
+    "staff_digital_literacy": {
+      "signals": [
+        "[instagram] Active public Instagram presence (~3,773 posts) (score=5)"
+      ],
+      "stream_b_score": 5.0
+    },
+    "governance_compliance": {
+      "signals": [
+        "[website] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6)",
+        "[website] Cookie consent tool detected: Generic cookie-consent (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] No filings in 1863 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_b_score": 5.0
+    },
+    "ai_tool_experience": {
+      "signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_b_score": 6.33
+    }
+  },
+  "pre_population_suggestions": {
+    "data_foundations": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 1 public data signal(s), mean score 7.0",
+      "source": "website_scrape"
+    },
+    "process_digitisation": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 5.5",
+      "source": "website_scrape"
+    },
+    "technology_infrastructure": {
+      "suggested_band": "high",
+      "suggested_score_range": "8-10",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 7.5",
+      "source": "website_scrape"
+    },
+    "staff_digital_literacy": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 1 public data signal(s), mean score 5.0",
+      "source": "instagram"
+    },
+    "governance_compliance": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "high",
+      "reason": "Derived from 5 public data signal(s), mean score 5.0",
+      "source": "website_scrape"
+    },
+    "ai_tool_experience": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "high",
+      "reason": "Derived from 3 public data signal(s), mean score 6.33",
+      "source": "website_scrape"
+    }
+  },
+  "cross_validation_flags": [
+    {
+      "flag": "No Companies House filings in the last 24 months",
+      "pillar": "governance_compliance",
+      "severity": "medium",
+      "probe_question": "Companies House shows no recent filings \u2014 can you confirm your accounts and confirmation statement are up to date?"
+    }
+  ],
+  "stream_c_inferences": [],
+  "raw_findings": {
+    "website": {
+      "url": "https://www.baukjen.com",
+      "platform": {
+        "name": "Shopify",
+        "confidence": "high",
+        "evidence": "Found 'cdn.shopify.com' in page source"
+      },
+      "privacy_policy": {
+        "found": true,
+        "url": "https://www.baukjen.com/privacy-policy",
+        "mentions_ai": true,
+        "mentions_profiling": false
+      },
+      "cookie_consent": {
+        "found": true,
+        "provider": "Generic cookie-consent"
+      },
+      "chat_widget": {
+        "found": true,
+        "provider": "Zendesk"
+      },
+      "analytics": {
+        "tools_detected": [
+          "Google Analytics 4",
+          "Microsoft Clarity"
+        ],
+        "count": 2
+      },
+      "marketing_automation": {
+        "tools_detected": [
+          "Klaviyo"
+        ],
+        "count": 1
+      },
+      "review_widgets": {
+        "found": true,
+        "providers": [
+          "Trustpilot"
+        ]
+      },
+      "structured_product_data": {
+        "found": false
+      },
+      "ssl": {
+        "enabled": true
+      },
+      "page_load_seconds": 1.01,
+      "raw_signals": [
+        "[technology_infrastructure] E-commerce platform detected: Shopify (score=7.0, band=6-8, confidence=high)",
+        "[governance_compliance] Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions) (score=6, band=5-9, confidence=high)",
+        "[governance_compliance] Cookie consent tool detected: Generic cookie-consent (score=7, band=6-8, confidence=high)",
+        "[data_foundations] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7, band=6+, confidence=high)",
+        "[ai_tool_experience] Page source references a personalisation/recommendation engine (score=8, band=7-9, confidence=high)",
+        "[process_digitisation] Review widget(s) detected: Trustpilot (score=6, band=5-7, confidence=medium)",
+        "[ai_tool_experience] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6, band=4-6, confidence=medium)",
+        "[governance_compliance] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7, band=6-9, confidence=high)",
+        "[technology_infrastructure] Fast page load: 1.01s (score=8, band=7-9, confidence=medium)"
+      ],
+      "pillar_contributions": {
+        "technology_infrastructure": [
+          {
+            "score": 7.0,
+            "evidence": "E-commerce platform detected: Shopify",
+            "band": "6-8",
+            "confidence": "high"
+          },
+          {
+            "score": 8,
+            "evidence": "Fast page load: 1.01s",
+            "band": "7-9",
+            "confidence": "medium"
+          }
+        ],
+        "governance_compliance": [
+          {
+            "score": 6,
+            "evidence": "Privacy policy found at https://www.baukjen.com/privacy-policy (1 governance-relevant mentions)",
+            "band": "5-9",
+            "confidence": "high"
+          },
+          {
+            "score": 7,
+            "evidence": "Cookie consent tool detected: Generic cookie-consent",
+            "band": "6-8",
+            "confidence": "high"
+          },
+          {
+            "score": 7,
+            "evidence": "HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy']",
+            "band": "6-9",
+            "confidence": "high"
+          }
+        ],
+        "data_foundations": [
+          {
+            "score": 7,
+            "evidence": "Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity",
+            "band": "6+",
+            "confidence": "high"
+          }
+        ],
+        "ai_tool_experience": [
+          {
+            "score": 8,
+            "evidence": "Page source references a personalisation/recommendation engine",
+            "band": "7-9",
+            "confidence": "high"
+          },
+          {
+            "score": 6,
+            "evidence": "Marketing automation tool(s) detected: Klaviyo (also has review platform tooling)",
+            "band": "4-6",
+            "confidence": "medium"
+          }
+        ],
+        "process_digitisation": [
+          {
+            "score": 6,
+            "evidence": "Review widget(s) detected: Trustpilot",
+            "band": "5-7",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "errors": [],
+      "ai_personalisation_tools": {
+        "tools_detected": [],
+        "keyword_match": true
+      }
+    },
+    "google_profile": {
+      "total_reviews": null,
+      "average_rating": null,
+      "last_review_days_ago": null,
+      "is_claimed": null,
+      "has_complete_hours": null,
+      "website_matches_input": null,
+      "business_status": null,
+      "pillar_contributions": {},
+      "error": "No matching Google Places result found"
+    },
+    "companies_house": {
+      "company_status": "dissolved",
+      "incorporation_date": "2003-05-19",
+      "sic_codes": [
+        "47910"
+      ],
+      "days_since_last_filing": 1863,
+      "filing_count_last_2_years": 0,
+      "has_accounts_filed": false,
+      "pillar_contributions": {
+        "governance_compliance": [
+          {
+            "score": 3,
+            "evidence": "No filings in 1863 days"
+          },
+          {
+            "score": 2,
+            "evidence": "No filings in the last 2 years"
+          }
+        ]
+      },
+      "error": null
+    },
+    "facebook_ads": {
+      "has_active_ads": true,
+      "detection_method": "playwright_render",
+      "pillar_contributions": {
+        "ai_tool_experience": [
+          {
+            "score": 5,
+            "evidence": "Active Facebook ads detected"
+          }
+        ],
+        "process_digitisation": [
+          {
+            "score": 5,
+            "evidence": "Active Facebook ads detected"
+          }
+        ]
+      }
+    },
+    "instagram": {
+      "handle": "baukjen",
+      "is_public": true,
+      "approx_post_count": "3,773",
+      "mentions_ai_or_ecommerce": false,
+      "pillar_contributions": {
+        "staff_digital_literacy": [
+          {
+            "score": 5,
+            "evidence": "Active public Instagram presence (~3,773 posts)"
+          }
+        ]
+      },
+      "error": null
+    }
+  },
+  "sources_available": [
+    "website_scrape",
+    "companies_house",
+    "facebook_ads",
+    "instagram"
+  ],
+  "sources_failed": [
+    "google_profile"
+  ],
+  "enrichment_duration_seconds": 9.69
+}

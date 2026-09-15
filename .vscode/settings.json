@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "python.analysis.extraPaths": ["${workspaceFolder}"],
+    "python.terminal.executeInFileDir": false,
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

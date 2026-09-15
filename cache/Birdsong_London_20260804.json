@@ -1,0 +1,271 @@
+{
+  "business_name": "Birdsong London",
+  "assessment_timestamp": "2026-08-04T11:21:31.756479+00:00",
+  "stream_b_signals": {
+    "data_foundations": {
+      "signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_b_score": 5.0
+    },
+    "process_digitisation": {
+      "signals": [
+        "[google_profile] 2 Google reviews (score=2)",
+        "[google_profile] Most recent review is 308 days old (score=3)"
+      ],
+      "stream_b_score": 2.5
+    },
+    "technology_infrastructure": {
+      "signals": [
+        "[website] E-commerce platform detected: Wix (score=5.0)",
+        "[website] Fast page load: 0.66s (score=8)"
+      ],
+      "stream_b_score": 6.5
+    },
+    "staff_digital_literacy": {
+      "signals": [],
+      "stream_b_score": null
+    },
+    "governance_compliance": {
+      "signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)",
+        "[companies_house] 8 filings in the last 2 years (score=6)"
+      ],
+      "stream_b_score": 4.67
+    },
+    "ai_tool_experience": {
+      "signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_b_score": 5.0
+    }
+  },
+  "pre_population_suggestions": {
+    "data_foundations": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 1 public data signal(s), mean score 5.0",
+      "source": "website_scrape"
+    },
+    "process_digitisation": {
+      "suggested_band": "low",
+      "suggested_score_range": "1-4",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 2.5",
+      "source": "google_profile"
+    },
+    "technology_infrastructure": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 6.5",
+      "source": "website_scrape"
+    },
+    "governance_compliance": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "high",
+      "reason": "Derived from 3 public data signal(s), mean score 4.67",
+      "source": "website_scrape"
+    },
+    "ai_tool_experience": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 5.0",
+      "source": "website_scrape"
+    }
+  },
+  "cross_validation_flags": [
+    {
+      "flag": "No privacy policy found on website",
+      "pillar": "governance_compliance",
+      "severity": "high",
+      "probe_question": "We couldn't find a privacy policy on your website \u2014 how do you currently handle data protection and customer data governance?"
+    },
+    {
+      "flag": "Very low Google review count",
+      "pillar": "process_digitisation",
+      "severity": "low",
+      "probe_question": "Your Google Business Profile has very few reviews \u2014 how do you currently collect customer feedback?"
+    }
+  ],
+  "stream_c_inferences": [],
+  "raw_findings": {
+    "website": {
+      "url": "https://birdsong.london",
+      "platform": {
+        "name": "Wix",
+        "confidence": "high",
+        "evidence": "Found 'static.wixstatic.com' in page source"
+      },
+      "privacy_policy": {
+        "found": false,
+        "url": null,
+        "mentions_ai": false,
+        "mentions_profiling": false
+      },
+      "cookie_consent": {
+        "found": false,
+        "provider": null
+      },
+      "chat_widget": {
+        "found": false,
+        "provider": null
+      },
+      "analytics": {
+        "tools_detected": [
+          "Google Analytics 4"
+        ],
+        "count": 1
+      },
+      "marketing_automation": {
+        "tools_detected": [
+          "Klaviyo"
+        ],
+        "count": 1
+      },
+      "review_widgets": {
+        "found": false,
+        "providers": []
+      },
+      "structured_product_data": {
+        "found": false
+      },
+      "ssl": {
+        "enabled": true
+      },
+      "page_load_seconds": 0.66,
+      "raw_signals": [
+        "[technology_infrastructure] E-commerce platform detected: Wix (score=5.0, band=4-6, confidence=high)",
+        "[governance_compliance] No privacy policy found at common paths (score=2, band=1-3, confidence=low)",
+        "[ai_tool_experience] Analytics tool detected: Google Analytics 4 (score=5, band=4-6, confidence=medium)",
+        "[data_foundations] Analytics tool detected: Google Analytics 4 (score=5, band=4-6, confidence=medium)",
+        "[ai_tool_experience] Marketing automation tool(s) detected: Klaviyo (score=5, band=5+, confidence=medium)",
+        "[governance_compliance] HTTPS enabled; security headers present: none (score=6, band=6-9, confidence=high)",
+        "[technology_infrastructure] Fast page load: 0.66s (score=8, band=7-9, confidence=medium)"
+      ],
+      "pillar_contributions": {
+        "technology_infrastructure": [
+          {
+            "score": 5.0,
+            "evidence": "E-commerce platform detected: Wix",
+            "band": "4-6",
+            "confidence": "high"
+          },
+          {
+            "score": 8,
+            "evidence": "Fast page load: 0.66s",
+            "band": "7-9",
+            "confidence": "medium"
+          }
+        ],
+        "governance_compliance": [
+          {
+            "score": 2,
+            "evidence": "No privacy policy found at common paths",
+            "band": "1-3",
+            "confidence": "low"
+          },
+          {
+            "score": 6,
+            "evidence": "HTTPS enabled; security headers present: none",
+            "band": "6-9",
+            "confidence": "high"
+          }
+        ],
+        "ai_tool_experience": [
+          {
+            "score": 5,
+            "evidence": "Analytics tool detected: Google Analytics 4",
+            "band": "4-6",
+            "confidence": "medium"
+          },
+          {
+            "score": 5,
+            "evidence": "Marketing automation tool(s) detected: Klaviyo",
+            "band": "5+",
+            "confidence": "medium"
+          }
+        ],
+        "data_foundations": [
+          {
+            "score": 5,
+            "evidence": "Analytics tool detected: Google Analytics 4",
+            "band": "4-6",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "errors": []
+    },
+    "google_profile": {
+      "total_reviews": 2,
+      "average_rating": 4.5,
+      "last_review_days_ago": 308,
+      "is_claimed": false,
+      "has_complete_hours": true,
+      "website_matches_input": null,
+      "business_status": "OPERATIONAL",
+      "pillar_contributions": {
+        "process_digitisation": [
+          {
+            "score": 2,
+            "evidence": "2 Google reviews"
+          },
+          {
+            "score": 3,
+            "evidence": "Most recent review is 308 days old"
+          }
+        ]
+      },
+      "error": null
+    },
+    "companies_house": {
+      "company_status": "active",
+      "incorporation_date": "2023-01-24",
+      "sic_codes": [
+        "69201",
+        "69202"
+      ],
+      "days_since_last_filing": 42,
+      "filing_count_last_2_years": 8,
+      "has_accounts_filed": true,
+      "pillar_contributions": {
+        "governance_compliance": [
+          {
+            "score": 6,
+            "evidence": "8 filings in the last 2 years"
+          }
+        ]
+      },
+      "error": null
+    },
+    "facebook_ads": {
+      "has_active_ads": false,
+      "detection_method": "html_parse",
+      "pillar_contributions": {}
+    },
+    "instagram": {
+      "handle": "birdsongldn",
+      "is_public": null,
+      "approx_post_count": null,
+      "mentions_ai_or_ecommerce": false,
+      "pillar_contributions": {},
+      "error": "Instagram check failed: Page.get_attribute: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"meta[name=\\\"description\\\"]\")\n"
+    }
+  },
+  "sources_available": [
+    "website_scrape",
+    "google_profile",
+    "companies_house",
+    "facebook_ads"
+  ],
+  "sources_failed": [
+    "instagram"
+  ],
+  "enrichment_duration_seconds": 35.85
+}

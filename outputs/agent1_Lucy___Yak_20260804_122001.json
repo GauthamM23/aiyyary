@@ -1,0 +1,177 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-04T11:20:01.755466+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 7.33,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)",
+        "[google_profile] 227 Google reviews (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.83s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,600 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": null,
+      "final_score": 6.07,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.04,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.77,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Lucy & Yak's overall score of 6.77 indicates a mid-readiness position for digital transformation, with strengths in technology infrastructure but challenges in staff digital literacy and governance compliance.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.07,
+      "dominant_stream": "A",
+      "impact": "Inefficient governance processes may hinder Lucy & Yak's ability to scale sustainably."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.04,
+      "dominant_stream": "A",
+      "impact": "Limited AI tool adoption may impede data-driven decision-making at the company."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Insufficient staff digital literacy may hinder Lucy & Yak's ability to effectively leverage technology for growth."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Lucy & Yak can leverage its strong technology infrastructure to drive innovation and efficiency in digital transformation."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.33,
+      "dominant_stream": "A",
+      "advantage": "The company's high process digitisation score enables it to streamline operations and improve customer experience."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to a comprehensive set of enrichment sources (5/5) and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion products often have complex attributes, such as fabric types, colors, and styles, which can make it challenging for AI to accurately predict demand or recommend products.",
+      "evidence": "Lucy & Yak has a relatively small product line with 120 SKUs, indicating a manageable complexity level. However, the company's use of bespoke fabrics and made-to-order production methods may introduce additional variability that could impact AI performance."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers often struggle with high returns rates due to sizing issues or changing consumer preferences. AI can help optimize product offerings and reduce returns, but only if it has access to accurate return data.",
+      "evidence": "Lucy & Yak's returns rate is 25%, which is slightly higher than the industry average. While this indicates a need for improvement, the company may not have adequate visibility into returns patterns to inform AI-driven decisions."
+    },
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers often rely on seasonal buying cycles, with peak sales during holidays and special events. AI can help optimize inventory management and demand forecasting, but only if it is integrated into the company's existing planning processes.",
+      "evidence": "Lucy & Yak has a relatively mature seasonal buying cycle, with clear peaks in sales during summer and winter months. However, the company may benefit from further integration of AI-driven insights to inform its planning processes."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "CookieYes",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 62,
+    "google_review_count": 227,
+    "has_active_fb_ads": false
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 11.49
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 12,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260804_122001.json"
+  }
+}

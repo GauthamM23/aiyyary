@@ -1,0 +1,615 @@
+{
+  "run_timestamp": "2026-08-04T12:28:05.539701+00:00",
+  "constructed_scores": {
+    "Birdsong London": {
+      "source": "researcher_constructed",
+      "maturity_label": "Very Low Maturity",
+      "pillar_scores": {
+        "data_foundations": 1.28,
+        "process_digitisation": 1.56,
+        "technology_infrastructure": 1.56,
+        "staff_digital_literacy": 1.56,
+        "governance_compliance": 1.28,
+        "ai_tool_experience": 1.56
+      },
+      "overall_score": 1.47
+    },
+    "Gudrun Sjödén UK": {
+      "source": "researcher_constructed",
+      "maturity_label": "Low-Mid Maturity",
+      "pillar_scores": {
+        "data_foundations": 4.09,
+        "process_digitisation": 2.41,
+        "technology_infrastructure": 5.22,
+        "staff_digital_literacy": 4.09,
+        "governance_compliance": 2.97,
+        "ai_tool_experience": 2.97
+      },
+      "overall_score": 3.62
+    },
+    "Baukjen": {
+      "source": "researcher_constructed",
+      "maturity_label": "Mid Maturity",
+      "pillar_scores": {
+        "data_foundations": 5.5,
+        "process_digitisation": 5.5,
+        "technology_infrastructure": 5.78,
+        "staff_digital_literacy": 4.94,
+        "governance_compliance": 6.06,
+        "ai_tool_experience": 4.94
+      },
+      "overall_score": 5.45
+    },
+    "Nobody's Child": {
+      "source": "researcher_constructed",
+      "maturity_label": "Mid-High Maturity",
+      "pillar_scores": {
+        "data_foundations": 7.19,
+        "process_digitisation": 7.19,
+        "technology_infrastructure": 7.19,
+        "staff_digital_literacy": 6.06,
+        "governance_compliance": 7.19,
+        "ai_tool_experience": 6.34
+      },
+      "overall_score": 6.86
+    },
+    "Lucy & Yak": {
+      "source": "researcher_constructed",
+      "maturity_label": "High Maturity",
+      "pillar_scores": {
+        "data_foundations": 9.44,
+        "process_digitisation": 9.44,
+        "technology_infrastructure": 9.44,
+        "staff_digital_literacy": 9.44,
+        "governance_compliance": 9.44,
+        "ai_tool_experience": 9.44
+      },
+      "overall_score": 9.44
+    }
+  },
+  "live_scores": {
+    "Birdsong London": {
+      "source": "live_enrichment",
+      "pillar_scores": {
+        "data_foundations": 3.97,
+        "process_digitisation": 3.22,
+        "technology_infrastructure": 4.66,
+        "staff_digital_literacy": 4.09,
+        "governance_compliance": 4.26,
+        "ai_tool_experience": 3.44
+      },
+      "overall_score": 3.94,
+      "readiness_tier": "Early-Stage",
+      "assessment_timestamp": "2026-08-04T11:22:21.735411+00:00"
+    },
+    "Gudrun Sjödén UK": {
+      "source": "live_enrichment",
+      "pillar_scores": {
+        "data_foundations": 5.78,
+        "process_digitisation": 6.14,
+        "technology_infrastructure": 5.06,
+        "staff_digital_literacy": 4.36,
+        "governance_compliance": 5.28,
+        "ai_tool_experience": 2.97
+      },
+      "overall_score": 4.93,
+      "readiness_tier": "Early-Stage",
+      "assessment_timestamp": "2026-08-04T11:23:11.005756+00:00"
+    },
+    "Baukjen": {
+      "source": "live_enrichment",
+      "pillar_scores": {
+        "data_foundations": 6.94,
+        "process_digitisation": 6.64,
+        "technology_infrastructure": 7.09,
+        "staff_digital_literacy": 5.55,
+        "governance_compliance": 5.94,
+        "ai_tool_experience": 5.65
+      },
+      "overall_score": 6.3,
+      "readiness_tier": "Mid-Readiness",
+      "assessment_timestamp": "2026-08-04T11:23:48.168185+00:00"
+    },
+    "Nobody's Child": {
+      "source": "live_enrichment",
+      "pillar_scores": {
+        "data_foundations": 6.65,
+        "process_digitisation": 7.72,
+        "technology_infrastructure": 7.87,
+        "staff_digital_literacy": 6.5,
+        "governance_compliance": 6.86,
+        "ai_tool_experience": 6.34
+      },
+      "overall_score": 6.99,
+      "readiness_tier": "Mid-Readiness",
+      "assessment_timestamp": "2026-08-04T11:20:55.904173+00:00"
+    },
+    "Lucy & Yak": {
+      "source": "live_enrichment",
+      "pillar_scores": {
+        "data_foundations": 6.94,
+        "process_digitisation": 7.33,
+        "technology_infrastructure": 7.87,
+        "staff_digital_literacy": 6.34,
+        "governance_compliance": 6.07,
+        "ai_tool_experience": 6.04
+      },
+      "overall_score": 6.77,
+      "readiness_tier": "Mid-Readiness",
+      "assessment_timestamp": "2026-08-04T11:20:01.755466+00:00"
+    }
+  },
+  "divergence_report": {
+    "Birdsong London": {
+      "pillars": {
+        "data_foundations": {
+          "constructed_score": 1.28,
+          "live_score": 3.97,
+          "divergence": 2.69,
+          "abs_divergence": 2.69,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "process_digitisation": {
+          "constructed_score": 1.56,
+          "live_score": 3.22,
+          "divergence": 1.66,
+          "abs_divergence": 1.66,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        },
+        "technology_infrastructure": {
+          "constructed_score": 1.56,
+          "live_score": 4.66,
+          "divergence": 3.1,
+          "abs_divergence": 3.1,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "staff_digital_literacy": {
+          "constructed_score": 1.56,
+          "live_score": 4.09,
+          "divergence": 2.53,
+          "abs_divergence": 2.53,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "governance_compliance": {
+          "constructed_score": 1.28,
+          "live_score": 4.26,
+          "divergence": 2.98,
+          "abs_divergence": 2.98,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "ai_tool_experience": {
+          "constructed_score": 1.56,
+          "live_score": 3.44,
+          "divergence": 1.88,
+          "abs_divergence": 1.88,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        }
+      },
+      "constructed_overall": 1.47,
+      "live_overall": 3.94,
+      "overall_divergence": 2.47,
+      "overall_abs_divergence": 2.47,
+      "overall_severity": "HIGH",
+      "agreement_rate": 0.0,
+      "verdict": "DIVERGENT"
+    },
+    "Gudrun Sjödén UK": {
+      "pillars": {
+        "data_foundations": {
+          "constructed_score": 4.09,
+          "live_score": 5.78,
+          "divergence": 1.69,
+          "abs_divergence": 1.69,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        },
+        "process_digitisation": {
+          "constructed_score": 2.41,
+          "live_score": 6.14,
+          "divergence": 3.73,
+          "abs_divergence": 3.73,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "technology_infrastructure": {
+          "constructed_score": 5.22,
+          "live_score": 5.06,
+          "divergence": -0.16,
+          "abs_divergence": 0.16,
+          "direction": "live_lower",
+          "severity": "LOW"
+        },
+        "staff_digital_literacy": {
+          "constructed_score": 4.09,
+          "live_score": 4.36,
+          "divergence": 0.27,
+          "abs_divergence": 0.27,
+          "direction": "live_higher",
+          "severity": "LOW"
+        },
+        "governance_compliance": {
+          "constructed_score": 2.97,
+          "live_score": 5.28,
+          "divergence": 2.31,
+          "abs_divergence": 2.31,
+          "direction": "live_higher",
+          "severity": "HIGH"
+        },
+        "ai_tool_experience": {
+          "constructed_score": 2.97,
+          "live_score": 2.97,
+          "divergence": 0.0,
+          "abs_divergence": 0.0,
+          "direction": "identical",
+          "severity": "LOW"
+        }
+      },
+      "constructed_overall": 3.62,
+      "live_overall": 4.93,
+      "overall_divergence": 1.31,
+      "overall_abs_divergence": 1.31,
+      "overall_severity": "MEDIUM",
+      "agreement_rate": 50.0,
+      "verdict": "PARTIAL_MATCH"
+    },
+    "Baukjen": {
+      "pillars": {
+        "data_foundations": {
+          "constructed_score": 5.5,
+          "live_score": 6.94,
+          "divergence": 1.44,
+          "abs_divergence": 1.44,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        },
+        "process_digitisation": {
+          "constructed_score": 5.5,
+          "live_score": 6.64,
+          "divergence": 1.14,
+          "abs_divergence": 1.14,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        },
+        "technology_infrastructure": {
+          "constructed_score": 5.78,
+          "live_score": 7.09,
+          "divergence": 1.31,
+          "abs_divergence": 1.31,
+          "direction": "live_higher",
+          "severity": "MEDIUM"
+        },
+        "staff_digital_literacy": {
+          "constructed_score": 4.94,
+          "live_score": 5.55,
+          "divergence": 0.61,
+          "abs_divergence": 0.61,
+          "direction": "live_higher",
+          "severity": "LOW"
+        },
+        "governance_compliance": {
+          "constructed_score": 6.06,
+          "live_score": 5.94,
+          "divergence": -0.12,
+          "abs_divergence": 0.12,
+          "direction": "live_lower",
+          "severity": "LOW"
+        },
+        "ai_tool_experience": {
+          "constructed_score": 4.94,
+          "live_score": 5.65,
+          "divergence": 0.71,
+          "abs_divergence": 0.71,
+          "direction": "live_higher",
+          "severity": "LOW"
+        }
+      },
+      "constructed_overall": 5.45,
+      "live_overall": 6.3,
+      "overall_divergence": 0.85,
+      "overall_abs_divergence": 0.85,
+      "overall_severity": "LOW",
+      "agreement_rate": 50.0,
+      "verdict": "PARTIAL_MATCH"
+    },
+    "Nobody's Child": {
+      "pillars": {
+        "data_foundations": {
+          "constructed_score": 7.19,
+          "live_score": 6.65,
+          "divergence": -0.54,
+          "abs_divergence": 0.54,
+          "direction": "live_lower",
+          "severity": "LOW"
+        },
+        "process_digitisation": {
+          "constructed_score": 7.19,
+          "live_score": 7.72,
+          "divergence": 0.53,
+          "abs_divergence": 0.53,
+          "direction": "live_higher",
+          "severity": "LOW"
+        },
+        "technology_infrastructure": {
+          "constructed_score": 7.19,
+          "live_score": 7.87,
+          "divergence": 0.68,
+          "abs_divergence": 0.68,
+          "direction": "live_higher",
+          "severity": "LOW"
+        },
+        "staff_digital_literacy": {
+          "constructed_score": 6.06,
+          "live_score": 6.5,
+          "divergence": 0.44,
+          "abs_divergence": 0.44,
+          "direction": "live_higher",
+          "severity": "LOW"
+        },
+        "governance_compliance": {
+          "constructed_score": 7.19,
+          "live_score": 6.86,
+          "divergence": -0.33,
+          "abs_divergence": 0.33,
+          "direction": "live_lower",
+          "severity": "LOW"
+        },
+        "ai_tool_experience": {
+          "constructed_score": 6.34,
+          "live_score": 6.34,
+          "divergence": 0.0,
+          "abs_divergence": 0.0,
+          "direction": "identical",
+          "severity": "LOW"
+        }
+      },
+      "constructed_overall": 6.86,
+      "live_overall": 6.99,
+      "overall_divergence": 0.13,
+      "overall_abs_divergence": 0.13,
+      "overall_severity": "LOW",
+      "agreement_rate": 100.0,
+      "verdict": "VALIDATED"
+    },
+    "Lucy & Yak": {
+      "pillars": {
+        "data_foundations": {
+          "constructed_score": 9.44,
+          "live_score": 6.94,
+          "divergence": -2.5,
+          "abs_divergence": 2.5,
+          "direction": "live_lower",
+          "severity": "HIGH"
+        },
+        "process_digitisation": {
+          "constructed_score": 9.44,
+          "live_score": 7.33,
+          "divergence": -2.11,
+          "abs_divergence": 2.11,
+          "direction": "live_lower",
+          "severity": "HIGH"
+        },
+        "technology_infrastructure": {
+          "constructed_score": 9.44,
+          "live_score": 7.87,
+          "divergence": -1.57,
+          "abs_divergence": 1.57,
+          "direction": "live_lower",
+          "severity": "MEDIUM"
+        },
+        "staff_digital_literacy": {
+          "constructed_score": 9.44,
+          "live_score": 6.34,
+          "divergence": -3.1,
+          "abs_divergence": 3.1,
+          "direction": "live_lower",
+          "severity": "HIGH"
+        },
+        "governance_compliance": {
+          "constructed_score": 9.44,
+          "live_score": 6.07,
+          "divergence": -3.37,
+          "abs_divergence": 3.37,
+          "direction": "live_lower",
+          "severity": "HIGH"
+        },
+        "ai_tool_experience": {
+          "constructed_score": 9.44,
+          "live_score": 6.04,
+          "divergence": -3.4,
+          "abs_divergence": 3.4,
+          "direction": "live_lower",
+          "severity": "HIGH"
+        }
+      },
+      "constructed_overall": 9.44,
+      "live_overall": 6.77,
+      "overall_divergence": -2.67,
+      "overall_abs_divergence": 2.67,
+      "overall_severity": "HIGH",
+      "agreement_rate": 0.0,
+      "verdict": "DIVERGENT"
+    }
+  },
+  "agent2_inputs": {
+    "Birdsong London": {
+      "score_sent_to_agent2": 3.94,
+      "readiness_tier_sent_to_agent2": "Early-Stage",
+      "score_source": "live_enrichment",
+      "confidence": "low",
+      "high_divergence_pillars": [
+        "data_foundations",
+        "technology_infrastructure",
+        "staff_digital_literacy",
+        "governance_compliance"
+      ],
+      "dissertation_flag": "Researcher underestimated data_foundations by 2.69 points; Researcher underestimated technology_infrastructure by 3.10 points; Researcher underestimated staff_digital_literacy by 2.53 points; Researcher underestimated governance_compliance by 2.98 points — discuss in limitations"
+    },
+    "Gudrun Sjödén UK": {
+      "score_sent_to_agent2": 4.93,
+      "readiness_tier_sent_to_agent2": "Early-Stage",
+      "score_source": "live_enrichment",
+      "confidence": "medium",
+      "high_divergence_pillars": [
+        "process_digitisation",
+        "governance_compliance"
+      ],
+      "dissertation_flag": "Researcher underestimated process_digitisation by 3.73 points; Researcher underestimated governance_compliance by 2.31 points — discuss in limitations"
+    },
+    "Baukjen": {
+      "score_sent_to_agent2": 6.3,
+      "readiness_tier_sent_to_agent2": "Mid-Readiness",
+      "score_source": "live_enrichment",
+      "confidence": "high",
+      "high_divergence_pillars": [],
+      "dissertation_flag": null
+    },
+    "Nobody's Child": {
+      "score_sent_to_agent2": 6.99,
+      "readiness_tier_sent_to_agent2": "Mid-Readiness",
+      "score_source": "live_enrichment",
+      "confidence": "high",
+      "high_divergence_pillars": [],
+      "dissertation_flag": null
+    },
+    "Lucy & Yak": {
+      "score_sent_to_agent2": 6.77,
+      "readiness_tier_sent_to_agent2": "Mid-Readiness",
+      "score_source": "live_enrichment",
+      "confidence": "low",
+      "high_divergence_pillars": [
+        "data_foundations",
+        "process_digitisation",
+        "staff_digital_literacy",
+        "governance_compliance",
+        "ai_tool_experience"
+      ],
+      "dissertation_flag": "Researcher overestimated data_foundations by 2.50 points; Researcher overestimated process_digitisation by 2.11 points; Researcher overestimated staff_digital_literacy by 3.10 points; Researcher overestimated governance_compliance by 3.37 points; Researcher overestimated ai_tool_experience by 3.40 points — discuss in limitations"
+    }
+  },
+  "academic_findings": {
+    "findings": [
+      {
+        "finding_number": 1,
+        "observation": "Birdsong London's constructed data foundations score (1.28) was significantly lower than its live-measured score (3.97), with a divergence of 2.69 and an absolute divergence of 2.69, indicating a HIGH severity.",
+        "interpretation": "This finding suggests that the researcher-constructed capability scores may not accurately capture the actual level of data foundations in SMEs, highlighting potential limitations in the assessment instrument's validity.",
+        "implication": "The methodology should consider incorporating live-measured data or additional validation methods to improve the accuracy and reliability of constructed capability scores."
+      },
+      {
+        "finding_number": 2,
+        "observation": "Gudrun Sjödén UK's constructed process digitisation score (2.41) was significantly lower than its live-measured score (6.14), with a divergence of 3.73 and an absolute divergence of 3.73, indicating a HIGH severity.",
+        "interpretation": "This finding indicates that the assessment instrument may struggle to accurately capture the complexity and nuances of process digitisation in SMEs, potentially leading to biased or inaccurate results.",
+        "implication": "The dissertation's methodology should consider incorporating more detailed and specific questions related to process digitisation to improve the accuracy and validity of constructed capability scores."
+      },
+      {
+        "finding_number": 3,
+        "observation": "Baukjen's constructed technology infrastructure score (5.78) was slightly lower than its live-measured score (7.09), with a divergence of 1.31 and an absolute divergence of 1.31, indicating a LOW severity.",
+        "interpretation": "This finding suggests that the assessment instrument may be able to capture general trends and levels of technology infrastructure in SMEs, but may not accurately capture specific details or nuances.",
+        "implication": "The methodology should consider incorporating more detailed and specific questions related to technology infrastructure to improve the accuracy and validity of constructed capability scores."
+      },
+      {
+        "finding_number": 4,
+        "observation": "Nobody's Child's constructed governance compliance score (7.19) was slightly lower than its live-measured score (6.86), with a divergence of -0.33 and an absolute divergence of 0.33, indicating a LOW severity.",
+        "interpretation": "This finding indicates that the assessment instrument may be able to capture general trends and levels of governance compliance in SMEs, but may not accurately capture specific details or nuances.",
+        "implication": "The methodology should consider incorporating more detailed and specific questions related to governance compliance to improve the accuracy and validity of constructed capability scores."
+      },
+      {
+        "finding_number": 5,
+        "observation": "Lucy & Yak's constructed overall score (9.44) was significantly lower than its live-measured overall score (6.77), with a divergence of -2.67 and an absolute divergence of 2.67, indicating a HIGH severity.",
+        "interpretation": "This finding suggests that the researcher-constructed capability scores may not accurately capture the actual level of capabilities in SMEs, highlighting potential limitations in the assessment instrument's validity.",
+        "implication": "The methodology should consider incorporating live-measured data or additional validation methods to improve the accuracy and reliability of constructed capability scores."
+      }
+    ],
+    "overall_instrument_validity_assessment": "The cross-validation report reveals significant discrepancies between researcher-constructed capability scores and live-measured scores for several SMEs, indicating potential limitations in the assessment instrument's validity. While some SMEs show high levels of agreement (e.g., Nobody's Child), others exhibit significant divergences (e.g., Birdsong London, Lucy & Yak). These findings suggest that the assessment instrument may require refinement and validation to ensure accurate and reliable results.",
+    "status": "generated"
+  },
+  "instrument_validity_summary": {
+    "overall_agreement_rate": 40.0,
+    "companies_evaluated": 5,
+    "total_pillar_comparisons": 30
+  },
+  "high_divergence_flags": [
+    {
+      "company": "Birdsong London",
+      "pillar": "data_foundations",
+      "constructed_score": 1.28,
+      "live_score": 3.97,
+      "divergence": 2.69
+    },
+    {
+      "company": "Birdsong London",
+      "pillar": "technology_infrastructure",
+      "constructed_score": 1.56,
+      "live_score": 4.66,
+      "divergence": 3.1
+    },
+    {
+      "company": "Birdsong London",
+      "pillar": "staff_digital_literacy",
+      "constructed_score": 1.56,
+      "live_score": 4.09,
+      "divergence": 2.53
+    },
+    {
+      "company": "Birdsong London",
+      "pillar": "governance_compliance",
+      "constructed_score": 1.28,
+      "live_score": 4.26,
+      "divergence": 2.98
+    },
+    {
+      "company": "Gudrun Sjödén UK",
+      "pillar": "process_digitisation",
+      "constructed_score": 2.41,
+      "live_score": 6.14,
+      "divergence": 3.73
+    },
+    {
+      "company": "Gudrun Sjödén UK",
+      "pillar": "governance_compliance",
+      "constructed_score": 2.97,
+      "live_score": 5.28,
+      "divergence": 2.31
+    },
+    {
+      "company": "Lucy & Yak",
+      "pillar": "data_foundations",
+      "constructed_score": 9.44,
+      "live_score": 6.94,
+      "divergence": -2.5
+    },
+    {
+      "company": "Lucy & Yak",
+      "pillar": "process_digitisation",
+      "constructed_score": 9.44,
+      "live_score": 7.33,
+      "divergence": -2.11
+    },
+    {
+      "company": "Lucy & Yak",
+      "pillar": "staff_digital_literacy",
+      "constructed_score": 9.44,
+      "live_score": 6.34,
+      "divergence": -3.1
+    },
+    {
+      "company": "Lucy & Yak",
+      "pillar": "governance_compliance",
+      "constructed_score": 9.44,
+      "live_score": 6.07,
+      "divergence": -3.37
+    },
+    {
+      "company": "Lucy & Yak",
+      "pillar": "ai_tool_experience",
+      "constructed_score": 9.44,
+      "live_score": 6.04,
+      "divergence": -3.4
+    }
+  ]
+}

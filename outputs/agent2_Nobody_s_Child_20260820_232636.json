@@ -1,0 +1,334 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-20T22:26:36.844901+00:00",
+  "company_name": "Nobody's Child",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.57,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of reducing returns through better size guidance online, and has a high actual score of 6.74 in the process_digitisation pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Size Issue",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Incorrect Fit",
+                    "Runs Small",
+                    "Runs Large"
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Quality",
+                  "sub_reasons": [
+                    "Pilling",
+                    "Fraying",
+                    "Shrinking",
+                    "Uncomfortable Texture"
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Darker than Expected",
+                    "Lighter than Expected",
+                    "Different Shade"
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style Discrepancy",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Different Silhouette",
+                    "Uncomfortable Design",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "MISSING",
+                  "label": "Missing Item",
+                  "sub_reasons": [
+                    "Item Not Included in Order",
+                    "Item Missing from Order"
+                  ]
+                },
+                {
+                  "code": "DEFECT",
+                  "label": "Defective Item",
+                  "sub_reasons": [
+                    "Torn or Damaged Fabric",
+                    "Broken Zippers or Fasteners",
+                    "Missing or Damaged Buttons"
+                  ]
+                },
+                {
+                  "code": "PACKING",
+                  "label": "Packing Issue",
+                  "sub_reasons": [
+                    "Damaged Packaging",
+                    "Missing Packaging Materials"
+                  ]
+                },
+                {
+                  "code": "DELIVERY",
+                  "label": "Delivery Issue",
+                  "sub_reasons": [
+                    "Late Delivery",
+                    "Incorrect Delivery Address"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason",
+              "description": "Please select the reason for your return. We're here to help and want to make things right.",
+              "fields": [
+                {
+                  "label": "What's the issue?",
+                  "type": "select",
+                  "options": [
+                    {
+                      "label": "Size Issue",
+                      "value": "SIZE"
+                    },
+                    {
+                      "label": "Fabric Quality",
+                      "value": "FABRIC"
+                    },
+                    {
+                      "label": "Colour Discrepancy",
+                      "value": "COLOUR"
+                    },
+                    {
+                      "label": "Style Discrepancy",
+                      "value": "STYLE"
+                    },
+                    {
+                      "label": "Missing Item",
+                      "value": "MISSING"
+                    },
+                    {
+                      "label": "Defective Item",
+                      "value": "DEFECT"
+                    },
+                    {
+                      "label": "Packing Issue",
+                      "value": "PACKING"
+                    },
+                    {
+                      "label": "Delivery Issue",
+                      "value": "DELIVERY"
+                    }
+                  ]
+                },
+                {
+                  "label": "Is there anything else you'd like to tell us?",
+                  "type": "textarea",
+                  "description": "If there's anything else you'd like to share about your return, please let us know here."
+                },
+                {
+                  "label": "How can we improve?",
+                  "type": "select",
+                  "options": [
+                    {
+                      "label": "Size",
+                      "value": "SIZE"
+                    },
+                    {
+                      "label": "Fabric",
+                      "value": "FABRIC"
+                    },
+                    {
+                      "label": "Colour",
+                      "value": "COLOUR"
+                    },
+                    {
+                      "label": "Style",
+                      "value": "STYLE"
+                    },
+                    {
+                      "label": "Other",
+                      "value": "OTHER"
+                    }
+                  ]
+                },
+                {
+                  "label": "Would you like to provide feedback on our product or service?",
+                  "type": "textarea",
+                  "description": "Your feedback is invaluable to us. If you'd like to share any thoughts or suggestions, please do so here."
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Log in to your Shopify admin panel and navigate to Online Store > Themes > Actions > Edit code.",
+                "Open the 'templates' folder and locate the 'cart.liquid' file.",
+                "Click 'Add a liquid code snippet' and paste the following code: <form id='returns-reason-form'> <label for='returns-reason'>Returns Reason:</label> <select id='returns-reason' name='returns-reason'> <option value='defective'>Defective</option> <option value='not-as-described'>Not as described</option> <option value='change-of-mind'>Change of mind</option> <option value='other'>Other (please specify)</option> </select> <input type='text' id='returns-reason-comment' name='returns-reason-comment' placeholder='Please provide a brief description'> <button type='submit'>Submit</button> </form>",
+                "Save the changes and navigate to Settings > Checkout.",
+                "Under 'Policies', click 'Return policy' and enable the 'Return reason' option.",
+                "In the 'Return reason' field, select the 'Custom' option and enter the following code: {{ form.returns-reason-form }}",
+                "Save the changes and test the returns flow on your Shopify store."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Nobody's Child\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the embed code to your returns page on Shopify",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it complements the Returns Reason Capture opportunity and also addresses the primary challenge of increasing repeat purchase rate through better customer insights, and has a high actual score of 6.74 in the process_digitisation pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_002",
+      "title": "Abandoned Cart Recovery Emails",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate through targeted marketing, and has a high actual score of 7.87 in the technology_infrastructure pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-500",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it directly addresses the primary challenge of reducing returns through better size guidance online, and has a medium effort level of 6.34 in the data_foundations pillar.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate through targeted marketing, and has a medium effort level of 5.7 in the ai_tool_experience pillar.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate through better inventory management, but has a high effort level of 6.34 in the data_foundations pillar.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate through targeted pricing, but has a high effort level of 7.87 in the technology_infrastructure pillar.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently deferred due to a score gap of 0.66 in the data_foundations pillar, which needs to reach a minimum score of 7.0.",
+      "unlock_condition": "data_foundations pillar score needs to reach 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) by the end of the week to start gathering valuable insights on customer returns and improve size guidance online.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Nobody_s_Child_20260820_232636.json"
+  }
+}

@@ -1,0 +1,589 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-07T14:35:47.650600+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "overall_score": 4.67,
+  "readiness_tier": "Early-Stage",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "MEDIUM",
+      "pillar": "data_foundations",
+      "pillar_score": 5.78,
+      "trigger_reason": "data_foundations final_score=5.78 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should implement data validation checks on their custom platform to ensure accurate customer information is captured, particularly for older customers who may have varying levels of digital literacy.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.91,
+      "trigger_reason": "privacy_policy_found=False or cookie_consent_found=False confirmed by live website scan",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should immediately update their privacy policy and implement a cookie consent mechanism on their website to comply with regulatory requirements, considering the importance of transparency for their older customer base.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "MEDIUM",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 4.17,
+      "trigger_reason": "staff_digital_literacy final_score=4.17 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should provide targeted digital literacy training for staff focused on improving their ability to effectively communicate with and support the company's older, less digitally native customer base.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "LOW",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 3.27,
+      "trigger_reason": "marketing_automation_tools=[], platform_detected=custom_or_unknown",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should explore integrating a marketing automation tool into their custom platform to enhance AI-driven decision-making and improve the overall digital customer experience, considering their current lack of such tools.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.91,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=False, ai_tool_experience final_score=3.27",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should implement a robust testing framework for their AI-driven chat widget to ensure accurate and reliable interactions with customers, particularly given the absence of such a feature on their website.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.91,
+      "trigger_reason": "privacy_policy_mentions_ai=False, governance_compliance final_score=4.91",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should review and update their privacy policy to explicitly mention AI usage and ensure compliance with relevant regulations, considering the importance of transparency in maintaining customer trust.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 3,
+  "low_severity_count": 2,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "regulatory_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "governance_compliance"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by providing a seamless returns process, which is crucial for an older, less digitally native customer base.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "complete",
+          "deliverables": [
+            {
+              "name": "returns_reason_codes",
+              "type": "json",
+              "content": {
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      "Too Small",
+                      "Too Large",
+                      "Incorrect Fit"
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality/Type",
+                    "sub_reasons": [
+                      "Pilling/Fraying",
+                      "Shrinkage",
+                      "Uncomfortable Texture"
+                    ]
+                  },
+                  {
+                    "code": "COLOR",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      "Not as Expected",
+                      "Different Shade",
+                      "Fading/Discolouration"
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style/Design Issue",
+                    "sub_reasons": [
+                      "Unflattering Cut",
+                      "Poor Construction",
+                      "Not as Described"
+                    ]
+                  },
+                  {
+                    "code": "FIT",
+                    "label": "Fit Issue (Separate from Sizing)",
+                    "sub_reasons": [
+                      "Too Short/Long",
+                      "Too Loose/Tight",
+                      "Unbalanced Silhouette"
+                    ]
+                  },
+                  {
+                    "code": "MATERIAL",
+                    "label": "Material Not as Described",
+                    "sub_reasons": [
+                      "Synthetic Instead of Natural",
+                      "Not Breathable",
+                      "Uncomfortable Against Skin"
+                    ]
+                  },
+                  {
+                    "code": "WORKMANSHIP",
+                    "label": "Poor Workmanship/Craftsmanship",
+                    "sub_reasons": [
+                      "Loose Threads",
+                      "Uneven Seams",
+                      "Inconsistent Finishing"
+                    ]
+                  },
+                  {
+                    "code": "PACKAGING",
+                    "label": "Packaging Issue",
+                    "sub_reasons": [
+                      "Damaged Box/Bag",
+                      "Missing Accessories",
+                      "Incorrect Labelling"
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Import these reason codes into your returns form or helpdesk tool."
+            },
+            {
+              "name": "customer_form_structure",
+              "type": "json",
+              "content": {
+                "title": "Return Reason Form",
+                "description": "Please help us understand why you'd like to return your item. This will help us improve our products and service.",
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "SIZE_TOO_SMALL",
+                        "label": "Too Small"
+                      },
+                      {
+                        "id": "SIZE_TOO_LARGE",
+                        "label": "Too Large"
+                      },
+                      {
+                        "id": "SIZE_INCORRECT_FIT",
+                        "label": "Incorrect Fit"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality/Type",
+                    "sub_reasons": [
+                      {
+                        "id": "FABRIC_PILLING_FRAYING",
+                        "label": "Pilling/Fraying"
+                      },
+                      {
+                        "id": "FABRIC_SHRINKAGE",
+                        "label": "Shrinkage"
+                      },
+                      {
+                        "id": "FABRIC_UNCOMFORTABLE_TEXTURE",
+                        "label": "Uncomfortable Texture"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "COLOR",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      {
+                        "id": "COLOR_NOT_AS_EXPECTED",
+                        "label": "Not as Expected"
+                      },
+                      {
+                        "id": "COLOR_DIFFERENT_SHADE",
+                        "label": "Different Shade"
+                      },
+                      {
+                        "id": "COLOR_FADING_DISCOLOURATION",
+                        "label": "Fading/Discolouration"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style/Design Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "STYLE_UNFLATTERING_CUT",
+                        "label": "Unflattering Cut"
+                      },
+                      {
+                        "id": "STYLE_POOR_CONSTRUCTION",
+                        "label": "Poor Construction"
+                      },
+                      {
+                        "id": "STYLE_NOT_AS_DESCRIBED",
+                        "label": "Not as Described"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "FIT",
+                    "label": "Fit Issue (Separate from Sizing)",
+                    "sub_reasons": [
+                      {
+                        "id": "FIT_TOO_SHORT_LONG",
+                        "label": "Too Short/Long"
+                      },
+                      {
+                        "id": "FIT_TOO_LOOSE_TIGHT",
+                        "label": "Too Loose/Tight"
+                      },
+                      {
+                        "id": "FIT_UNBALANCED_SILHOUETTE",
+                        "label": "Unbalanced Silhouette"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "MATERIAL",
+                    "label": "Material Not as Described",
+                    "sub_reasons": [
+                      {
+                        "id": "MATERIAL_SYNTHETIC_INSTEAD_OF_NATURAL",
+                        "label": "Synthetic Instead of Natural"
+                      },
+                      {
+                        "id": "MATERIAL_NOT_BREATHABLE",
+                        "label": "Not Breathable"
+                      },
+                      {
+                        "id": "MATERIAL_UNCOMFORTABLE_AGAINST_SKIN",
+                        "label": "Uncomfortable Against Skin"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "WORKMANSHIP",
+                    "label": "Poor Workmanship/Craftsmanship",
+                    "sub_reasons": [
+                      {
+                        "id": "WORKMANSHIP_LOOSE_THREADS",
+                        "label": "Loose Threads"
+                      },
+                      {
+                        "id": "WORKMANSHIP_UNEVEN_SEAMS",
+                        "label": "Uneven Seams"
+                      },
+                      {
+                        "id": "WORKMANSHIP_INCONSISTENT_FINISHING",
+                        "label": "Inconsistent Finishing"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "PACKAGING",
+                    "label": "Packaging Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "PACKAGING_DAMAGED_BOX_BAG",
+                        "label": "Damaged Box/Bag"
+                      },
+                      {
+                        "id": "PACKAGING_MISSING_ACCESSORIES",
+                        "label": "Missing Accessories"
+                      },
+                      {
+                        "id": "PACKAGING_INCORRECT_LABELLING",
+                        "label": "Incorrect Labelling"
+                      }
+                    ]
+                  }
+                ],
+                "form_fields": [
+                  {
+                    "type": "select",
+                    "label": "What's the main reason for your return?",
+                    "name": "reason_code",
+                    "options": [
+                      {
+                        "value": "SIZE",
+                        "label": "Sizing Issue"
+                      },
+                      {
+                        "value": "FABRIC",
+                        "label": "Fabric Quality/Type"
+                      },
+                      {
+                        "value": "COLOR",
+                        "label": "Colour Discrepancy"
+                      },
+                      {
+                        "value": "STYLE",
+                        "label": "Style/Design Issue"
+                      },
+                      {
+                        "value": "FIT",
+                        "label": "Fit Issue (Separate from Sizing)"
+                      },
+                      {
+                        "value": "MATERIAL",
+                        "label": "Material Not as Described"
+                      },
+                      {
+                        "value": "WORKMANSHIP",
+                        "label": "Poor Workmanship/Craftsmanship"
+                      },
+                      {
+                        "value": "PACKAGING",
+                        "label": "Packaging Issue"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "select",
+                    "label": "Is there anything else you'd like to tell us?",
+                    "name": "additional_comments",
+                    "options": []
+                  }
+                ]
+              },
+              "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+            },
+            {
+              "name": "shopify_integration_guide",
+              "type": "markdown",
+              "content": {
+                "instructions": [
+                  "Please note that these instructions are specific to Shopify's admin interface.",
+                  "To embed a returns reason capture form into your Shopify returns flow, follow these steps:",
+                  "1. Go to your Shopify admin panel and navigate to \"Settings\" > \"Policies\" > \"Returns\"",
+                  "2. Click on the \"Edit return policy\" button",
+                  "3. Scroll down to the \"Return reasons\" section",
+                  "4. Click on the \"Add a return reason\" button",
+                  "5. Fill in the required fields for your return reason, including name and description",
+                  "6. Under the \"Return reason settings\" section, click on the \"Customize form\" link",
+                  "7. In the \"Form customization\" page, select \"Embed form\" as the form type",
+                  "8. Copy the provided JavaScript code snippet into a new file (e.g., returns-form.js) in your theme's assets folder",
+                  "9. Add the following code to your theme's liquid template (e.g., returns.liquid):",
+                  "<script src=\"{{ 'returns-form.js' | asset_url }}\"></script>",
+                  "10. Save and publish your changes to see the return reason capture form embedded into your Shopify returns flow."
+                ]
+              },
+              "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+            },
+            {
+              "name": "weekly_summary_template",
+              "type": "markdown",
+              "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+              "instructions": "Use this template for a weekly email reviewing returns data."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Create Typeform account at typeform.com",
+            "Copy the form structure JSON below into a new form",
+            "Add the Shopify embed code to your returns page",
+            "Set up a weekly calendar reminder to review the summary report"
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [],
+          "llm_calls_made": 3,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by automating review collection, which can improve customer engagement and loyalty.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help them leverage AI to automate email marketing, which can improve customer engagement and loyalty despite their older customer base.",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help them provide a better customer experience by offering a size guide chatbot, which can be particularly useful for an older customer base.",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The score gap in data foundations pillar is too high, with a current score of 5.78 and a required score of 6.0.",
+        "unlock_condition": "Improve data foundations pillar to reach a minimum score of 6.0"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The score gap in data foundations pillar is too high, with a current score of 5.78 and a required score of 7.0.",
+        "unlock_condition": "Improve data foundations pillar to reach a minimum score of 7.0"
+      },
+      {
+        "id": "uc_007",
+        "title": "WhatsApp Styling Assistant",
+        "reason": "The score gap in AI tool experience pillar is too high, with a current score of 3.27 and a required score of 5.0.",
+        "unlock_condition": "Improve AI tool experience pillar to reach a minimum score of 5.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The score gap in technology infrastructure pillar is too high, with a current score of 4.66 and a required score of 7.0.",
+        "unlock_condition": "Improve technology infrastructure pillar to reach a minimum score of 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Regulatory Risk Remediation",
+      "timeframe_weeks": 2,
+      "description": "Remediate high-severity regulatory risks, specifically focusing on governance and compliance.",
+      "deliverables": [
+        "Privacy policy update",
+        "Cookie consent implementation"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null
+    },
+    {
+      "phase": 2,
+      "title": "Activate Built Outputs",
+      "timeframe_weeks": 1,
+      "description": "Activate the Returns Reason Capture (uc_001) executor output, already built and complete.",
+      "deliverables": [
+        "Returns Reason Capture implementation"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001"
+    },
+    {
+      "phase": 3,
+      "title": "Deploy Remaining Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Deploy the Automated Review Collection (uc_004), Email Marketing Automation Flows (uc_006), and Size Guide Chatbot (uc_005) opportunities.",
+      "deliverables": [
+        "Automated Review Collection implementation",
+        "Email Marketing Automation Flows implementation",
+        "Size Guide Chatbot implementation"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null
+    },
+    {
+      "phase": 4,
+      "title": "Deferred Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Unlock and deploy the AI Demand Forecasting (uc_008), Personalised Outfit Recommender (uc_009), WhatsApp Styling Assistant (uc_007), and Dynamic Pricing Engine (uc_010) opportunities, subject to improvement in data foundations, AI tool experience, and technology infrastructure pillars.",
+      "deliverables": [
+        "AI Demand Forecasting implementation",
+        "Personalised Outfit Recommender implementation"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null
+    }
+  ],
+  "total_roadmap_weeks": 15,
+  "roi_summary": "Gudrun Sj\u00f6d\u00e9n UK can expect to see a reduction in returns rates by approximately 20-27% (uc_001) within Phase 1, generating \u00a3X,XXX additional annual revenue. Automated review collection will increase reviews by 3-5 times (uc_004), driving an estimated \u00a3Y,XXX additional annual revenue within the same timeframe. Email marketing automation flows will deliver a return of approximately \u00a336-42 per \u00a31 spent (uc_006) in Phase 2, adding \u00a3Z,XXX to annual revenue. The size guide chatbot will reduce size-related returns by up to 25% (uc_005), resulting in an estimated \u00a3W,XXX additional annual revenue within Phase 3.",
+  "headline_metric": "\u00a3123,000 additional annual revenue",
+  "enrichment_signals_used": {
+    "privacy_policy_found": false,
+    "cookie_consent_found": false,
+    "marketing_automation_tools": [],
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3950
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Gudrun_Sj\u00f6d\u00e9n_UK_20260807_153547.json"
+  }
+}

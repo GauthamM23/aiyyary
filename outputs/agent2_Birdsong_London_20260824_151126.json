@@ -1,0 +1,117 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-24T14:11:26.369767+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.98,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to better understand customer pain points and improve the overall customer experience, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "failed",
+        "deliverables": [],
+        "missing_prerequisites": [],
+        "next_steps": [],
+        "estimated_activation_time": "",
+        "market_tools_recommended": [],
+        "llm_calls_made": 2,
+        "error": "LLM structured_chat failed after repair attempt.\nOriginal response:\n{\"instructions\": [\"Log in to your Wix site's editor and navigate to the \\\"Site Editor\\\" mode.\", \"Click on the \\\"Add App\\\" button and search for the \\\"Form Builder\\\" app.\", \"Install and configure the Form Builder app to create a new form.\", \"In the Form Builder app, create a new form with the following fields: 'Reason for Return', 'Description', and 'Submit'.\", \"Customize the form's design and layout as needed.\", \"Click on the \\\"Settings\\\" icon for the form and select \\\"Integrate with other apps\\\".\", \"Choose the \\\"API\" option and select the \\\"Returns Reason Capture\\\" app from the list.\", \"Copy the API key provided by the app and paste it into the Wix site's settings under \\\"Site Settings\\\" > \\\"Advanced\\\" > \\\"API Keys\\\".\", \"In the Wix site's settings, navigate to \\\"Site Settings\\\" > \\\"Checkout\\\" > \\\"Returns\\\" and enable the returns feature.\", \"Configure the returns settings as needed, including the form created in the Form Builder app.\", \"Test the returns flow by initiating a return from the site and verifying that the returns reason capture form is displayed correctly.\"]}\nRepair attempt response:\n{\"instructions\": [\"Log in to your Wix site's editor and navigate to the \\\"Site Editor\\\" mode.\", \"Click on the \\\"Add App\\\" button and search for the \\\"Form Builder\\\" app.\", \"Install and configure the Form Builder app to create a new form.\", \"In the Form Builder app, create a new form with the following fields: 'Reason for Return', 'Description', and 'Submit'.\", \"Customize the form's design and layout as needed.\", \"Click on the \\\"Settings\\\" icon for the form and select \\\"Integrate with other apps\\\".\", \"Choose the \\\"API\" option and select the \\\"Returns Reason Capture\\\" app from the list.\", \"Copy the API key provided by the app and paste it into the Wix site's settings under \\\"Site Settings\\\" > \\\"Advanced\\\" > \\\"API Keys\\\".\", \"In the Wix site's settings, navigate to \\\"Site Settings\\\" > \\\"Checkout\\\" > \\\"Returns\\\" and enable the returns feature.\", \"Configure the returns settings as needed, including the form created in the Form Builder app.\", \"Test the returns flow by initiating a return from the site and verifying that the returns reason capture form is displayed correctly.\"]}"
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to collect and showcase customer reviews more efficiently, which is essential for building trust with a wider audience and growing online sales (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to provide a better customer experience by offering a convenient and accessible size guide, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (data_foundations pillar score: 3.97).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to streamline and personalize its email marketing efforts, which is essential for growing online sales beyond the existing ethical fashion community without losing brand values (ai_tool_experience pillar score: 3.29).",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The opportunity is currently not executable due to a score gap in the ai_tool_experience pillar, which needs to reach at least 5.0 to unlock this opportunity.",
+      "unlock_condition": "ai_tool_experience pillar score needs to reach at least 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, which needs to reach at least 6.0 to unlock this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The opportunity is currently not executable due to a score gap in the technology_infrastructure pillar, which needs to reach at least 7.0 to unlock this opportunity.",
+      "unlock_condition": "technology_infrastructure pillar score needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, which needs to reach at least 7.0 to unlock this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) this week to start collecting valuable customer feedback and improve the overall customer experience.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 2
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260824_151126.json"
+  }
+}

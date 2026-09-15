@@ -1,0 +1,176 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-22T21:06:24.885565+00:00",
+  "company_name": "Aspiga",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 4.75,
+      "stream_c_reconciled": null,
+      "final_score": 5.67,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Trustpilot (score=6)",
+        "[google_profile] 40 Google reviews (score=5)",
+        "[google_profile] Most recent review is 412 days old (score=3)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 5.5,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 6.1,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.39s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 7.47,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 7.47,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 3.81,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": 4.5,
+      "final_score": 4.76,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://www.aspiga.com/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: Cookiebot (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 8 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 3.81 carries more weight, but the public data score of 6.75 indicates a strong governance and compliance framework. However, the owner's score is lower, suggesting some potential issues or areas for improvement. To reconcile these scores, I've taken a weighted average, giving more weight to the owner interview score. The reconciled score of 4.5 reflects a balance between the owner's self-assessment and the public data, indicating a good but not exceptional governance and compliance framework."
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 5.5,
+      "stream_b_score": 5.5,
+      "stream_c_reconciled": null,
+      "final_score": 5.5,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.07,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Aspiga's overall score of 6.07 indicates a mid-readiness position, which is consistent with their primary challenge of improving sustainability credibility. Public data enrichment revealed that Aspiga's website lacks transparency on their environmental policies, which may hinder their credibility efforts. The company's strong staff digital literacy score suggests a solid foundation for future digital transformations.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 4.76,
+      "dominant_stream": "C",
+      "impact": "Aspiga may struggle to implement and maintain effective sustainability practices due to inadequate governance and compliance processes."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 5.67,
+      "dominant_stream": "A",
+      "impact": "Aspiga's inefficient processes may hinder their ability to scale digital initiatives and improve sustainability performance."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 5.5,
+      "dominant_stream": "A",
+      "impact": "Aspiga's limited experience with AI tools may impede their ability to leverage technology for sustainability-driven innovations."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 7.47,
+      "dominant_stream": "A",
+      "advantage": "Aspiga can leverage their strong staff digital literacy to drive digital transformations and improve sustainability performance."
+    },
+    {
+      "pillar": "data_foundations",
+      "score": 6.94,
+      "dominant_stream": "A",
+      "advantage": "Aspiga's solid data foundations can serve as a foundation for future digital initiatives and sustainability-driven decision-making."
+    }
+  ],
+  "data_confidence_note": "Due to the presence of 1 Stream C reconciliation, which affected the governance compliance pillar, a moderate level of confidence should be placed in this overall assessment.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce waste, and improve sales forecasting. Aspiga's relatively low score in process digitisation (5.67) suggests a need to streamline and automate seasonal buying processes.",
+      "evidence": "Aspiga's overall score is 6.07, indicating some level of digital maturity, but the low score in process digitisation suggests that Aspiga may struggle to implement AI-driven seasonal buying strategies effectively."
+    },
+    {
+      "signal": "Sizing Data Structure",
+      "relevance": "Accurate and consistent sizing data is crucial in fashion retail to ensure correct fit and reduce returns. Aspiga's low score in governance and compliance (4.76) may indicate a lack of standardised sizing data structures, making it challenging to integrate AI-driven fit recommendations.",
+      "evidence": "Aspiga's low score in governance and compliance suggests that they may not have robust processes in place to manage sizing data, which could hinder the effectiveness of AI-driven fit recommendations."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers with high returns rates can benefit from AI-driven analytics to identify trends and optimise product offerings. Aspiga's relatively low score in data foundations (6.94) suggests a need to improve data quality and visibility, particularly around returns patterns.",
+      "evidence": "Aspiga's overall score is 6.07, indicating some level of digital maturity, but the relatively low score in data foundations suggests that Aspiga may struggle to provide AI with the necessary data to identify returns patterns and make informed decisions."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "Cookiebot",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 85,
+    "google_review_count": 40,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 1,
+    "enrichment_duration_seconds": 15.68
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 13,
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent1_Aspiga_20260822_220624.json"
+  }
+}

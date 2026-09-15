@@ -1,0 +1,186 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-31T14:42:19.568774+00:00",
+  "company_name": "Lucy & Yak",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.73,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is right for Lucy & Yak now because it will help them streamline their customer feedback process, reducing the administrative burden on staff and allowing them to focus on maintaining brand authenticity.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": {
+        "mode": "market_connect",
+        "status": "connected",
+        "deliverables": [
+          {
+            "name": "configuration_guide_yotpo",
+            "type": "markdown",
+            "content": "To configure Yotpo on Lucy & Yak's Shopify store, navigate to the Apps section in the Shopify dashboard and search for 'Yotpo'. Click Install, then follow the setup wizard to connect your store and configure review collection settings. Be sure to set up automated email sequences to ask customers for reviews at the optimal time.",
+            "instructions": "Configuration guide for Yotpo, ranked #1 for this business."
+          },
+          {
+            "name": "configuration_guide_judge.me",
+            "type": "markdown",
+            "content": "To configure Yotpo on Lucy & Yak's Shopify store, navigate to the Apps section in the Shopify dashboard and search for 'Yotpo'. Click Install, then follow the setup wizard to connect your store and configure review collection settings. Be sure to set up automated email sequences to ask customers for reviews at the optimal time.",
+            "instructions": "Configuration guide for Judge.me, ranked #2 for this business."
+          },
+          {
+            "name": "configuration_guide_trustpilot",
+            "type": "markdown",
+            "content": "To configure Yotpo on Lucy & Yak's Shopify store, navigate to the Apps section in the Shopify dashboard and search for 'Yotpo'. Click Install, then follow the setup wizard to connect your store and configure review collection settings. Be sure to set up automated email sequences to ask customers for reviews at the optimal time.",
+            "instructions": "Configuration guide for Trustpilot, ranked #3 for this business."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Install Yotpo from the Shopify App Store",
+          "Connect your Lucy & Yak store to Yotpo and configure review collection settings",
+          "Set up automated email sequences to ask customers for reviews"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [
+          {
+            "rank": 1,
+            "tool_name": "Yotpo",
+            "why_this_business": "Lucy & Yak's established tech budget and need for a full-featured reviews platform make Yotpo the best fit to manage rapid growth while maintaining brand authenticity.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3495 - \u00a31,995",
+            "shopify_native": true
+          },
+          {
+            "rank": 2,
+            "tool_name": "Judge.me",
+            "why_this_business": "Judge.me's lightweight and budget-friendly approach aligns with Lucy & Yak's need for a simple review collection solution that won't break the bank.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a30 - \u00a399",
+            "shopify_native": true
+          },
+          {
+            "rank": 3,
+            "tool_name": "Trustpilot",
+            "why_this_business": "While Trustpilot is a well-recognised review platform, its independent focus may not align with Lucy & Yak's need for brand-specific authenticity and supply chain transparency.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a30 - \u00a3299",
+            "shopify_native": true
+          }
+        ],
+        "llm_calls_made": 1,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is right for Lucy & Yak now because it will help them improve their customer service by providing a more efficient way to capture and respond to returns-related queries, supporting their rapid growth in online sales.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is right for Lucy & Yak now because it will enable them to automate and personalise their email marketing campaigns, helping to maintain brand engagement with customers during periods of rapid growth.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is right for Lucy & Yak now because it will help them provide a more seamless customer experience by offering instant size guidance, supporting their commitment to sustainable supply chain transparency.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "justification": "This opportunity is right for Lucy & Yak now because it will enable them to provide a more engaging and interactive customer experience, helping to build brand loyalty during periods of rapid growth.",
+      "effort": "medium",
+      "implementation_weeks": 4,
+      "cost_estimate_gbp": "1500-5000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is right for Lucy & Yak now because it will help them make more accurate predictions about future demand, supporting their ability to manage rapid growth in online sales while maintaining sustainable supply chain transparency.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "This opportunity is right for Lucy & Yak now because it will enable them to optimise their pricing strategy in real-time, helping to maximise revenue during periods of rapid growth.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently deferred due to a score gap in the data_foundations pillar, requiring an improvement of 0.06 points before it can be deployed.",
+      "unlock_condition": "data_foundations > 7.0"
+    }
+  ],
+  "quick_win_summary": "Lucy & Yak should prioritise implementing Automated Review Collection (uc_004) this week to quickly improve their customer feedback process and free up staff time for more strategic activities.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 1,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 1
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Lucy___Yak_20260731_154219.json"
+  }
+}

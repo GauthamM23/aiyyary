@@ -1,0 +1,324 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-12T10:40:27.843930+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.98,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to better understand customer pain points and improve their online sales by reducing returns, which aligns with their primary challenge of growing online sales without losing brand values (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZ001",
+                  "label": "Incorrect Sizing",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Unfitted"
+                  ]
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Fabric Quality Issue",
+                  "sub_reasons": [
+                    "Pilling",
+                    "Shrinkage",
+                    "Discolouration"
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "Colour Mismatch",
+                  "sub_reasons": [
+                    "Different from Image",
+                    "Not as Described",
+                    "Fading"
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "Style Disappointment",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Unflattering Fit",
+                    "Poor Construction"
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "Material Not Suitable for Purpose",
+                  "sub_reasons": [
+                    "Too Heavy",
+                    "Too Light",
+                    "Not Breathable"
+                  ]
+                },
+                {
+                  "code": "FIT001",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    "Unflattering Silhouette",
+                    "Inconsistent Fit",
+                    "Runs Small/Large"
+                  ]
+                },
+                {
+                  "code": "DES001",
+                  "label": "Design Disappointment",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Poor Aesthetic",
+                    "Lack of Detailing"
+                  ]
+                },
+                {
+                  "code": "PRO001",
+                  "label": "Product Not as Described",
+                  "sub_reasons": [
+                    "Missing Features",
+                    "Incorrect Details",
+                    "Not Suitable for Occasion"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason Form",
+              "description": "Please help us understand why you'd like to return your item. This will help us improve our products and service.",
+              "sections": [
+                {
+                  "label": "What's the main reason for returning this item?",
+                  "type": "select",
+                  "options": [
+                    {
+                      "code": "SIZ001",
+                      "label": "Incorrect Sizing"
+                    },
+                    {
+                      "code": "FAB001",
+                      "label": "Fabric Quality Issue"
+                    },
+                    {
+                      "code": "COL001",
+                      "label": "Colour Mismatch"
+                    },
+                    {
+                      "code": "STY001",
+                      "label": "Style Disappointment"
+                    },
+                    {
+                      "code": "MAT001",
+                      "label": "Material Not Suitable for Purpose"
+                    },
+                    {
+                      "code": "FIT001",
+                      "label": "Fit Issue"
+                    },
+                    {
+                      "code": "DES001",
+                      "label": "Design Disappointment"
+                    },
+                    {
+                      "code": "PRO001",
+                      "label": "Product Not as Described"
+                    }
+                  ]
+                },
+                {
+                  "label": "Is there anything else you'd like to tell us about your return?",
+                  "type": "textarea",
+                  "placeholder": "Let us know if there's anything we can do differently next time."
+                },
+                {
+                  "label": "How would you rate the quality of our customer service during this process?",
+                  "type": "rating",
+                  "options": [
+                    {
+                      "label": "Excellent"
+                    },
+                    {
+                      "label": "Good"
+                    },
+                    {
+                      "label": "Fair"
+                    },
+                    {
+                      "label": "Poor"
+                    }
+                  ]
+                }
+              ],
+              "sub_reasons": [
+                {
+                  "code": "SIZ001",
+                  "label": "Too Small",
+                  "description": "The item was too small for my needs."
+                },
+                {
+                  "code": "SIZ001",
+                  "label": "Too Large",
+                  "description": "The item was too large for my needs."
+                },
+                {
+                  "code": "SIZ001",
+                  "label": "Unfitted",
+                  "description": "The item didn't fit as expected."
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Pilling",
+                  "description": "The fabric pilled excessively."
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Shrinkage",
+                  "description": "The item shrunk after washing."
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Discolouration",
+                  "description": "The fabric discoloured unexpectedly."
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Unfortunately, we do not support Wix as a platform for embedding returns reason capture forms at this time. Please consider migrating to Shopify or another supported platform."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Birdsong London\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to collect and showcase customer reviews, which can increase trust and drive sales among a wider audience, aligning with their primary challenge (process_digitisation pillar score: 3.08).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to provide a seamless and user-friendly experience for customers, which can increase sales and customer satisfaction, aligning with their primary challenge (data_foundations pillar score: 3.97).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to automate and personalize their email marketing campaigns, which can increase sales and customer engagement, aligning with their primary challenge (ai_tool_experience pillar score: 3.27).",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The company needs to improve their AI tool experience (actual score: 3.27) before they can deploy this opportunity.",
+      "unlock_condition": "ai_tool_experience pillar score needs to reach at least 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The company needs to improve their data foundations (actual score: 3.97) before they can deploy this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The company needs to improve their technology infrastructure (actual score: 4.89) before they can deploy this opportunity.",
+      "unlock_condition": "technology_infrastructure pillar score needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The company needs to improve their data foundations (actual score: 3.97) before they can deploy this opportunity.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) by the end of the week, which will help Birdsong London to better understand customer pain points and improve their online sales.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260812_114027.json"
+  }
+}

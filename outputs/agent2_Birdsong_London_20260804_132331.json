@@ -1,0 +1,371 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-04T12:23:31.498478+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.94,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is right for Birdsong London now because it allows them to capture valuable customer feedback without losing brand values, aligning with their primary challenge of growing online sales while maintaining ethical fashion standards.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZ001",
+                  "label": "Incorrect Sizing",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large"
+                  ]
+                },
+                {
+                  "code": "FAB001",
+                  "label": "Fabric Quality Issue",
+                  "sub_reasons": [
+                    "Pilling",
+                    "Shrinkage",
+                    "Uncomfortable Texture"
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Fading",
+                    "Uneven Dyeing"
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "Style or Fit Issue",
+                  "sub_reasons": [
+                    "Unflattering Silhouette",
+                    "Poor Construction",
+                    "Not Suitable for Body Type"
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "Material Not as Described",
+                  "sub_reasons": [
+                    "Synthetic Instead of Natural",
+                    "Not Sustainable",
+                    "Not Eco-Friendly"
+                  ]
+                },
+                {
+                  "code": "PRO001",
+                  "label": "Product Defect",
+                  "sub_reasons": [
+                    "Tearing",
+                    "Missing Parts",
+                    "Broken Zippers"
+                  ]
+                },
+                {
+                  "code": "IMG001",
+                  "label": "Image Representation Issue",
+                  "sub_reasons": [
+                    "Not Representative of Product",
+                    "Incorrect Image",
+                    "Outdated Image"
+                  ]
+                },
+                {
+                  "code": "DEL001",
+                  "label": "Delivery or Shipping Issue",
+                  "sub_reasons": [
+                    "Late Delivery",
+                    "Damaged Packaging",
+                    "Missing Items"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason Form",
+              "description": "Please select the reason for returning your item. We value your feedback and want to make things right.",
+              "reason_codes": [
+                {
+                  "code": "SIZ001",
+                  "label": "I didn't get the sizing right",
+                  "sub_reasons": [
+                    {
+                      "id": "SIZ001-SMALL",
+                      "label": "The item was too small"
+                    },
+                    {
+                      "id": "SIZ001-LARGE",
+                      "label": "The item was too large"
+                    }
+                  ]
+                },
+                {
+                  "code": "FAB001",
+                  "label": "I'm not happy with the fabric quality",
+                  "sub_reasons": [
+                    {
+                      "id": "FAB001-PILLING",
+                      "label": "There's pilling or snagging"
+                    },
+                    {
+                      "id": "FAB001-SHRINKAGE",
+                      "label": "The item shrunk after washing"
+                    },
+                    {
+                      "id": "FAB001-TEXTURE",
+                      "label": "I don't like the texture"
+                    }
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "The colour isn't what I expected",
+                  "sub_reasons": [
+                    {
+                      "id": "COL001-NOTEXPECTED",
+                      "label": "The item doesn't match my expectations"
+                    },
+                    {
+                      "id": "COL001-FADED",
+                      "label": "The item has faded quickly"
+                    },
+                    {
+                      "id": "COL001-UNEVEN",
+                      "label": "The dyeing is uneven"
+                    }
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "I'm not happy with the style or fit",
+                  "sub_reasons": [
+                    {
+                      "id": "STY001-SILHOUETTE",
+                      "label": "The silhouette isn't flattering"
+                    },
+                    {
+                      "id": "STY001-CONSTRUCTION",
+                      "label": "I don't like the construction"
+                    },
+                    {
+                      "id": "STY001-BODYTYPE",
+                      "label": "It's not suitable for my body type"
+                    }
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "The material isn't what I was told it would be",
+                  "sub_reasons": [
+                    {
+                      "id": "MAT001-SYNTHETIC",
+                      "label": "It's synthetic instead of natural"
+                    },
+                    {
+                      "id": "MAT001-NOT_SUSTAINABLE",
+                      "label": "I don't think it's sustainable"
+                    },
+                    {
+                      "id": "MAT001-NOT_ECO_FRIENDLY",
+                      "label": "I don't think it's eco-friendly"
+                    }
+                  ]
+                },
+                {
+                  "code": "PRO001",
+                  "label": "There's a product defect",
+                  "sub_reasons": [
+                    {
+                      "id": "PRO001-TEARING",
+                      "label": "The item is torn"
+                    },
+                    {
+                      "id": "PRO001-MISSING_PARTS",
+                      "label": "Some parts are missing"
+                    },
+                    {
+                      "id": "PRO001-BROKEN_ZIPPERS",
+                      "label": "The zippers are broken"
+                    }
+                  ]
+                },
+                {
+                  "code": "IMG001",
+                  "label": "I'm not happy with the image representation",
+                  "sub_reasons": [
+                    {
+                      "id": "IMG001-NOT_REPRESENTATIVE",
+                      "label": "The item doesn't look like the picture"
+                    },
+                    {
+                      "id": "IMG001-INCORRECT_IMAGE",
+                      "label": "The image is incorrect"
+                    },
+                    {
+                      "id": "IMG001-OUTDATED_IMAGE",
+                      "label": "The image is outdated"
+                    }
+                  ]
+                },
+                {
+                  "code": "DEL001",
+                  "label": "I had a delivery or shipping issue",
+                  "sub_reasons": [
+                    {
+                      "id": "DEL001-LATE_DELIVERY",
+                      "label": "My item was delivered late"
+                    },
+                    {
+                      "id": "DEL001-DAMAGED_PACKAGING",
+                      "label": "The packaging was damaged"
+                    },
+                    {
+                      "id": "DEL001-MISSING_ITEMS",
+                      "label": "Some items were missing from my order"
+                    }
+                  ]
+                }
+              ],
+              "submit_button": "Submit Return Reason"
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Unfortunately, we are unable to provide specific instructions for Wix as the original request was for Shopify. However, if you would like to proceed with embedding a returns reason capture form into your Wix store, please refer to Wix's documentation on customizing forms and integrating third-party apps."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Birdsong London\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is right for Birdsong London now because it enables them to collect and showcase customer reviews in a seamless manner, supporting their growth strategy without compromising on brand values.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is right for Birdsong London now because it provides an efficient way to offer size guidance, enhancing the customer experience and supporting their growth aspirations without losing brand integrity.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is right for Birdsong London now because it enables them to automate email marketing campaigns, streamlining their operations and supporting growth without compromising on brand values.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The opportunity is currently not executable due to a score gap in AI tool experience, requiring improvement in this area.",
+      "unlock_condition": "AI Tool Experience pillar needs to reach a minimum score of 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The opportunity is currently not executable due to a significant score gap in data foundations, requiring improvement in this area.",
+      "unlock_condition": "Data Foundations pillar needs to reach a minimum score of 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The opportunity is currently not executable due to a substantial score gap in technology infrastructure, requiring improvement in this area.",
+      "unlock_condition": "Technology Infrastructure pillar needs to reach a minimum score of 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a significant score gap in data foundations, requiring improvement in this area.",
+      "unlock_condition": "Data Foundations pillar needs to reach a minimum score of 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) within the next week to start capturing valuable customer feedback and enhance the overall customer experience.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260804_132331.json"
+  }
+}

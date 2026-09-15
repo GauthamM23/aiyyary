@@ -1,0 +1,179 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-12T10:31:24.647317+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.74,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)",
+        "[google_profile] 229 Google reviews (score=8)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.09,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.75s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 8.31,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 7.15,
+      "final_score": 7.2,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,606 posts) (score=5)"
+      ],
+      "stream_c_reasoning": "The owner interview score carries more weight than public data for staff digital literacy. However, the public data from Instagram suggests a strong online presence, which contradicts a very high score of 8.31. To reconcile this, I've taken an average of the two scores, but with a slight bias towards Stream A as per the rules."
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.34,
+      "stream_b_score": 6.75,
+      "stream_c_reconciled": null,
+      "final_score": 6.46,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 7.19,
+      "stream_b_score": 6.33,
+      "stream_c_reconciled": null,
+      "final_score": 6.93,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Page source references a personalisation/recommendation engine (score=8)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.89,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Lucy & Yak's overall score of 6.89 indicates a mid-readiness position for digital transformation, with strengths in staff digital literacy and technology infrastructure, but challenges in governance compliance and AI tool experience.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.46,
+      "dominant_stream": "A",
+      "impact": "Inefficient governance processes may hinder Lucy & Yak's ability to scale sustainably."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.93,
+      "dominant_stream": "A",
+      "impact": "Limited AI tool adoption may prevent Lucy & Yak from leveraging automation and data-driven insights effectively."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 6.74,
+      "dominant_stream": "A",
+      "impact": "Inadequate process digitization may lead to manual errors, delays, and decreased operational efficiency for a small fashion retailer like Lucy & Yak."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 7.2,
+      "dominant_stream": "C",
+      "advantage": "Lucy & Yak can leverage its high staff digital literacy to drive innovation and adoption of new technologies."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.09,
+      "dominant_stream": "A",
+      "advantage": "Lucy & Yak's strong technology infrastructure provides a solid foundation for future growth and scalability."
+    }
+  ],
+  "data_confidence_note": "Due to the presence of Stream C reconciliations (1) affecting staff digital literacy, moderate confidence should be placed in this overall assessment.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Lucy & Yak's seasonal buying cycle maturity is crucial for effective AI deployment in the fashion industry, where trends and demand can shift rapidly.",
+      "evidence": "Given Lucy & Yak's overall score of 6.89, which suggests a moderate level of digital maturity, it's likely that their seasonal buying cycle is somewhat established but may not be fully optimized for AI-driven decision-making."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Understanding returns patterns is vital in the fashion industry to inform product development, pricing, and inventory management. AI can help identify trends and areas for improvement.",
+      "evidence": "Lucy & Yak's data foundations score of 6.94 suggests they have a good foundation for collecting and analyzing customer data, but it's unclear how well they track returns patterns."
+    },
+    {
+      "signal": "Product Line Complexity",
+      "relevance": "Fashion retailers like Lucy & Yak often have complex product lines with multiple styles, sizes, and colors. AI can help simplify this complexity by identifying key products and optimizing inventory.",
+      "evidence": "Lucy & Yak's process digitization score of 6.74 suggests they are somewhat effective in streamlining their operations, but it's unclear how well they manage the complexity of their product line."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": true,
+    "privacy_policy_mentions_ai": true,
+    "cookie_consent_found": true,
+    "cookie_consent_provider": "CookieYes",
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4",
+      "Microsoft Clarity"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Shopify",
+    "company_status": "active",
+    "days_since_last_filing": 70,
+    "google_review_count": 229,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 1,
+    "enrichment_duration_seconds": 13.69
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 14,
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260812_113124.json"
+  }
+}

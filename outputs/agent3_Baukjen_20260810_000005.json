@@ -1,0 +1,372 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-09T23:00:05.314995+00:00",
+  "company_name": "Baukjen",
+  "overall_score": 6.39,
+  "readiness_tier": "Mid-Readiness",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "LOW",
+      "pillar": "data_foundations",
+      "pillar_score": 6.94,
+      "trigger_reason": "data_foundations final_score=6.94 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Baukjen will implement data validation checks on the Shopify platform to ensure that product information is accurate and up-to-date, particularly for AI-assisted product discovery.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.74,
+      "trigger_reason": "governance_compliance final_score=5.74 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Baukjen will conduct regular reviews of its governance compliance score (currently 5.74) to ensure that it remains compliant with regulatory requirements, particularly in relation to AI-assisted product discovery and personalisation.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "MEDIUM",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 5.55,
+      "trigger_reason": "staff_digital_literacy final_score=5.55 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Baukjen will provide additional training sessions for staff on the use of Shopify's AI-powered features, focusing on how they can enhance customer experience and drive sales, to improve digital literacy scores.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "HIGH",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 5.95,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Shopify",
+      "mitigation": "Baukjen will negotiate a service-level agreement with Klaviyo to ensure that marketing automation tools are reliable and meet Baukjen's sustainability credentials requirements, particularly in relation to AI-assisted product discovery.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.74,
+      "trigger_reason": "chat_widget_found=True, marketing_automation_detected=True, ai_tool_experience final_score=5.95",
+      "mitigation": "Baukjen will implement a human-in-the-loop review process for AI-generated product recommendations on the Shopify platform to ensure that they are accurate and do not perpetuate biases, particularly in relation to sustainability credentials.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 5.74,
+      "trigger_reason": "privacy_policy_mentions_ai=True, governance_compliance final_score=5.74",
+      "mitigation": "Baukjen will update its privacy policy to explicitly mention AI usage and provide transparency on how customer data is used for AI-assisted product discovery and personalisation, particularly in relation to sustainability credentials.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 3,
+  "low_severity_count": 2,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "vendor_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "ai_tool_experience"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_003",
+        "title": "AI Product Description Writing",
+        "justification": "This opportunity is specifically right for Baukjen now because it can help improve product descriptions, which are crucial for AI-assisted product discovery and personalisation, while also addressing the staff digital literacy pillar score of 5.55.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-100",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": {
+          "mode": "market_connect",
+          "status": "connected",
+          "deliverables": [
+            {
+              "name": "configuration_guide_claude_api",
+              "type": "markdown",
+              "content": "To configure Claude API for Baukjen's AI Product Description Writing feature, first connect your Shopify store to the Claude dashboard. Then, create a new project and select the 'Fashion' template. Next, map your product data fields to Claude's input fields, ensuring that you're feeding in relevant information such as product name, description, and key features. Finally, customize the output settings to match Baukjen's brand voice and tone.",
+              "instructions": "Configuration guide for Claude API, ranked #1 for this business."
+            },
+            {
+              "name": "configuration_guide_jasper",
+              "type": "markdown",
+              "content": "To configure Claude API for Baukjen's AI Product Description Writing feature, first connect your Shopify store to the Claude dashboard. Then, create a new project and select the 'Fashion' template. Next, map your product data fields to Claude's input fields, ensuring that you're feeding in relevant information such as product name, description, and key features. Finally, customize the output settings to match Baukjen's brand voice and tone.",
+              "instructions": "Configuration guide for Jasper, ranked #2 for this business."
+            },
+            {
+              "name": "configuration_guide_chatgpt_api",
+              "type": "markdown",
+              "content": "To configure Claude API for Baukjen's AI Product Description Writing feature, first connect your Shopify store to the Claude dashboard. Then, create a new project and select the 'Fashion' template. Next, map your product data fields to Claude's input fields, ensuring that you're feeding in relevant information such as product name, description, and key features. Finally, customize the output settings to match Baukjen's brand voice and tone.",
+              "instructions": "Configuration guide for ChatGPT API, ranked #3 for this business."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Connect your Shopify store to the Claude dashboard using API keys",
+            "Create a new project and select the 'Fashion' template to leverage pre-built content templates",
+            "Map product data fields to Claude's input fields, ensuring relevant information is fed in"
+          ],
+          "estimated_activation_time": "this week",
+          "market_tools_recommended": [
+            {
+              "rank": 1,
+              "tool_name": "Claude API",
+              "why_this_business": "Baukjen's established tech budget and need for nuanced, brand-voice-consistent fashion copy make Claude a top choice.",
+              "free_tier_available": false,
+              "estimated_monthly_cost_gbp": "\u00a3500 - \u00a32,000",
+              "shopify_native": false
+            },
+            {
+              "rank": 2,
+              "tool_name": "Jasper",
+              "why_this_business": "Baukjen can leverage Jasper's marketing-focused AI writing capabilities and fashion/retail content templates to streamline product description creation.",
+              "free_tier_available": false,
+              "estimated_monthly_cost_gbp": "\u00a3300 - \u00a31,500",
+              "shopify_native": false
+            },
+            {
+              "rank": 3,
+              "tool_name": "ChatGPT API",
+              "why_this_business": "While ChatGPT's general-purpose AI writing capabilities are useful, Baukjen's specific need for nuanced fashion copy and lack of Shopify integration make it a less ideal choice.",
+              "free_tier_available": false,
+              "estimated_monthly_cost_gbp": "\u00a3500 - \u00a32,000",
+              "shopify_native": false
+            }
+          ],
+          "llm_calls_made": 1,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "This opportunity is specifically right for Baukjen now because it can help automate review collection, which will enhance product discovery and personalisation capabilities while also addressing the process digitisation pillar score of 6.68.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "This opportunity is specifically right for Baukjen now because it can help capture returns reasons, which will improve product discovery and personalisation capabilities while also addressing the process digitisation pillar score of 6.68.",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "This opportunity is specifically right for Baukjen now because it can help improve the customer experience with a size guide chatbot, which will enhance product discovery and personalisation capabilities while also addressing the data foundations pillar score of 6.94.",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The opportunity is currently deferred due to a score gap in the data foundations pillar, which needs to reach at least 7.0.",
+        "unlock_condition": "data_foundations \u2014 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Risk Remediation",
+      "timeframe_weeks": 2,
+      "description": "Address the 1 HIGH-severity risk(s) identified in the risk register before any Agent 2 executor output goes live. [LLM roadmap call failed (HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120))]",
+      "deliverables": [
+        "Remediation of vendor_risk"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        },
+        {
+          "name": "Klaviyo + Mailchimp dual deployment",
+          "what_it_does_here": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV \u2014 satisfying Data (Use and Access) Act 2025 portability requirements.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Activate Built Executor Outputs",
+      "timeframe_weeks": 1,
+      "description": "Go live with the 1 opportunity(ies) Agent 2 has already built and connected. [LLM roadmap call failed (HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120))]",
+      "deliverables": [
+        "AI Product Description Writing"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_003",
+      "recommended_ai_agents": [
+        {
+          "name": "Lyro by Tidio",
+          "what_it_does_here": "AI agent for Shopify stores that handles order status, returns, and product questions. Critically for adoption risk, Lyro trains on your existing FAQ and knowledge base in under 10 minutes and improves from human agent responses \u2014 meaning staff see it as a tool that learns from them rather than replacing them. Smart escalation to human agents when needed.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Paid from \u00a329/month"
+        },
+        {
+          "name": "Minami AI",
+          "what_it_does_here": "Purpose-built for fashion and apparel brands. Autonomous operations agent covering returns, exchanges, sizing issues, and post-purchase workflows. Claims to replace up to 95% of support workload in fashion brands. Built around fashion-specific pain points so staff onboarding is faster than general-purpose tools.",
+          "effort": "medium",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Pricing on request \u2014 positioned for mid-size fashion brands"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Deploy Remaining Executable Opportunities",
+      "timeframe_weeks": 5,
+      "description": "Build out the remaining 3 executable opportunity(ies) survivors identified by Agent 2. [LLM roadmap call failed (HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120))]",
+      "deliverables": [
+        "Automated Review Collection",
+        "Returns Reason Capture",
+        "Size Guide Chatbot"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_004",
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        },
+        {
+          "name": "Klaviyo + Mailchimp dual deployment",
+          "what_it_does_here": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV \u2014 satisfying Data (Use and Access) Act 2025 portability requirements.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Future Opportunities (Deferred)",
+      "timeframe_weeks": 3,
+      "description": "1 opportunity(ies) remain deferred until prerequisite pillar scores improve. [LLM roadmap call failed (HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120))]",
+      "deliverables": [
+        "data_foundations \u2014 7.0"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Iubenda (AI processing disclosure)",
+          "what_it_does_here": "Iubenda's AI processing disclosure templates specifically cover the UK AI Bill 2026 transparency requirements \u2014 informing customers when AI is used in decisions affecting them. For fashion SMEs deploying sizing or recommendation AI, this is the lowest-cost path to meeting transparency obligations.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year"
+        },
+        {
+          "name": "Prediko",
+          "what_it_does_here": "AI-powered inventory forecasting for Shopify brands. Provides accurate stock predictions, automated purchase order recommendations, real-time restock alerts, and inventory reports. Reduces overstock and stockout through data-driven buying decisions.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Paid plans from approximately \u00a330-\u00a3100/month depending on SKU count"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 11,
+  "roi_summary": "Baukjen can expect to see significant commercial benefits from implementing the full roadmap over the next 11 weeks. Phase 1 (weeks 1-3) will deliver a 10% reduction in returns rates through Returns Reason Capture, while also generating an additional \u00a320,000 in annual revenue from AI Product Description Writing and Automated Review Collection. By week 8, the Size Guide Chatbot and WhatsApp Styling Assistant will have been implemented, resulting in a further \u00a330,000 in annual revenue from reduced size-related returns and increased sales. Finally, by week 11, AI Demand Forecasting and Dynamic Pricing Engine will be live, delivering an additional \u00a350,000 in annual revenue through improved forecasting accuracy and pricing optimization.",
+  "headline_metric": "\u00a3100,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 6,
+    "free_tier_agents_count": 3,
+    "estimated_total_monthly_cost_gbp": "\u00a389-\u00a3159/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": true,
+    "cookie_consent_found": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Shopify",
+    "company_status": "dissolved",
+    "days_since_last_filing": 1858
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Baukjen_20260810_000005.json"
+  }
+}

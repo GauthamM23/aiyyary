@@ -1,0 +1,130 @@
+{
+  "version": "1.0",
+  "thresholds": {
+    "HIGH": 4.0,
+    "MEDIUM": 6.0,
+    "LOW": 10.0
+  },
+  "categories": [
+    {
+      "id": "data_risk",
+      "label": "Data quality risk",
+      "pillar_mapped": "data_foundations",
+      "score_driven": true,
+      "enrichment_signals": [],
+      "description": "Risk from fragmented, inconsistent or incomplete business data undermining AI output reliability",
+      "regulatory_refs": ["UK GDPR Article 5(1)(d) — data accuracy principle"],
+      "fashion_extensions": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "mitigations": {
+        "HIGH": "Conduct a full data audit before activating any Agent 2 executor outputs. Consolidate sales, inventory and customer records into one queryable system. Implement structured reason-code capture for all returns before deploying any customer-facing AI.",
+        "MEDIUM": "Establish data validation rules for all new product uploads and order processing. Schedule a quarterly data quality review.",
+        "LOW": "Maintain current data governance practices. Document data lineage for all AI-consumed datasets."
+      }
+    },
+    {
+      "id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "pillar_mapped": "governance_compliance",
+      "score_driven": true,
+      "enrichment_signals": ["privacy_policy_found", "cookie_consent_found", "days_since_last_filing"],
+      "description": "Risk of non-compliance with UK data protection and AI governance obligations",
+      "regulatory_refs": [
+        "UK GDPR 2018 — consent, data minimisation, subject access rights",
+        "Data (Use and Access) Act 2025 — data sharing obligations",
+        "UK AI Bill 2026 — transparency and human oversight requirements",
+        "ISO/IEC 42001:2023 — AI management system standard"
+      ],
+      "fashion_extensions": [
+        "Personalisation profiling requires explicit consent — not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "mitigations": {
+        "HIGH": "Do not activate any Agent 2 executor output that touches customer data until privacy policy is updated to cover AI processing and explicit opt-in consent is documented. Register with ICO if not already done. Create a written staff AI use policy before any AI tool goes live.",
+        "MEDIUM": "Review privacy policy against UK GDPR AI processing requirements. Create a staff AI use policy. Monitor UK AI Bill 2026 guidance as it develops.",
+        "LOW": "Conduct an annual compliance review. Subscribe to ICO guidance updates."
+      }
+    },
+    {
+      "id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "pillar_mapped": "staff_digital_literacy",
+      "score_driven": true,
+      "enrichment_signals": [],
+      "description": "Risk that AI tools are rejected, misused or underutilised because staff lack confidence, skills or motivation",
+      "regulatory_refs": ["ISO/IEC 42001:2023 — competence and awareness requirements"],
+      "fashion_extensions": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "mitigations": {
+        "HIGH": "Identify one staff member as AI champion before any deployment. Run a structured two-hour onboarding session before go-live. Pilot with the most digitally confident team member first and use their experience to bring others along.",
+        "MEDIUM": "Provide role-specific guidance on how AI tools support rather than replace current tasks. Build a four-week settling-in period before evaluating adoption.",
+        "LOW": "Include AI tool updates in regular team meetings. Create a simple feedback channel for staff to flag issues."
+      }
+    },
+    {
+      "id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "pillar_mapped": "ai_tool_experience",
+      "score_driven": false,
+      "enrichment_signals": ["marketing_automation_tools", "platform_detected"],
+      "description": "Risk from reliance on a single AI provider, platform or tool including pricing changes, service discontinuation or lock-in",
+      "regulatory_refs": ["Data (Use and Access) Act 2025 — data portability provisions"],
+      "fashion_extensions": [
+        "Shopify platform dependency — significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in — if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "mitigations": {
+        "HIGH": "Avoid building bespoke integrations to a single AI vendor before piloting. Ensure all AI-generated data is exportable in standard CSV format. Maintain a documented list of alternative providers for each tool deployed.",
+        "MEDIUM": "Test data export from each platform annually. Include vendor lock-in review in annual technology budget planning.",
+        "LOW": "Document alternative providers. Review vendor contracts annually."
+      }
+    },
+    {
+      "id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "pillar_mapped": "governance_compliance",
+      "score_driven": false,
+      "enrichment_signals": ["chat_widget_found", "marketing_automation_detected"],
+      "description": "Risk that LLM-generated outputs contain confident but incorrect information that damages customer trust or causes operational errors",
+      "regulatory_refs": [
+        "UK AI Bill 2026 — accuracy and transparency obligations",
+        "Consumer Protection from Unfair Trading Regulations 2008 — misleading commercial practices"
+      ],
+      "fashion_extensions": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them — directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "mitigations": {
+        "HIGH": "All AI-generated customer-facing content must pass through human review before publication. Use RAG-grounded outputs from Agent 2's knowledge base wherever possible rather than free-form generation. Implement a correction and logging process for identified AI errors.",
+        "MEDIUM": "Implement weekly spot-check audits of AI outputs. Create a clear customer escalation path for AI-related errors.",
+        "LOW": "Maintain a log of AI output corrections for continuous improvement."
+      }
+    },
+    {
+      "id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "pillar_mapped": "governance_compliance",
+      "score_driven": false,
+      "enrichment_signals": ["privacy_policy_mentions_ai"],
+      "description": "Risk that AI systems perpetuate or amplify biases in product recommendations, sizing standards or customer targeting",
+      "regulatory_refs": [
+        "UK Equality Act 2010 — protected characteristics in automated decision-making",
+        "UK AI Bill 2026 — fairness and non-discrimination provisions",
+        "ISO/IEC 42001:2023 — ethical AI management requirements"
+      ],
+      "fashion_extensions": [
+        "Sizing bias — AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability — AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "mitigations": {
+        "HIGH": "Audit any sizing AI for performance across the full range of sizes stocked before customer-facing deployment. Document the data sources for any AI touching customer recommendations. Establish a human override mechanism for any AI-driven customer decision.",
+        "MEDIUM": "Include diversity and inclusion review in AI tool procurement. Test AI outputs for systematic bias across customer segments quarterly.",
+        "LOW": "Include ethical AI considerations in annual technology review."
+      }
+    }
+  ]
+}

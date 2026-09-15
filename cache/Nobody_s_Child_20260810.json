@@ -1,0 +1,300 @@
+{
+  "business_name": "Nobody's Child",
+  "assessment_timestamp": "2026-08-10T14:44:58.047898+00:00",
+  "stream_b_signals": {
+    "data_foundations": {
+      "signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_b_score": 5.0
+    },
+    "process_digitisation": {
+      "signals": [
+        "[website] Review widget(s) detected: Yotpo (score=6)",
+        "[google_profile] 51 Google reviews (score=8)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_b_score": 6.33
+    },
+    "technology_infrastructure": {
+      "signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 2.11s (score=8)"
+      ],
+      "stream_b_score": 7.5
+    },
+    "staff_digital_literacy": {
+      "signals": [
+        "[instagram] Active public Instagram presence (~6,326 posts) (score=5)"
+      ],
+      "stream_b_score": 5.0
+    },
+    "governance_compliance": {
+      "signals": [
+        "[website] Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: OneTrust (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)",
+        "[companies_house] 10 filings in the last 2 years (score=6)"
+      ],
+      "stream_b_score": 6.75
+    },
+    "ai_tool_experience": {
+      "signals": [
+        "[website] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_b_score": 5.5
+    }
+  },
+  "pre_population_suggestions": {
+    "data_foundations": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 1 public data signal(s), mean score 5.0",
+      "source": "website_scrape"
+    },
+    "process_digitisation": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "high",
+      "reason": "Derived from 3 public data signal(s), mean score 6.33",
+      "source": "website_scrape"
+    },
+    "technology_infrastructure": {
+      "suggested_band": "high",
+      "suggested_score_range": "8-10",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 7.5",
+      "source": "website_scrape"
+    },
+    "staff_digital_literacy": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 1 public data signal(s), mean score 5.0",
+      "source": "instagram"
+    },
+    "governance_compliance": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "high",
+      "reason": "Derived from 4 public data signal(s), mean score 6.75",
+      "source": "website_scrape"
+    },
+    "ai_tool_experience": {
+      "suggested_band": "mid",
+      "suggested_score_range": "5-7",
+      "confidence": "medium",
+      "reason": "Derived from 2 public data signal(s), mean score 5.5",
+      "source": "website_scrape"
+    }
+  },
+  "cross_validation_flags": [],
+  "stream_c_inferences": [],
+  "raw_findings": {
+    "website": {
+      "url": "https://nobodyschild.com",
+      "platform": {
+        "name": "Shopify",
+        "confidence": "high",
+        "evidence": "Found 'cdn.shopify.com' in page source"
+      },
+      "privacy_policy": {
+        "found": true,
+        "url": "https://nobodyschild.com/privacy-policy",
+        "mentions_ai": true,
+        "mentions_profiling": false
+      },
+      "cookie_consent": {
+        "found": true,
+        "provider": "OneTrust"
+      },
+      "chat_widget": {
+        "found": false,
+        "provider": null
+      },
+      "analytics": {
+        "tools_detected": [
+          "Google Analytics 4"
+        ],
+        "count": 1
+      },
+      "marketing_automation": {
+        "tools_detected": [
+          "Klaviyo"
+        ],
+        "count": 1
+      },
+      "review_widgets": {
+        "found": true,
+        "providers": [
+          "Yotpo"
+        ]
+      },
+      "structured_product_data": {
+        "found": false
+      },
+      "ssl": {
+        "enabled": true
+      },
+      "page_load_seconds": 2.11,
+      "raw_signals": [
+        "[technology_infrastructure] E-commerce platform detected: Shopify (score=7.0, band=6-8, confidence=high)",
+        "[governance_compliance] Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions) (score=7, band=5-9, confidence=high)",
+        "[governance_compliance] Cookie consent tool detected: OneTrust (score=7, band=6-8, confidence=high)",
+        "[data_foundations] Analytics tool detected: Google Analytics 4 (score=5, band=4-6, confidence=medium)",
+        "[process_digitisation] Review widget(s) detected: Yotpo (score=6, band=5-7, confidence=medium)",
+        "[ai_tool_experience] Marketing automation tool(s) detected: Klaviyo (also has review platform tooling) (score=6, band=4-6, confidence=medium)",
+        "[governance_compliance] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7, band=6-9, confidence=high)",
+        "[technology_infrastructure] Fast page load: 2.11s (score=8, band=7-9, confidence=medium)"
+      ],
+      "pillar_contributions": {
+        "technology_infrastructure": [
+          {
+            "score": 7.0,
+            "evidence": "E-commerce platform detected: Shopify",
+            "band": "6-8",
+            "confidence": "high"
+          },
+          {
+            "score": 8,
+            "evidence": "Fast page load: 2.11s",
+            "band": "7-9",
+            "confidence": "medium"
+          }
+        ],
+        "governance_compliance": [
+          {
+            "score": 7,
+            "evidence": "Privacy policy found at https://nobodyschild.com/privacy-policy (2 governance-relevant mentions)",
+            "band": "5-9",
+            "confidence": "high"
+          },
+          {
+            "score": 7,
+            "evidence": "Cookie consent tool detected: OneTrust",
+            "band": "6-8",
+            "confidence": "high"
+          },
+          {
+            "score": 7,
+            "evidence": "HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy']",
+            "band": "6-9",
+            "confidence": "high"
+          }
+        ],
+        "data_foundations": [
+          {
+            "score": 5,
+            "evidence": "Analytics tool detected: Google Analytics 4",
+            "band": "4-6",
+            "confidence": "medium"
+          }
+        ],
+        "process_digitisation": [
+          {
+            "score": 6,
+            "evidence": "Review widget(s) detected: Yotpo",
+            "band": "5-7",
+            "confidence": "medium"
+          }
+        ],
+        "ai_tool_experience": [
+          {
+            "score": 6,
+            "evidence": "Marketing automation tool(s) detected: Klaviyo (also has review platform tooling)",
+            "band": "4-6",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "errors": [],
+      "ai_personalisation_tools": {
+        "tools_detected": [],
+        "keyword_match": false
+      }
+    },
+    "google_profile": {
+      "total_reviews": 51,
+      "average_rating": 3.9,
+      "last_review_days_ago": 53,
+      "is_claimed": true,
+      "has_complete_hours": true,
+      "website_matches_input": true,
+      "business_status": "OPERATIONAL",
+      "pillar_contributions": {
+        "process_digitisation": [
+          {
+            "score": 8,
+            "evidence": "51 Google reviews"
+          }
+        ]
+      },
+      "error": null
+    },
+    "companies_house": {
+      "company_status": "active",
+      "incorporation_date": "2015-04-29",
+      "sic_codes": [
+        "46420",
+        "47710",
+        "47910"
+      ],
+      "days_since_last_filing": 87,
+      "filing_count_last_2_years": 10,
+      "has_accounts_filed": true,
+      "pillar_contributions": {
+        "governance_compliance": [
+          {
+            "score": 6,
+            "evidence": "10 filings in the last 2 years"
+          }
+        ]
+      },
+      "error": null
+    },
+    "facebook_ads": {
+      "has_active_ads": true,
+      "detection_method": "playwright_render",
+      "pillar_contributions": {
+        "ai_tool_experience": [
+          {
+            "score": 5,
+            "evidence": "Active Facebook ads detected"
+          }
+        ],
+        "process_digitisation": [
+          {
+            "score": 5,
+            "evidence": "Active Facebook ads detected"
+          }
+        ]
+      }
+    },
+    "instagram": {
+      "handle": "nobodyschild",
+      "is_public": true,
+      "approx_post_count": "6,326",
+      "mentions_ai_or_ecommerce": false,
+      "pillar_contributions": {
+        "staff_digital_literacy": [
+          {
+            "score": 5,
+            "evidence": "Active public Instagram presence (~6,326 posts)"
+          }
+        ]
+      },
+      "error": null
+    }
+  },
+  "sources_available": [
+    "website_scrape",
+    "google_profile",
+    "companies_house",
+    "facebook_ads",
+    "instagram"
+  ],
+  "sources_failed": [],
+  "enrichment_duration_seconds": 15.3
+}

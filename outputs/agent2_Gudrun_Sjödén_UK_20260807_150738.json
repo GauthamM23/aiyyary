@@ -1,0 +1,322 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-07T14:07:38.338299+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 4.67,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by capturing returns reasons, which is crucial for an older, less digitally native customer base who may require more support and understanding.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Unfitted"
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Issue",
+                  "sub_reasons": [
+                    "Itchy or Irritating",
+                    "Shrinks Excessively",
+                    "Not as Described"
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Different Shade",
+                    "Not as Expected",
+                    "Fading"
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style or Fit Issue",
+                  "sub_reasons": [
+                    "Unflattering Silhouette",
+                    "Poor Construction",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "NEEDLEWORK",
+                  "label": "Needlework Defect",
+                  "sub_reasons": [
+                    "Loose Stitches",
+                    "Tangled Threads",
+                    "Missing or Damaged Embellishments"
+                  ]
+                },
+                {
+                  "code": "BUTTONS_ZIPS",
+                  "label": "Fastening Issues",
+                  "sub_reasons": [
+                    "Broken or Missing Buttons",
+                    "Non-Functional Zippers"
+                  ]
+                },
+                {
+                  "code": "LABELLING",
+                  "label": "Labelling Error",
+                  "sub_reasons": [
+                    "Incorrect Care Label",
+                    "Missing Size or Fit Information"
+                  ]
+                },
+                {
+                  "code": "PACKAGING",
+                  "label": "Packaging Damage",
+                  "sub_reasons": [
+                    "Damaged Box",
+                    "Torn or Missing Packaging Materials"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason Form",
+              "description": "Please help us understand why you'd like to return your item. This will help us improve our products and service.",
+              "fields": [
+                {
+                  "type": "select",
+                  "label": "What's the main reason for returning this item?",
+                  "name": "reason_code",
+                  "options": [
+                    {
+                      "value": "SIZE",
+                      "text": "Incorrect Size"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "text": "Fabric Issue"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "text": "Colour Discrepancy"
+                    },
+                    {
+                      "value": "STYLE",
+                      "text": "Style or Fit Issue"
+                    },
+                    {
+                      "value": "NEEDLEWORK",
+                      "text": "Needlework Defect"
+                    },
+                    {
+                      "value": "BUTTONS_ZIPS",
+                      "text": "Fastening Issues"
+                    },
+                    {
+                      "value": "LABELLING",
+                      "text": "Labelling Error"
+                    },
+                    {
+                      "value": "PACKAGING",
+                      "text": "Packaging Damage"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "label": "Is there anything else you'd like to tell us about your return?",
+                  "name": "sub_reason",
+                  "options": [
+                    {
+                      "value": "",
+                      "text": ""
+                    }
+                  ],
+                  "conditional": {
+                    "if": "reason_code == 'SIZE'",
+                    "then": {
+                      "type": "select",
+                      "label": "Was the size too small, too large or unfitted?",
+                      "name": "sub_reason_size",
+                      "options": [
+                        {
+                          "value": "Too Small",
+                          "text": "Too Small"
+                        },
+                        {
+                          "value": "Too Large",
+                          "text": "Too Large"
+                        },
+                        {
+                          "value": "Unfitted",
+                          "text": "Unfitted"
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "textarea",
+                  "label": "Any other comments or feedback?",
+                  "name": "comments"
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Please note that these instructions are specific to Shopify's admin interface.",
+                "To embed a returns reason capture form into your Shopify returns flow, follow these steps:",
+                "1. Log in to your Shopify admin panel and navigate to \"Settings\" > \"Policies\"",
+                "2. Click on the \"Return Policy\" tab",
+                "3. Scroll down to the \"Return Reason\" section and click on the \"Add Return Reason\" button",
+                "4. Enter a name for your return reason and select the type (e.g., 'Damaged', 'Defective', etc.)",
+                "5. To embed the returns reason capture form, you'll need to add a new section to your return policy template",
+                "6. In the \"Return Policy\" tab, click on the \"Templates\" button next to the return policy name",
+                "7. Click on the \"Edit Template\" button and then select the \"Add Section\" option from the dropdown menu",
+                "8. Choose the \"Form\" section type and add a new form field with the label 'Reason for Return'",
+                "9. Configure the form field settings as desired (e.g., make it required, set a specific format, etc.)",
+                "10. Save your changes to the return policy template",
+                "11. To display the returns reason capture form on your store's returns page, you'll need to add a new section to your theme's liquid files",
+                "12. In the Shopify admin panel, navigate to \"Online Store\" > \"Themes\"",
+                "13. Click on the \"Actions\" dropdown menu next to your active theme and select \"Edit code\"",
+                "14. Open the `templates/returns.liquid` file and add a new section with the returns reason capture form",
+                "15. Use Shopify's liquid syntax to render the form field values and display them in the correct format",
+                "16. Save your changes to the `returns.liquid` file and preview your store's returns page to test the embedded form"
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by automating review collection, which can improve customer engagement and loyalty.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by automating email marketing flows, which can improve customer engagement and loyalty.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by providing a size guide chatbot, which can improve customer satisfaction and loyalty.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The score gap in data foundations pillar is too high to deploy this opportunity now.",
+      "unlock_condition": "Improve data foundations pillar score to at least 6.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The score gap in data foundations pillar is too high to deploy this opportunity now.",
+      "unlock_condition": "Improve data foundations pillar score to at least 7.0"
+    },
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The score gap in AI tool experience pillar is too high to deploy this opportunity now.",
+      "unlock_condition": "Improve AI tool experience pillar score to at least 5.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The score gap in technology infrastructure pillar is too high to deploy this opportunity now.",
+      "unlock_condition": "Improve technology infrastructure pillar score to at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) within the next week to start modernising Gudrun Sj\u00f6d\u00e9n UK's digital customer experience and improving customer satisfaction.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Gudrun_Sj\u00f6d\u00e9n_UK_20260807_150738.json"
+  }
+}

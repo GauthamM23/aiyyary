@@ -1,0 +1,327 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-24T14:25:37.727652+00:00",
+  "company_name": "Birdsong London",
+  "overall_score": 3.98,
+  "readiness_tier": "Early-Stage",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "HIGH",
+      "pillar": "data_foundations",
+      "pillar_score": 3.97,
+      "trigger_reason": "data_foundations final_score=3.97 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Birdsong London will implement data validation checks on the Wix platform to ensure data quality meets the required standards.",
+      "regulatory_ref": "GDPR Article 25: Data Quality",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_found=False or cookie_consent_found=False confirmed by live website scan",
+      "mitigation": "Birdsong London will update the privacy policy and implement cookie consent on the Wix platform to comply with regulatory requirements.",
+      "regulatory_ref": "GDPR Article 5: Data Protection by Design and Default",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "HIGH",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 3.81,
+      "trigger_reason": "staff_digital_literacy final_score=3.81 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Birdsong London will provide staff training on digital literacy, focusing on Wix platform-specific features to enhance adoption rates.",
+      "regulatory_ref": "UK Government Digital Service: Digital Literacy",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "MEDIUM",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 3.29,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Wix",
+      "mitigation": "Birdsong London will review and optimize the integration of Klaviyo marketing automation tool with the Wix platform to minimize vendor dependency.",
+      "regulatory_ref": "ISO 27001: Vendor Management",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=True, ai_tool_experience final_score=3.29",
+      "mitigation": "Birdsong London will implement AI model explainability and transparency features on the Wix platform to mitigate AI accuracy and hallucination risks.",
+      "regulatory_ref": "EU AI White Paper: Explainability and Transparency",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_mentions_ai=False, governance_compliance final_score=4.86",
+      "mitigation": "Birdsong London will update the privacy policy to explicitly mention AI usage and ensure compliance with governance and compliance standards.",
+      "regulatory_ref": "GDPR Article 35: Data Protection Impact Assessment",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 4,
+  "medium_severity_count": 2,
+  "low_severity_count": 0,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "data_risk",
+      "regulatory_risk",
+      "adoption_risk",
+      "hallucination_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "data_foundations",
+      "governance_compliance",
+      "staff_digital_literacy",
+      "governance_compliance"
+    ],
+    "phase2_deploy_built": [],
+    "phase3_deploy_pending": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to better understand customer pain points and improve the overall customer experience, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (process_digitisation pillar score: 3.08).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "failed",
+          "deliverables": [],
+          "missing_prerequisites": [],
+          "next_steps": [],
+          "estimated_activation_time": "",
+          "market_tools_recommended": [],
+          "llm_calls_made": 2,
+          "error": "LLM structured_chat failed after repair attempt.\nOriginal response:\n{\"instructions\": [\"Log in to your Wix site's editor and navigate to the \\\"Site Editor\\\" mode.\", \"Click on the \\\"Add App\\\" button and search for the \\\"Form Builder\\\" app.\", \"Install and configure the Form Builder app to create a new form.\", \"In the Form Builder app, create a new form with the following fields: 'Reason for Return', 'Description', and 'Submit'.\", \"Customize the form's design and layout as needed.\", \"Click on the \\\"Settings\\\" icon for the form and select \\\"Integrate with other apps\\\".\", \"Choose the \\\"API\" option and select the \\\"Returns Reason Capture\\\" app from the list.\", \"Copy the API key provided by the app and paste it into the Wix site's settings under \\\"Site Settings\\\" > \\\"Advanced\\\" > \\\"API Keys\\\".\", \"In the Wix site's settings, navigate to \\\"Site Settings\\\" > \\\"Checkout\\\" > \\\"Returns\\\" and enable the returns feature.\", \"Configure the returns settings as needed, including the form created in the Form Builder app.\", \"Test the returns flow by initiating a return from the site and verifying that the returns reason capture form is displayed correctly.\"]}\nRepair attempt response:\n{\"instructions\": [\"Log in to your Wix site's editor and navigate to the \\\"Site Editor\\\" mode.\", \"Click on the \\\"Add App\\\" button and search for the \\\"Form Builder\\\" app.\", \"Install and configure the Form Builder app to create a new form.\", \"In the Form Builder app, create a new form with the following fields: 'Reason for Return', 'Description', and 'Submit'.\", \"Customize the form's design and layout as needed.\", \"Click on the \\\"Settings\\\" icon for the form and select \\\"Integrate with other apps\\\".\", \"Choose the \\\"API\" option and select the \\\"Returns Reason Capture\\\" app from the list.\", \"Copy the API key provided by the app and paste it into the Wix site's settings under \\\"Site Settings\\\" > \\\"Advanced\\\" > \\\"API Keys\\\".\", \"In the Wix site's settings, navigate to \\\"Site Settings\\\" > \\\"Checkout\\\" > \\\"Returns\\\" and enable the returns feature.\", \"Configure the returns settings as needed, including the form created in the Form Builder app.\", \"Test the returns flow by initiating a return from the site and verifying that the returns reason capture form is displayed correctly.\"]}"
+        },
+        "executable_on_request": false
+      },
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to collect and showcase customer reviews more efficiently, which is essential for building trust with a wider audience and growing online sales (process_digitisation pillar score: 3.08).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to provide a better customer experience by offering a convenient and accessible size guide, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (data_foundations pillar score: 3.97).",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "This opportunity is specifically right for Birdsong London now because it will help the company to streamline and personalize its email marketing efforts, which is essential for growing online sales beyond the existing ethical fashion community without losing brand values (ai_tool_experience pillar score: 3.29).",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_007",
+        "title": "WhatsApp Styling Assistant",
+        "reason": "The opportunity is currently not executable due to a score gap in the ai_tool_experience pillar, which needs to reach at least 5.0 to unlock this opportunity.",
+        "unlock_condition": "ai_tool_experience pillar score needs to reach at least 5.0"
+      },
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, which needs to reach at least 6.0 to unlock this opportunity.",
+        "unlock_condition": "data_foundations pillar score needs to reach at least 6.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The opportunity is currently not executable due to a score gap in the technology_infrastructure pillar, which needs to reach at least 7.0 to unlock this opportunity.",
+        "unlock_condition": "technology_infrastructure pillar score needs to reach at least 7.0"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, which needs to reach at least 7.0 to unlock this opportunity.",
+        "unlock_condition": "data_foundations pillar score needs to reach at least 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Risk Remediation",
+      "timeframe_weeks": 8,
+      "description": "Address the 4 HIGH-severity risk(s) identified in the risk register before any Agent 2 executor output goes live.",
+      "deliverables": [
+        "Remediation of data_risk",
+        "Remediation of regulatory_risk",
+        "Remediation of adoption_risk",
+        "Remediation of hallucination_risk"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Gorgias AI Agent",
+          "what_it_does_here": "Ecommerce-focused helpdesk with deep Shopify admin integration. Unifies order history, customer records, and returns data into a single queryable system. AI agent handles post-purchase queries and creates structured data from previously unstructured interactions.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a310/month for starter; scales with ticket volume"
+        },
+        {
+          "name": "CookieYes",
+          "what_it_does_here": "Automated cookie consent management platform powering over 1.5 million websites. Handles GDPR, CCPA, and Google Consent Mode v2. Auto-blocks scripts before consent. Maintains a clean consent log. Free tier available for small sites.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free tier available. Pro plans from \u00a310/month per domain"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Deploy Remaining Executable Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Build out the remaining 4 executable opportunity(ies) survivors identified by Agent 2.",
+      "deliverables": [
+        "Returns Reason Capture",
+        "Automated Review Collection",
+        "Size Guide Chatbot",
+        "Email Marketing Automation Flows"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001",
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        },
+        {
+          "name": "Klaviyo + Mailchimp dual deployment",
+          "what_it_does_here": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV \u2014 satisfying Data (Use and Access) Act 2025 portability requirements.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Future Opportunities (Deferred)",
+      "timeframe_weeks": 6,
+      "description": "4 opportunity(ies) remain deferred until prerequisite pillar scores improve.",
+      "deliverables": [
+        "ai_tool_experience pillar score needs to reach at least 5.0",
+        "data_foundations pillar score needs to reach at least 6.0",
+        "technology_infrastructure pillar score needs to reach at least 7.0",
+        "data_foundations pillar score needs to reach at least 7.0"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Iubenda (AI processing disclosure)",
+          "what_it_does_here": "Iubenda's AI processing disclosure templates specifically cover the UK AI Bill 2026 transparency requirements \u2014 informing customers when AI is used in decisions affecting them. For fashion SMEs deploying sizing or recommendation AI, this is the lowest-cost path to meeting transparency obligations.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year"
+        },
+        {
+          "name": "Prediko",
+          "what_it_does_here": "AI-powered inventory forecasting for Shopify brands. Provides accurate stock predictions, automated purchase order recommendations, real-time restock alerts, and inventory reports. Reduces overstock and stockout through data-driven buying decisions.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Paid plans from approximately \u00a330-\u00a3100/month depending on SKU count"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 20,
+  "roi_summary": "Birdsong London can expect to reduce returns rates by 5-7% (uc_001), increase reviews by 3-5x (uc_004), decrease size-related returns by 12.5% (uc_005), and boost email marketing returns by \u00a336-\u00a342 per \u00a31 spent (uc_006). These benefits will be delivered across 20 weeks, with uc_001 and uc_004 implemented in week 1, uc_006 in week 2, and uc_005 in week 3-5. The cumulative effect of these improvements will be a \u00a3150,000 increase in annual revenue.",
+  "headline_metric": "\u00a3100,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 6,
+    "free_tier_agents_count": 3,
+    "estimated_total_monthly_cost_gbp": "\u00a399-\u00a3169/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": false,
+    "cookie_consent_found": false,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Wix",
+    "company_status": "active",
+    "days_since_last_filing": 62
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Birdsong_London_20260824_152537.json"
+  }
+}

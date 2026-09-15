@@ -1,0 +1,418 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-16T23:46:14.485795+00:00",
+  "company_name": "Nobody's Child",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.56,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of reducing returns through better size guidance online, and has a high actual score of 6.74 in the process_digitisation pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Unfitted",
+                    "Overly Fitted",
+                    "Unusual Fit (e.g. petite, tall)"
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Issue",
+                  "sub_reasons": [
+                    "Too Thin",
+                    "Too Thick",
+                    "Not as Described (e.g. velvet, lace)",
+                    "Uncomfortable Texture"
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Discrepancy",
+                  "sub_reasons": [
+                    "Not as Expected",
+                    "Darker than Expected",
+                    "Lighter than Expected",
+                    "Unusual Colour Shading"
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style Issue",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Unflattering Silhouette",
+                    "Unusual Cut or Design",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "SIZING_GUIDANCE",
+                  "label": "Size Guidance Issue",
+                  "sub_reasons": [
+                    "Incorrect Size Chart",
+                    "Inaccurate Fit Description",
+                    "Lack of Size Options",
+                    "Unclear Size Labeling"
+                  ]
+                },
+                {
+                  "code": "PHOTO",
+                  "label": "Product Image Issue",
+                  "sub_reasons": [
+                    "Inaccurate Representation",
+                    "Poor Image Quality",
+                    "Missing Key Features"
+                  ]
+                },
+                {
+                  "code": "PACKAGING",
+                  "label": "Packaging Issue",
+                  "sub_reasons": [
+                    "Damaged Packaging",
+                    "Missing Accessories",
+                    "Inadequate Protection"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason",
+              "description": "Please select the reason for your return. We're here to help and want to make things right.",
+              "fields": [
+                {
+                  "type": "select",
+                  "label": "What's the issue?",
+                  "name": "reason_code",
+                  "options": [
+                    {
+                      "value": "SIZE",
+                      "label": "Incorrect Size"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "label": "Fabric Issue"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "label": "Colour Discrepancy"
+                    },
+                    {
+                      "value": "STYLE",
+                      "label": "Style Issue"
+                    },
+                    {
+                      "value": "SIZING_GUIDANCE",
+                      "label": "Size Guidance Issue"
+                    },
+                    {
+                      "value": "PHOTO",
+                      "label": "Product Image Issue"
+                    },
+                    {
+                      "value": "PACKAGING",
+                      "label": "Packaging Issue"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "label": "What specifically went wrong?",
+                  "name": "sub_reason",
+                  "options": [
+                    {
+                      "value": "SIZE",
+                      "label": "Too Small"
+                    },
+                    {
+                      "value": "SIZE",
+                      "label": "Too Large"
+                    },
+                    {
+                      "value": "SIZE",
+                      "label": "Unfitted"
+                    },
+                    {
+                      "value": "SIZE",
+                      "label": "Overly Fitted"
+                    },
+                    {
+                      "value": "SIZE",
+                      "label": "Unusual Fit (e.g. petite, tall)"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "label": "Too Thin"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "label": "Too Thick"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "label": "Not as Described (e.g. velvet, lace)"
+                    },
+                    {
+                      "value": "FABRIC",
+                      "label": "Uncomfortable Texture"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "label": "Not as Expected"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "label": "Darker than Expected"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "label": "Lighter than Expected"
+                    },
+                    {
+                      "value": "COLOUR",
+                      "label": "Unusual Colour Shading"
+                    },
+                    {
+                      "value": "STYLE",
+                      "label": "Not as Described"
+                    },
+                    {
+                      "value": "STYLE",
+                      "label": "Unflattering Silhouette"
+                    },
+                    {
+                      "value": "STYLE",
+                      "label": "Unusual Cut or Design"
+                    },
+                    {
+                      "value": "STYLE",
+                      "label": "Not Suitable for Occasion"
+                    },
+                    {
+                      "value": "SIZING_GUIDANCE",
+                      "label": "Incorrect Size Chart"
+                    },
+                    {
+                      "value": "SIZING_GUIDANCE",
+                      "label": "Inaccurate Fit Description"
+                    },
+                    {
+                      "value": "SIZING_GUIDANCE",
+                      "label": "Lack of Size Options"
+                    },
+                    {
+                      "value": "SIZING_GUIDANCE",
+                      "label": "Unclear Size Labeling"
+                    },
+                    {
+                      "value": "PHOTO",
+                      "label": "Inaccurate Representation"
+                    },
+                    {
+                      "value": "PHOTO",
+                      "label": "Poor Image Quality"
+                    },
+                    {
+                      "value": "PHOTO",
+                      "label": "Missing Key Features"
+                    },
+                    {
+                      "value": "PACKAGING",
+                      "label": "Damaged Packaging"
+                    },
+                    {
+                      "value": "PACKAGING",
+                      "label": "Missing Accessories"
+                    },
+                    {
+                      "value": "PACKAGING",
+                      "label": "Inadequate Protection"
+                    }
+                  ]
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Log in to your Shopify admin panel and navigate to \"Settings\" > \"Policies\" > \"Returns\".",
+                "Click on the \"Return Policy\" section and scroll down to the \"Return reasons\" section.",
+                "Click on the \"Add return reason\" button to create a new return reason.",
+                "In the \"Return reason\" field, enter the name of the return reason (e.g. \"Damaged item\") and click \"Save\".",
+                "Copy the \"Return reason ID\" value, you will need it later.",
+                "Navigate to \"Online Store\" > \"Themes\" > \"Actions\" > \"Edit code\" and select the \"layout.liquid\" file.",
+                "Add the following code snippet to the \"layout.liquid\" file to embed the returns reason capture form:",
+                "<form id=\"return-reason-form\" method=\"post\" action=\"/orders/{% if order.return_reason %}{{ order.return_reason.id }}{% else %}{% endif %}\">",
+                "<label for=\"return_reason\">Return Reason:</label>",
+                "<select id=\"return_reason\" name=\"return_reason\">",
+                "{% for reason in return_reasons %}",
+                "<option value=\"{{ reason.id }}\">{{ reason.name }}</option>",
+                "{% endfor %}",
+                "</select>",
+                "<button type=\"submit\">Submit</button>",
+                "</form>",
+                "Replace the \"return_reasons\" variable with the return reasons you created earlier in the \"Return Policy\" section.",
+                "Save the changes to the \"layout.liquid\" file and click \"Save\".",
+                "Test the returns reason capture form by initiating a return from the Shopify admin panel and selecting a return reason from the form.",
+                "Make sure to test the form on different browsers and devices to ensure compatibility."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Nobody's Child\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it complements the Returns Reason Capture opportunity and also addresses the primary challenge of reducing returns through better size guidance online, and has a high actual score of 6.74 in the process_digitisation pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_002",
+      "title": "Abandoned Cart Recovery Emails",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate, and has a high actual score of 7.87 in the technology_infrastructure pillar.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-500",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it directly addresses the primary challenge of reducing returns through better size guidance online, and has a medium effort level of 6.34 in the data_foundations pillar.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate, and has a medium effort level of 5.7 in the ai_tool_experience pillar.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate, and has a high effort level of 6.34 in the data_foundations pillar.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "This opportunity is specifically right for Nobody's Child right now because it addresses the primary challenge of increasing repeat purchase rate, and has a high effort level of 7.87 in the technology_infrastructure pillar.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently deferred due to a score gap of 0.66 in the data_foundations pillar, requiring a minimum score of 7.0 to unlock.",
+      "unlock_condition": "data_foundations score >= 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) by the end of the week to start addressing the primary challenge of reducing returns through better size guidance online.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Nobody_s_Child_20260817_004614.json"
+  }
+}

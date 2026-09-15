@@ -1,0 +1,166 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-05T20:55:08.567608+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 5.78,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 5.78,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 5.22,
+      "stream_b_score": 8.0,
+      "stream_c_reconciled": 6.3,
+      "final_score": 6.16,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[google_profile] 103 Google reviews (score=8)"
+      ],
+      "stream_c_reasoning": "The owner interview score of 5.22 carries more weight due to the internal operational data it provides. However, Stream B's score of 8.0 is high and suggests a strong online presence. To reconcile these scores, I've taken a weighted average, giving more emphasis to the owner interview score (60% weight) and adjusting downward slightly to reflect the discrepancy between the two scores."
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 4.66,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 5.06,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No recognized e-commerce platform detected (score=4)",
+        "[website] Fast page load: 1.11s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 4.36,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~2,854 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 6.34,
+      "stream_b_score": 3.25,
+      "stream_c_reconciled": 5.0,
+      "final_score": 5.28,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)",
+        "[companies_house] No filings in 3948 days (score=3)",
+        "[companies_house] No filings in the last 2 years (score=2)"
+      ],
+      "stream_c_reasoning": "Stream A score carries more weight, but Stream B evidence directly contradicts factual claims from owner interview. The lack of a privacy policy and no recent company filings significantly reduce the overall score. While HTTPS is enabled, this is not enough to offset the other issues."
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.97,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 2.97,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 4.93,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Gudrun Sj\u00f6d\u00e9n UK faces significant challenges in modernising its digital customer experience while maintaining loyalty of an older customer base, with a critical need to address gaps in AI tool adoption and staff digital literacy.",
+  "top_gaps": [
+    {
+      "pillar": "ai_tool_experience",
+      "score": 2.97,
+      "dominant_stream": "A",
+      "impact": "Poor integration of AI tools will hinder the company's ability to personalise customer experiences."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 4.36,
+      "dominant_stream": "A",
+      "impact": "Low staff digital literacy will slow down the implementation of new digital initiatives."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 5.06,
+      "dominant_stream": "A",
+      "impact": "Outdated technology infrastructure may compromise data security and hinder scalability."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "process_digitisation",
+      "score": 6.16,
+      "dominant_stream": "C",
+      "advantage": "Strong process digitisation capabilities will enable efficient implementation of new digital initiatives."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 5.28,
+      "dominant_stream": "C",
+      "advantage": "Effective governance and compliance practices will mitigate risks associated with digital transformation."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to the availability of multiple enrichment sources and successful Stream C reconciliations.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce waste, and improve sales forecasting.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's pillar scores suggest a relatively low maturity in process digitisation (6.16), which may indicate an opportunity for improvement in their seasonal buying cycle processes."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Effective integration of supplier data is crucial in fashion to ensure accurate product information, track inventory levels, and manage supply chain complexities.",
+      "evidence": "Given Gudrun Sj\u00f6d\u00e9n UK's relatively low score in technology infrastructure (5.06), it may be challenging for them to effectively integrate supplier data, which could hinder AI adoption."
+    },
+    {
+      "signal": "Product Variability Management",
+      "relevance": "Fashion retailers often deal with high product variability due to factors like size, color, and style. Effective management of this variability is essential for AI-driven inventory optimization and demand forecasting.",
+      "evidence": "Gudrun Sj\u00f6d\u00e9n UK's low score in data foundations (5.78) may indicate a need to improve their data structure and management capabilities, particularly with regards to product variability."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": false,
+    "privacy_policy_mentions_ai": false,
+    "cookie_consent_found": false,
+    "cookie_consent_provider": null,
+    "marketing_automation_detected": false,
+    "marketing_automation_tools": [],
+    "analytics_tools_detected": [],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3948,
+    "google_review_count": 103,
+    "has_active_fb_ads": false
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 8.7
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 8,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Gudrun_Sj\u00f6d\u00e9n_UK_20260805_215508.json"
+  }
+}

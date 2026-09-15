@@ -1,0 +1,419 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-04T11:28:09.637724+00:00",
+  "company_name": "Nobody's Child",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.99,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them capture valuable data on returns reasons, which will inform their size guidance improvements and directly address their primary challenge of reducing returns.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SZ001",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large"
+                  ]
+                },
+                {
+                  "code": "SZ002",
+                  "label": "Size Not Matched to Description",
+                  "sub_reasons": [
+                    "Sizing not clear online",
+                    "Size chart not accessible"
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "Fabric Quality Issue",
+                  "sub_reasons": [
+                    "Pilling or snagging",
+                    "Fraying or loose threads"
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "Colour Not as Expected",
+                  "sub_reasons": [
+                    "Dye lot variation",
+                    "Colour not matching description"
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "Style Not as Expected",
+                  "sub_reasons": [
+                    "Fit not as described",
+                    "Neckline or sleeve style incorrect"
+                  ]
+                },
+                {
+                  "code": "FIT001",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    "Too tight or constricting",
+                    "Too loose or baggy"
+                  ]
+                },
+                {
+                  "code": "MAT002",
+                  "label": "Fabric Content Not as Expected",
+                  "sub_reasons": [
+                    "Material not as described",
+                    "Blend of materials incorrect"
+                  ]
+                },
+                {
+                  "code": "PRL001",
+                  "label": "Product Not as Described",
+                  "sub_reasons": [
+                    "Missing features or embellishments",
+                    "Incorrect pattern or print"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason Form",
+              "description": "Please select the reason for your return. We're here to help you with any issues.",
+              "reason_codes": [
+                {
+                  "code": "SZ001",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    {
+                      "id": "SZ001-SZ01",
+                      "label": "Too Small"
+                    },
+                    {
+                      "id": "SZ001-SZ02",
+                      "label": "Too Large"
+                    }
+                  ]
+                },
+                {
+                  "code": "SZ002",
+                  "label": "Size Not Matched to Description",
+                  "sub_reasons": [
+                    {
+                      "id": "SZ002-SZ03",
+                      "label": "Sizing not clear online"
+                    },
+                    {
+                      "id": "SZ002-SZ04",
+                      "label": "Size chart not accessible"
+                    }
+                  ]
+                },
+                {
+                  "code": "MAT001",
+                  "label": "Fabric Quality Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "MAT001-MAT01",
+                      "label": "Pilling or snagging"
+                    },
+                    {
+                      "id": "MAT001-MAT02",
+                      "label": "Fraying or loose threads"
+                    }
+                  ]
+                },
+                {
+                  "code": "COL001",
+                  "label": "Colour Not as Expected",
+                  "sub_reasons": [
+                    {
+                      "id": "COL001-COL01",
+                      "label": "Dye lot variation"
+                    },
+                    {
+                      "id": "COL001-COL02",
+                      "label": "Colour not matching description"
+                    }
+                  ]
+                },
+                {
+                  "code": "STY001",
+                  "label": "Style Not as Expected",
+                  "sub_reasons": [
+                    {
+                      "id": "STY001-STY01",
+                      "label": "Fit not as described"
+                    },
+                    {
+                      "id": "STY001-STY02",
+                      "label": "Neckline or sleeve style incorrect"
+                    }
+                  ]
+                },
+                {
+                  "code": "FIT001",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "FIT001-FIT01",
+                      "label": "Too tight or constricting"
+                    },
+                    {
+                      "id": "FIT001-FIT02",
+                      "label": "Too loose or baggy"
+                    }
+                  ]
+                },
+                {
+                  "code": "MAT002",
+                  "label": "Fabric Content Not as Expected",
+                  "sub_reasons": [
+                    {
+                      "id": "MAT002-MAT03",
+                      "label": "Material not as described"
+                    },
+                    {
+                      "id": "MAT002-MAT04",
+                      "label": "Blend of materials incorrect"
+                    }
+                  ]
+                },
+                {
+                  "code": "PRL001",
+                  "label": "Product Not as Described",
+                  "sub_reasons": [
+                    {
+                      "id": "PRL001-PRL01",
+                      "label": "Missing features or embellishments"
+                    },
+                    {
+                      "id": "PRL001-PRL02",
+                      "label": "Incorrect pattern or print"
+                    }
+                  ]
+                }
+              ],
+              "fields": [
+                {
+                  "type": "select",
+                  "label": "What's the reason for your return?",
+                  "name": "reason_code",
+                  "options": [
+                    {
+                      "value": "SZ001",
+                      "text": "Incorrect Size"
+                    },
+                    {
+                      "value": "SZ002",
+                      "text": "Size Not Matched to Description"
+                    },
+                    {
+                      "value": "MAT001",
+                      "text": "Fabric Quality Issue"
+                    },
+                    {
+                      "value": "COL001",
+                      "text": "Colour Not as Expected"
+                    },
+                    {
+                      "value": "STY001",
+                      "text": "Style Not as Expected"
+                    },
+                    {
+                      "value": "FIT001",
+                      "text": "Fit Issue"
+                    },
+                    {
+                      "value": "MAT002",
+                      "text": "Fabric Content Not as Expected"
+                    },
+                    {
+                      "value": "PRL001",
+                      "text": "Product Not as Described"
+                    }
+                  ]
+                },
+                {
+                  "type": "select",
+                  "label": "Is there anything else you'd like to tell us?",
+                  "name": "additional_info",
+                  "options": [
+                    {
+                      "value": "",
+                      "text": ""
+                    }
+                  ],
+                  "sub_reasons": []
+                }
+              ]
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Log in to your Shopify admin panel and navigate to \"Settings\" > \"Policies\".",
+                "In the policies page, click on \"Return Policy\".",
+                "Scroll down to the \"Return reasons\" section and click on the \"Add return reason\" button.",
+                "Enter a name for the return reason and select the type (e.g. 'Defective', 'Not as described').",
+                "Click \"Save\" to save the new return reason.",
+                "Next, navigate to \"Settings\" > \"Apps\" and search for the returns app you want to integrate with.",
+                "Install and configure the app according to its instructions.",
+                "In the app's settings, look for a section related to embedding a returns reason capture form.",
+                "Copy the provided code snippet and paste it into your Shopify theme's liquid file (e.g. `layout.liquid` or `product.liquid`).",
+                "Make sure to place the code in the correct location to display the form at the right time in the returns flow.",
+                "Save the changes to your theme and test the returns process on your store to ensure the form is working as expected."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Nobody's Child\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them collect and leverage customer reviews to improve their online product information, including size guidance, which will contribute to reducing returns.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_002",
+      "title": "Abandoned Cart Recovery Emails",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them recover lost sales and reduce the financial impact of returns, which will free up resources to focus on improving size guidance.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-500",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can provide real-time, interactive size guidance to customers online, directly addressing their primary challenge of improving repeat purchase rate and reducing returns.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them create targeted, automated email campaigns to encourage repeat purchases and reduce returns by promoting size guidance and product recommendations.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 6,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them optimize their inventory management and reduce stockouts, which will indirectly contribute to reducing returns by ensuring that customers receive the correct size first time.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "This opportunity is specifically right for Nobody's Child now because it can help them optimize their pricing strategy to balance revenue and sales volume, which will indirectly contribute to reducing returns by encouraging customers to purchase the correct size.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a score gap in data_foundations, specifically needing to reach a minimum score of 7.0.",
+      "unlock_condition": "data_foundations > 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) within the next week to start collecting valuable data on returns reasons and inform size guidance improvements.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Nobody_s_Child_20260804_122809.json"
+  }
+}

@@ -1,0 +1,667 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-10T15:02:41.778831+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "overall_score": 4.66,
+  "readiness_tier": "Early-Stage",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "MEDIUM",
+      "pillar": "data_foundations",
+      "pillar_score": 5.78,
+      "trigger_reason": "data_foundations final_score=5.78 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should implement data validation checks on their custom-built platform to ensure accurate and consistent product information.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.89,
+      "trigger_reason": "privacy_policy_found=False or cookie_consent_found=False confirmed by live website scan",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK must update their privacy policy and obtain explicit cookie consent from users before collecting any personal data, in compliance with GDPR regulations.",
+      "regulatory_ref": "GDPR Article 5(1)(c) and Recital 38",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "MEDIUM",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 4.17,
+      "trigger_reason": "staff_digital_literacy final_score=4.17 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should provide regular digital literacy training sessions for staff to improve their understanding of the custom-built platform and its features.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "LOW",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 3.27,
+      "trigger_reason": "marketing_automation_tools=[], platform_detected=custom_or_unknown",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should consider integrating a marketing automation tool, such as Klaviyo or Mailchimp, to streamline their email marketing campaigns and improve customer engagement.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "LOW",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.89,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=False, ai_tool_experience final_score=3.27",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK should implement AI model explainability features in their chat widget to provide transparency into the decision-making process and reduce the risk of AI hallucinations.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.89,
+      "trigger_reason": "privacy_policy_mentions_ai=False, governance_compliance final_score=4.89",
+      "mitigation": "Gudrun Sj\u00f6d\u00e9n UK must review and update their privacy policy to explicitly mention the use of AI in data processing, ensuring compliance with GDPR regulations and transparency for customers.",
+      "regulatory_ref": "GDPR Article 13(2)(f) and Recital 38",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 1,
+  "medium_severity_count": 3,
+  "low_severity_count": 2,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "regulatory_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "governance_compliance"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help modernise their digital customer experience by streamlining returns processes, which is a crucial aspect of maintaining loyalty among an older, less digitally native customer base (process_digitisation pillar score: 5.21).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "complete",
+          "deliverables": [
+            {
+              "name": "returns_reason_codes",
+              "type": "json",
+              "content": {
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      "Too Small",
+                      "Too Large",
+                      "Incorrect Sizing"
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality or Type",
+                    "sub_reasons": [
+                      "Not as Described",
+                      "Poor Quality",
+                      "Unacceptable Texture"
+                    ]
+                  },
+                  {
+                    "code": "COLOUR",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      "Different from Image",
+                      "Not as Expected",
+                      "Incorrect Shade"
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style or Design Issue",
+                    "sub_reasons": [
+                      "Not as Described",
+                      "Poor Fit",
+                      "Unflattering Cut"
+                    ]
+                  },
+                  {
+                    "code": "FIT",
+                    "label": "Fit Issue",
+                    "sub_reasons": [
+                      "Too Tight",
+                      "Too Loose",
+                      "Uncomfortable Silhouette"
+                    ]
+                  },
+                  {
+                    "code": "NEEDLEWORK",
+                    "label": "Needlework or Embellishment Issue",
+                    "sub_reasons": [
+                      "Poor Quality",
+                      "Inconsistent Stitching",
+                      "Missing or Damaged Embellishments"
+                    ]
+                  },
+                  {
+                    "code": "BUTTONS",
+                    "label": "Button or Fastening Issue",
+                    "sub_reasons": [
+                      "Missing Buttons",
+                      "Broken Zippers",
+                      "Loose or Detached Fastenings"
+                    ]
+                  },
+                  {
+                    "code": "LABELLING",
+                    "label": "Labelling or Care Instructions Issue",
+                    "sub_reasons": [
+                      "Incorrect Labelling",
+                      "Inadequate Care Instructions",
+                      "Missing Care Label"
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Import these reason codes into your returns form or helpdesk tool."
+            },
+            {
+              "name": "customer_form_structure",
+              "type": "json",
+              "content": {
+                "title": "Return Reason Form",
+                "description": "Please let us know why you'd like to return your item. This helps us improve our products and service.",
+                "reason_codes": [
+                  {
+                    "code": "SIZE",
+                    "label": "Sizing Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "SIZE_TOO_SMALL",
+                        "label": "Too Small"
+                      },
+                      {
+                        "id": "SIZE_TOO_LARGE",
+                        "label": "Too Large"
+                      },
+                      {
+                        "id": "SIZE_INCORRECT_SIZING",
+                        "label": "Incorrect Sizing"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "FABRIC",
+                    "label": "Fabric Quality or Type",
+                    "sub_reasons": [
+                      {
+                        "id": "FABRIC_NOT_AS_DESCRIBED",
+                        "label": "Not as Described"
+                      },
+                      {
+                        "id": "FABRIC_POOR_QUALITY",
+                        "label": "Poor Quality"
+                      },
+                      {
+                        "id": "FABRIC_UNACCEPTABLE_TEXTURE",
+                        "label": "Unacceptable Texture"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "COLOUR",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      {
+                        "id": "COLOUR_DIFFERENT_FROM_IMAGE",
+                        "label": "Different from Image"
+                      },
+                      {
+                        "id": "COLOUR_NOT_AS_EXPECTED",
+                        "label": "Not as Expected"
+                      },
+                      {
+                        "id": "COLOUR_INCORRECT_SHADE",
+                        "label": "Incorrect Shade"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "STYLE",
+                    "label": "Style or Design Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "STYLE_NOT_AS_DESCRIBED",
+                        "label": "Not as Described"
+                      },
+                      {
+                        "id": "STYLE_POOR_FIT",
+                        "label": "Poor Fit"
+                      },
+                      {
+                        "id": "STYLE_UNFLATTERING_CUT",
+                        "label": "Unflattering Cut"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "FIT",
+                    "label": "Fit Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "FIT_TOO_TIGHT",
+                        "label": "Too Tight"
+                      },
+                      {
+                        "id": "FIT_TOO_LOOSE",
+                        "label": "Too Loose"
+                      },
+                      {
+                        "id": "FIT_UNCOMFORTABLE_SILHOUETTE",
+                        "label": "Uncomfortable Silhouette"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "NEEDLEWORK",
+                    "label": "Needlework or Embellishment Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "NEEDLEWORK_POOR_QUALITY",
+                        "label": "Poor Quality"
+                      },
+                      {
+                        "id": "NEEDLEWORK_INCONSISTENT_STITCHING",
+                        "label": "Inconsistent Stitching"
+                      },
+                      {
+                        "id": "NEEDLEWORK_MISSING_OR DAMAGED_EMBELLISHMENTS",
+                        "label": "Missing or Damaged Embellishments"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "BUTTONS",
+                    "label": "Button or Fastening Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "BUTTONS_MISSING_BUTTONS",
+                        "label": "Missing Buttons"
+                      },
+                      {
+                        "id": "BUTTONS_BROKEN_ZIPPERS",
+                        "label": "Broken Zippers"
+                      },
+                      {
+                        "id": "BUTTONS_LOOSE_OR_DETACHED_FASTENINGS",
+                        "label": "Loose or Detached Fastenings"
+                      }
+                    ]
+                  },
+                  {
+                    "code": "LABELLING",
+                    "label": "Labelling or Care Instructions Issue",
+                    "sub_reasons": [
+                      {
+                        "id": "LABELLING_INCORRECT_LABELLING",
+                        "label": "Incorrect Labelling"
+                      },
+                      {
+                        "id": "LABELLING_INADEQUATE_CARE_INSTRUCTIONS",
+                        "label": "Inadequate Care Instructions"
+                      },
+                      {
+                        "id": "LABELLING_MISSING_CARE_LABEL",
+                        "label": "Missing Care Label"
+                      }
+                    ]
+                  }
+                ],
+                "form_fields": [
+                  {
+                    "type": "select",
+                    "label": "What's the main reason for returning your item?",
+                    "name": "main_reason",
+                    "options": [
+                      {
+                        "id": "SIZE",
+                        "label": "Sizing Issue"
+                      },
+                      {
+                        "id": "FABRIC",
+                        "label": "Fabric Quality or Type"
+                      },
+                      {
+                        "id": "COLOUR",
+                        "label": "Colour Discrepancy"
+                      },
+                      {
+                        "id": "STYLE",
+                        "label": "Style or Design Issue"
+                      },
+                      {
+                        "id": "FIT",
+                        "label": "Fit Issue"
+                      },
+                      {
+                        "id": "NEEDLEWORK",
+                        "label": "Needlework or Embellishment Issue"
+                      },
+                      {
+                        "id": "BUTTONS",
+                        "label": "Button or Fastening Issue"
+                      },
+                      {
+                        "id": "LABELLING",
+                        "label": "Labelling or Care Instructions Issue"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "select",
+                    "label": "Is there anything else you'd like to tell us?",
+                    "name": "additional_info",
+                    "options": [
+                      {
+                        "id": "NONE",
+                        "label": "No additional information"
+                      }
+                    ]
+                  }
+                ],
+                "submit_button": {
+                  "text": "Submit Return Reason"
+                }
+              },
+              "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+            },
+            {
+              "name": "shopify_integration_guide",
+              "type": "markdown",
+              "content": {
+                "instructions": [
+                  "Please note that these instructions are specific to Shopify's current admin interface.",
+                  "To embed a returns reason capture form into a Shopify returns flow, follow these steps:",
+                  "1. Navigate to your Shopify store's Admin panel and click on 'Settings' from the left-hand menu.",
+                  "2. Click on 'Policies' under the 'Store' section.",
+                  "3. Scroll down to the 'Returns' section and click on the 'Edit' button next to 'Return policy'.",
+                  "4. In the 'Return policy' page, scroll down to the 'Return reason' section.",
+                  "5. Click on the 'Add return reason' button to create a new return reason field.",
+                  "6. Enter the required details for the return reason field and click 'Save'.",
+                  "7. To embed the returns reason capture form into your store's returns flow, you'll need to use Shopify's API or a third-party app that supports this functionality.",
+                  "8. You can use Shopify's API to create a custom form using Liquid templates and JavaScript code.",
+                  "9. Alternatively, you can use a third-party app like Re:amaze or ReturnLogic that provides pre-built integrations for returns reason capture forms.",
+                  "10. Follow the app's documentation to set up the returns reason capture form in your Shopify store."
+                ]
+              },
+              "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+            },
+            {
+              "name": "weekly_summary_template",
+              "type": "markdown",
+              "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+              "instructions": "Use this template for a weekly email reviewing returns data."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Create Typeform account at typeform.com",
+            "Copy the form structure JSON below into a new form",
+            "Add the Shopify embed code to your returns page",
+            "Set up a weekly calendar reminder to review the summary report"
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [],
+          "llm_calls_made": 3,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will further enhance their digital customer experience by automating review collection, which will improve the overall shopping experience and build trust among customers (process_digitisation pillar score: 5.21).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will help them leverage AI to automate email marketing, which can improve customer engagement and retention among their older customer base (ai_tool_experience pillar score: 3.27).",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it will provide a convenient and user-friendly way to help customers find their size, which can improve the overall shopping experience and build trust among customers (data_foundations pillar score: 5.78).",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The opportunity is currently not executable due to a score gap in the data_foundations pillar, specifically a score of 5.78 which needs to reach at least 6.0.",
+        "unlock_condition": "data_foundations pillar score must reach at least 6.0"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The opportunity is currently not executable due to a significant score gap in the data_foundations pillar, specifically a score of 5.78 which needs to reach at least 7.0.",
+        "unlock_condition": "data_foundations pillar score must reach at least 7.0"
+      },
+      {
+        "id": "uc_007",
+        "title": "WhatsApp Styling Assistant",
+        "reason": "The opportunity is currently not executable due to a significant score gap in the ai_tool_experience pillar, specifically a score of 3.27 which needs to reach at least 5.0.",
+        "unlock_condition": "ai_tool_experience pillar score must reach at least 5.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The opportunity is currently not executable due to a significant score gap in the technology_infrastructure pillar, specifically a score of 4.66 which needs to reach at least 7.0.",
+        "unlock_condition": "technology_infrastructure pillar score must reach at least 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Risk Remediation",
+      "timeframe_weeks": 2,
+      "description": "Address the 1 HIGH-severity risk(s) identified in the risk register before any Agent 2 executor output goes live. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is a suggested roadmap for fashion SMEs to mitigate risks and deploy AI solutions:\n\n**Phase 1: Risk Assessment and Vendor Selection (Weeks 1-4)**\n\n1. Conduct a thorough risk assessment using the provided categories (adoption, vendor, hallucination, and ethical risk).\n2. Shortlist potential vendors based on their ability to address identified risks.\n3. Evaluate the technical feasibility of integrating selected vendors with existing Shopify infrastructure.\n\n**Phase 2: Compliance and Data Governance (Weeks 5-8)**\n\n1. Implement a comprehensive compliance platform like Iubenda or Termly to ensure GDPR, CCPA, and UK data protection law compliance.\n2. Configure AI processing disclosure templates to meet transparency requirements for the UK AI Bill 2026.\n3. Establish data governance policies and procedures to ensure responsible AI deployment.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. Deploy an AI agent like Lyro by Tidio or Minami AI to address customer service pain points, such as returns and exchanges.\n2. Configure human-in-the-loop mode for sensitive outputs to mitigate hallucination risk.\n3. Integrate the AI agent with existing Shopify infrastructure.\n\n**Phase 4: Vendor Diversification and Risk Mitigation (Weeks 13-16)**\n\n1. Implement a returns management platform like Loop Returns to reduce refund leakage and improve customer satisfaction.\n2. Deploy a marketing automation vendor diversification strategy using Klaviyo and Mailchimp to ensure no single vendor holds all customer communication data.\n3. Continuously monitor and evaluate the effectiveness of deployed AI solutions.\n\n**Phase 5: Ongoing Monitoring and Improvement (After Week 16)**\n\n1. Regularly review and update compliance policies and procedures to reflect changing regulatory requirements.\n2. Monitor AI performance and adjust configurations as needed to maintain optimal results.\n3. Continuously assess and address emerging risks and challenges in the deployment of AI solutions.\n\nThis roadmap provides a structured approach for fashion SMEs to mitigate identified risks, deploy AI solutions, and ensure responsible AI adoption.\nRepair attempt response:\nHere is the JSON response:\n\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate high-risk areas to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\"Risk assessment report\", \"Compliance platform implementation\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Ensure GDPR, CCPA, and UK data protection law compliance for the fashion SME.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Implement a returns management platform to reduce refund leakage and improve customer satisfaction.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate the returns form and email sequence using Gorgias AI Agent for helpdesk integration.\",\n      \"deliverables\": [\"Returns form activation\", \"Email sequence configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Helpdesk integration for returns and exchanges using Gorgias AI Agent.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Configure email sequence for customer communication using Lyro by Tidio.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy size guide chatbot using Fin by Intercom and email marketing using Klaviyo.\",\n      \"deliverables\": [\"Size guide chatbot deployment\", \"Email marketing configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy size guide chatbot using Fin by Intercom for improved customer experience.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Configure email marketing campaigns using Klaviyo for increased customer engagement.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy personalisation using ViSenze when data foundations improve and demand forecasting using Prediko when data matures.\",\n      \"deliverables\": [\"Personalisation deployment\", \"Demand forecasting configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Deploy personalisation using ViSenze for improved customer experience when data foundations improve.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"399\"\n        },\n        {\n          \"name\": \"Prediko\",\n          \"what_it_does_here\": \"Configure demand forecasting using Prediko when data matures for improved business decisions.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 16\n})]",
+      "deliverables": [
+        "Remediation of regulatory_risk"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "CookieYes",
+          "what_it_does_here": "Automated cookie consent management platform powering over 1.5 million websites. Handles GDPR, CCPA, and Google Consent Mode v2. Auto-blocks scripts before consent. Maintains a clean consent log. Free tier available for small sites.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free tier available. Pro plans from \u00a310/month per domain"
+        },
+        {
+          "name": "Termly",
+          "what_it_does_here": "Automated compliance platform generating GDPR-compliant privacy policies, cookie policies, and terms of service. Scans website for compliance gaps. Embeds compliance widgets directly on site. Best for businesses that need legal documents without hiring a solicitor.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available with watermark. Paid from \u00a314/month"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "title": "Activate Built Executor Outputs",
+      "timeframe_weeks": 1,
+      "description": "Go live with the 1 opportunity(ies) Agent 2 has already built and connected. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is a suggested roadmap for fashion SMEs to mitigate risks and deploy AI solutions:\n\n**Phase 1: Risk Assessment and Vendor Selection (Weeks 1-4)**\n\n1. Conduct a thorough risk assessment using the provided categories (adoption, vendor, hallucination, and ethical risk).\n2. Shortlist potential vendors based on their ability to address identified risks.\n3. Evaluate the technical feasibility of integrating selected vendors with existing Shopify infrastructure.\n\n**Phase 2: Compliance and Data Governance (Weeks 5-8)**\n\n1. Implement a comprehensive compliance platform like Iubenda or Termly to ensure GDPR, CCPA, and UK data protection law compliance.\n2. Configure AI processing disclosure templates to meet transparency requirements for the UK AI Bill 2026.\n3. Establish data governance policies and procedures to ensure responsible AI deployment.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. Deploy an AI agent like Lyro by Tidio or Minami AI to address customer service pain points, such as returns and exchanges.\n2. Configure human-in-the-loop mode for sensitive outputs to mitigate hallucination risk.\n3. Integrate the AI agent with existing Shopify infrastructure.\n\n**Phase 4: Vendor Diversification and Risk Mitigation (Weeks 13-16)**\n\n1. Implement a returns management platform like Loop Returns to reduce refund leakage and improve customer satisfaction.\n2. Deploy a marketing automation vendor diversification strategy using Klaviyo and Mailchimp to ensure no single vendor holds all customer communication data.\n3. Continuously monitor and evaluate the effectiveness of deployed AI solutions.\n\n**Phase 5: Ongoing Monitoring and Improvement (After Week 16)**\n\n1. Regularly review and update compliance policies and procedures to reflect changing regulatory requirements.\n2. Monitor AI performance and adjust configurations as needed to maintain optimal results.\n3. Continuously assess and address emerging risks and challenges in the deployment of AI solutions.\n\nThis roadmap provides a structured approach for fashion SMEs to mitigate identified risks, deploy AI solutions, and ensure responsible AI adoption.\nRepair attempt response:\nHere is the JSON response:\n\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate high-risk areas to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\"Risk assessment report\", \"Compliance platform implementation\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Ensure GDPR, CCPA, and UK data protection law compliance for the fashion SME.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Implement a returns management platform to reduce refund leakage and improve customer satisfaction.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate the returns form and email sequence using Gorgias AI Agent for helpdesk integration.\",\n      \"deliverables\": [\"Returns form activation\", \"Email sequence configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Helpdesk integration for returns and exchanges using Gorgias AI Agent.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Configure email sequence for customer communication using Lyro by Tidio.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy size guide chatbot using Fin by Intercom and email marketing using Klaviyo.\",\n      \"deliverables\": [\"Size guide chatbot deployment\", \"Email marketing configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy size guide chatbot using Fin by Intercom for improved customer experience.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Configure email marketing campaigns using Klaviyo for increased customer engagement.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy personalisation using ViSenze when data foundations improve and demand forecasting using Prediko when data matures.\",\n      \"deliverables\": [\"Personalisation deployment\", \"Demand forecasting configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Deploy personalisation using ViSenze for improved customer experience when data foundations improve.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"399\"\n        },\n        {\n          \"name\": \"Prediko\",\n          \"what_it_does_here\": \"Configure demand forecasting using Prediko when data matures for improved business decisions.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 16\n})]",
+      "deliverables": [
+        "Returns Reason Capture"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001",
+      "recommended_ai_agents": [
+        {
+          "name": "Lyro by Tidio",
+          "what_it_does_here": "AI agent for Shopify stores that handles order status, returns, and product questions. Critically for adoption risk, Lyro trains on your existing FAQ and knowledge base in under 10 minutes and improves from human agent responses \u2014 meaning staff see it as a tool that learns from them rather than replacing them. Smart escalation to human agents when needed.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Paid from \u00a329/month"
+        },
+        {
+          "name": "Gorgias AI Agent (human-in-the-loop mode)",
+          "what_it_does_here": "Gorgias's 2026 update introduced configurable human oversight controls \u2014 the AI drafts responses and flags them for human review before sending for defined categories (size advice, refund decisions, complaints). This is the practical implementation of hallucination risk mitigation for a fashion SME's customer service stack.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a310/month"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "title": "Deploy Remaining Executable Opportunities",
+      "timeframe_weeks": 6,
+      "description": "Build out the remaining 3 executable opportunity(ies) survivors identified by Agent 2. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is a suggested roadmap for fashion SMEs to mitigate risks and deploy AI solutions:\n\n**Phase 1: Risk Assessment and Vendor Selection (Weeks 1-4)**\n\n1. Conduct a thorough risk assessment using the provided categories (adoption, vendor, hallucination, and ethical risk).\n2. Shortlist potential vendors based on their ability to address identified risks.\n3. Evaluate the technical feasibility of integrating selected vendors with existing Shopify infrastructure.\n\n**Phase 2: Compliance and Data Governance (Weeks 5-8)**\n\n1. Implement a comprehensive compliance platform like Iubenda or Termly to ensure GDPR, CCPA, and UK data protection law compliance.\n2. Configure AI processing disclosure templates to meet transparency requirements for the UK AI Bill 2026.\n3. Establish data governance policies and procedures to ensure responsible AI deployment.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. Deploy an AI agent like Lyro by Tidio or Minami AI to address customer service pain points, such as returns and exchanges.\n2. Configure human-in-the-loop mode for sensitive outputs to mitigate hallucination risk.\n3. Integrate the AI agent with existing Shopify infrastructure.\n\n**Phase 4: Vendor Diversification and Risk Mitigation (Weeks 13-16)**\n\n1. Implement a returns management platform like Loop Returns to reduce refund leakage and improve customer satisfaction.\n2. Deploy a marketing automation vendor diversification strategy using Klaviyo and Mailchimp to ensure no single vendor holds all customer communication data.\n3. Continuously monitor and evaluate the effectiveness of deployed AI solutions.\n\n**Phase 5: Ongoing Monitoring and Improvement (After Week 16)**\n\n1. Regularly review and update compliance policies and procedures to reflect changing regulatory requirements.\n2. Monitor AI performance and adjust configurations as needed to maintain optimal results.\n3. Continuously assess and address emerging risks and challenges in the deployment of AI solutions.\n\nThis roadmap provides a structured approach for fashion SMEs to mitigate identified risks, deploy AI solutions, and ensure responsible AI adoption.\nRepair attempt response:\nHere is the JSON response:\n\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate high-risk areas to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\"Risk assessment report\", \"Compliance platform implementation\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Ensure GDPR, CCPA, and UK data protection law compliance for the fashion SME.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Implement a returns management platform to reduce refund leakage and improve customer satisfaction.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate the returns form and email sequence using Gorgias AI Agent for helpdesk integration.\",\n      \"deliverables\": [\"Returns form activation\", \"Email sequence configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Helpdesk integration for returns and exchanges using Gorgias AI Agent.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Configure email sequence for customer communication using Lyro by Tidio.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy size guide chatbot using Fin by Intercom and email marketing using Klaviyo.\",\n      \"deliverables\": [\"Size guide chatbot deployment\", \"Email marketing configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy size guide chatbot using Fin by Intercom for improved customer experience.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Configure email marketing campaigns using Klaviyo for increased customer engagement.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy personalisation using ViSenze when data foundations improve and demand forecasting using Prediko when data matures.\",\n      \"deliverables\": [\"Personalisation deployment\", \"Demand forecasting configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Deploy personalisation using ViSenze for improved customer experience when data foundations improve.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"399\"\n        },\n        {\n          \"name\": \"Prediko\",\n          \"what_it_does_here\": \"Configure demand forecasting using Prediko when data matures for improved business decisions.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 16\n})]",
+      "deliverables": [
+        "Automated Review Collection",
+        "Email Marketing Automation Flows",
+        "Size Guide Chatbot"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_004",
+      "recommended_ai_agents": [
+        {
+          "name": "Loop Returns",
+          "what_it_does_here": "Returns management platform for Shopify merchants that converts refunds into exchanges. When a customer initiates a return, Loop suggests alternative products, different sizes, or store credit. Directly reduces refund leakage for fashion brands with high size-related return rates. Provides structured returns data as a byproduct.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "From \u00a359/month. Scales with return volume"
+        },
+        {
+          "name": "Klaviyo + Mailchimp dual deployment",
+          "what_it_does_here": "Not a single tool but a strategy: running primary email flows in Klaviyo while maintaining a Mailchimp backup list ensures no single marketing automation vendor holds all customer communication. Both export subscriber lists in standard CSV \u2014 satisfying Data (Use and Access) Act 2025 portability requirements.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Mailchimp free up to 500 contacts. Klaviyo free up to 250 contacts"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "title": "Future Opportunities (Deferred)",
+      "timeframe_weeks": 6,
+      "description": "4 opportunity(ies) remain deferred until prerequisite pillar scores improve. [LLM roadmap call failed (LLM structured_chat failed after repair attempt.\nOriginal response:\nBased on the provided data, here is a suggested roadmap for fashion SMEs to mitigate risks and deploy AI solutions:\n\n**Phase 1: Risk Assessment and Vendor Selection (Weeks 1-4)**\n\n1. Conduct a thorough risk assessment using the provided categories (adoption, vendor, hallucination, and ethical risk).\n2. Shortlist potential vendors based on their ability to address identified risks.\n3. Evaluate the technical feasibility of integrating selected vendors with existing Shopify infrastructure.\n\n**Phase 2: Compliance and Data Governance (Weeks 5-8)**\n\n1. Implement a comprehensive compliance platform like Iubenda or Termly to ensure GDPR, CCPA, and UK data protection law compliance.\n2. Configure AI processing disclosure templates to meet transparency requirements for the UK AI Bill 2026.\n3. Establish data governance policies and procedures to ensure responsible AI deployment.\n\n**Phase 3: AI Agent Deployment (Weeks 9-12)**\n\n1. Deploy an AI agent like Lyro by Tidio or Minami AI to address customer service pain points, such as returns and exchanges.\n2. Configure human-in-the-loop mode for sensitive outputs to mitigate hallucination risk.\n3. Integrate the AI agent with existing Shopify infrastructure.\n\n**Phase 4: Vendor Diversification and Risk Mitigation (Weeks 13-16)**\n\n1. Implement a returns management platform like Loop Returns to reduce refund leakage and improve customer satisfaction.\n2. Deploy a marketing automation vendor diversification strategy using Klaviyo and Mailchimp to ensure no single vendor holds all customer communication data.\n3. Continuously monitor and evaluate the effectiveness of deployed AI solutions.\n\n**Phase 5: Ongoing Monitoring and Improvement (After Week 16)**\n\n1. Regularly review and update compliance policies and procedures to reflect changing regulatory requirements.\n2. Monitor AI performance and adjust configurations as needed to maintain optimal results.\n3. Continuously assess and address emerging risks and challenges in the deployment of AI solutions.\n\nThis roadmap provides a structured approach for fashion SMEs to mitigate identified risks, deploy AI solutions, and ensure responsible AI adoption.\nRepair attempt response:\nHere is the JSON response:\n\n{\n  \"roadmap\": [\n    {\n      \"phase\": 1,\n      \"title\": \"Remediation of HIGH-severity risks\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Remediate high-risk areas to ensure a stable foundation for AI adoption.\",\n      \"deliverables\": [\"Risk assessment report\", \"Compliance platform implementation\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Iubenda\",\n          \"what_it_does_here\": \"Ensure GDPR, CCPA, and UK data protection law compliance for the fashion SME.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"99\"\n        },\n        {\n          \"name\": \"Loop Returns\",\n          \"what_it_does_here\": \"Implement a returns management platform to reduce refund leakage and improve customer satisfaction.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 2,\n      \"title\": \"Activation of Agent 2 executor outputs already built\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Activate the returns form and email sequence using Gorgias AI Agent for helpdesk integration.\",\n      \"deliverables\": [\"Returns form activation\", \"Email sequence configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": \"executor_id\",\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Gorgias AI Agent\",\n          \"what_it_does_here\": \"Helpdesk integration for returns and exchanges using Gorgias AI Agent.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"199\"\n        },\n        {\n          \"name\": \"Lyro by Tidio\",\n          \"what_it_does_here\": \"Configure email sequence for customer communication using Lyro by Tidio.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 3,\n      \"title\": \"Deployment of remaining executable opportunities\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy size guide chatbot using Fin by Intercom and email marketing using Klaviyo.\",\n      \"deliverables\": [\"Size guide chatbot deployment\", \"Email marketing configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"Fin by Intercom\",\n          \"what_it_does_here\": \"Deploy size guide chatbot using Fin by Intercom for improved customer experience.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"299\"\n        },\n        {\n          \"name\": \"Klaviyo\",\n          \"what_it_does_here\": \"Configure email marketing campaigns using Klaviyo for increased customer engagement.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    },\n    {\n      \"phase\": 4,\n      \"title\": \"Deferred opportunities (unlock conditions must be stated)\",\n      \"timeframe_weeks\": 4,\n      \"description\": \"Deploy personalisation using ViSenze when data foundations improve and demand forecasting using Prediko when data matures.\",\n      \"deliverables\": [\"Personalisation deployment\", \"Demand forecasting configuration\"],\n      \"human_oversight_required\": true,\n      \"activates_executor\": null,\n      \"recommended_ai_agents\": [\n        {\n          \"name\": \"ViSenze\",\n          \"what_it_does_here\": \"Deploy personalisation using ViSenze for improved customer experience when data foundations improve.\",\n          \"effort\": \"high\",\n          \"free_tier\": false,\n          \"estimated_monthly_cost_gbp\": \"399\"\n        },\n        {\n          \"name\": \"Prediko\",\n          \"what_it_does_here\": \"Configure demand forecasting using Prediko when data matures for improved business decisions.\",\n          \"effort\": \"medium\",\n          \"free_tier\": true,\n          \"estimated_monthly_cost_gbp\": \"0\"\n        }\n      ]\n    }\n  ],\n  \"total_roadmap_weeks\": 16\n})]",
+      "deliverables": [
+        "data_foundations pillar score must reach at least 6.0",
+        "data_foundations pillar score must reach at least 7.0",
+        "ai_tool_experience pillar score must reach at least 5.0",
+        "technology_infrastructure pillar score must reach at least 7.0"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null,
+      "recommended_ai_agents": [
+        {
+          "name": "Iubenda (AI processing disclosure)",
+          "what_it_does_here": "Iubenda's AI processing disclosure templates specifically cover the UK AI Bill 2026 transparency requirements \u2014 informing customers when AI is used in decisions affecting them. For fashion SMEs deploying sizing or recommendation AI, this is the lowest-cost path to meeting transparency obligations.",
+          "effort": "low",
+          "free_tier": true,
+          "estimated_monthly_cost_gbp": "Free plan available. Pro from \u00a327/year"
+        },
+        {
+          "name": "Prediko",
+          "what_it_does_here": "AI-powered inventory forecasting for Shopify brands. Provides accurate stock predictions, automated purchase order recommendations, real-time restock alerts, and inventory reports. Reduces overstock and stockout through data-driven buying decisions.",
+          "effort": "low",
+          "free_tier": false,
+          "estimated_monthly_cost_gbp": "Paid plans from approximately \u00a330-\u00a3100/month depending on SKU count"
+        }
+      ]
+    }
+  ],
+  "total_roadmap_weeks": 15,
+  "roi_summary": "Gudrun Sj\u00f6d\u00e9n UK can expect to reduce returns rates by implementing Returns Reason Capture (Phase 1), automate review collection with Automated Review Collection (Phase 1) generating 4-7x more reviews, improve email marketing efficiency with Email Marketing Automation Flows (Phases 2-3) delivering \u00a336-42 return per \u00a31 spent, and decrease size-related returns by up to 25% with Size Guide Chatbot (Phase 3).",
+  "headline_metric": "\u00a324,000 additional annual revenue",
+  "marketplace_summary": {
+    "total_agents_recommended": 8,
+    "free_tier_agents_count": 5,
+    "estimated_total_monthly_cost_gbp": "\u00a399-\u00a3169/month",
+    "aiyyary_bridge_note": "These agents are recommended as immediate solutions. As AIYYARY grows, custom-built equivalents will replace third-party dependencies where appropriate."
+  },
+  "enrichment_signals_used": {
+    "privacy_policy_found": false,
+    "cookie_consent_found": false,
+    "marketing_automation_tools": [],
+    "platform_detected": "custom_or_unknown",
+    "company_status": "active",
+    "days_since_last_filing": 3953
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Gudrun_Sj\u00f6d\u00e9n_UK_20260810_160241.json"
+  }
+}

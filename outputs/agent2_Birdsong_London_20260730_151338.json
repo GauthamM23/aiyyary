@@ -1,0 +1,117 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-30T14:13:38.319742+00:00",
+  "company_name": "Birdsong London",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 3.96,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is right for Birdsong London now because it can help improve customer satisfaction and reduce returns, which are crucial for growing online sales without losing brand values (process_digitisation pillar score: 3.53).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "failed",
+        "deliverables": [],
+        "missing_prerequisites": [],
+        "next_steps": [],
+        "estimated_activation_time": "",
+        "market_tools_recommended": [],
+        "llm_calls_made": 2,
+        "error": "LLM structured_chat failed after repair attempt.\nOriginal response:\nIt seems I was expecting Shopify, but it looks like we have a Wix website instead!\n\nHowever, since you asked me to provide instructions for embedding a returns reason capture form into a Shopify returns flow, I'll still provide those instructions. If you need help with Wix, please let me know and I'll be happy to assist.\n\n**Embedding a Returns Reason Capture Form in Shopify**\n\nTo embed a returns reason capture form into your Shopify returns flow, follow these steps:\n\n**Step 1: Create a new section in your Shopify theme**\n\n1. Log in to your Shopify admin panel.\n2. Go to **Online Store > Themes**.\n3. Click on the **Actions** dropdown menu next to your active theme and select **Edit code**.\n4. In the file tree, navigate to `sections` and click on the **+ Add a new section** button.\n5. Name your section (e.g., \"Returns Reason Capture\").\n\n**Step 2: Create a template for the returns reason capture form**\n\n1. In the same `sections` directory, create a new file called `returns-reason-capture.liquid`.\n2. Copy and paste the following code into the file:\n```liquid\n<form id=\"returns-reason-form\">\n  <label for=\"reason\">Reason for return:</label>\n  <select id=\"reason\" name=\"reason\">\n    <!-- Add your options here -->\n    <option value=\"defective\">Defective</option>\n    <option value=\"not-as-described\">Not as described</option>\n    <option value=\"change-of-mind\">Change of mind</option>\n  </select>\n  <button type=\"submit\">Submit</button>\n</form>\n\n<script>\n  // Get the form and submit button\n  const form = document.getElementById('returns-reason-form');\n  const submitButton = form.querySelector('button[type=\"submit\"]');\n\n  // Add event listener to submit button\n  submitButton.addEventListener('click', (e) => {\n    e.preventDefault();\n    // Submit the form data to your server-side script\n    fetch('/api/returns/reason', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify({ reason: document.getElementById('reason').value }),\n    })\n      .then((response) => response.json())\n      .then((data) => console.log(data))\n      .catch((error) => console.error(error));\n  });\n</script>\n```\n**Step 3: Add the returns reason capture form to your Shopify returns flow**\n\n1. In your Shopify admin panel, go to **Settings > Shipping and delivery**.\n2. Click on the **Returns** tab.\n3. Under **Return reasons**, click on the **Add a return reason** button.\n4. Select the section you created in Step 1 (e.g., \"Returns Reason Capture\").\n5. In the **Section settings**, enter the following code:\n```liquid\n{% section 'returns-reason-capture' %}\n```\n6. Save your changes.\n\nThat's it! When a customer initiates a return, they will see the returns reason capture form embedded in the Shopify returns flow. The form data will be submitted to your server-side script using the `fetch` API.\n\nPlease note that you'll need to create a server-side script to handle the form submission and store the returned reason in your database. This is just a basic example, and you may want to customize it according to your specific requirements.\nRepair attempt response:\nHere are the instructions as valid JSON:\n\n```json\n{\n  \"instructions\": [\n    \"Create a new section in your Shopify theme by navigating to Online Store > Themes and clicking on the Actions dropdown menu next to your active theme.\",\n    \"Select Edit code and navigate to sections, then click on the + Add a new section button.\",\n    \"Name your section (e.g., \\\"Returns Reason Capture\\\").\",\n    \"Create a template for the returns reason capture form by copying and pasting the following code into a new file called returns-reason-capture.liquid:\",\n    \"<form id=\\\"returns-reason-form\\\">...</form>\",\n    \"Add the returns reason capture form to your Shopify returns flow by navigating to Settings > Shipping and delivery, clicking on the Returns tab, and selecting the section you created.\",\n    \"In the Section settings, enter the following code: {% section 'returns-reason-capture' %}\",\n    \"Save your changes.\"\n  ]\n}\n```"
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is right for Birdsong London now because it can help increase online visibility and credibility, which are essential for attracting new customers beyond the existing ethical fashion community (process_digitisation pillar score: 3.53).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is right for Birdsong London now because it can provide a seamless customer experience, which aligns with the brand's values and will help attract new customers (data_foundations pillar score: 3.97).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is right for Birdsong London now because it can help nurture leads and drive sales, which are critical for growing online sales beyond the existing customer base (ai_tool_experience pillar score: 3.44).",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The opportunity is currently not executable due to a score gap in the ai_tool_experience pillar, which needs to improve to at least 5.0.",
+      "unlock_condition": "ai_tool_experience pillar score needs to reach at least 5.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the data_foundations pillar, which needs to improve to at least 6.0.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 6.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the technology_infrastructure pillar, which needs to improve to at least 7.0.",
+      "unlock_condition": "technology_infrastructure pillar score needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the data_foundations pillar, which needs to improve to at least 7.0.",
+      "unlock_condition": "data_foundations pillar score needs to reach at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) within the next week to start improving customer satisfaction and reducing returns, which will help drive online sales growth.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 2
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Birdsong_London_20260730_151338.json"
+  }
+}

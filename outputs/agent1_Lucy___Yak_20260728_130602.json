@@ -1,0 +1,154 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-28T12:06:02.154622+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 7.03,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 1.17s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,592 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.15,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.04,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.73,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Lucy & Yak's overall score of 6.73 indicates a mid-readiness position for digital transformation, with strengths in technology infrastructure but areas for improvement in staff digital literacy and governance compliance.",
+  "top_gaps": [
+    {
+      "pillar": "governance_compliance",
+      "score": 6.15,
+      "dominant_stream": "A",
+      "impact": "Inadequate governance and compliance processes may hinder Lucy & Yak's ability to scale sustainably."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Limited digital literacy among staff may hinder the effective adoption of new technologies."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.04,
+      "dominant_stream": "A",
+      "impact": "Poor AI tool experience may lead to inefficient use of resources and reduced productivity."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Lucy & Yak can leverage its strong technology infrastructure to drive innovation and efficiency in digital transformation."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.03,
+      "dominant_stream": "A",
+      "advantage": "The company's well-digitised processes provide a solid foundation for further automation and optimisation."
+    }
+  ],
+  "data_confidence_note": "High confidence in the overall assessment due to multiple enrichment sources available (website scrape, facebook ads, instagram) with no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Lucy & Yak's seasonal buying cycle maturity is crucial for effective AI-driven inventory management and demand forecasting. A mature process would allow the company to leverage historical sales data, supplier information, and market trends to inform purchasing decisions.",
+      "evidence": "The overall score of 6.73 suggests that Lucy & Yak has a good foundation in place, but further refinement is needed. The relatively low scores in 'data_foundations' (6.94) and 'staff_digital_literacy' (6.34) may indicate challenges in collecting and utilizing relevant data for seasonal buying decisions."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Understanding returns patterns is vital for fashion retailers like Lucy & Yak to optimize product offerings, pricing, and inventory levels. AI can help identify trends and anomalies in returns data, enabling the company to make data-driven decisions.",
+      "evidence": "Lucy & Yak's overall score suggests a moderate level of readiness, but without specific information on returns pattern visibility, it is difficult to assess their current capabilities. A more detailed analysis of returns data would be necessary to determine their position on this signal."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Effective supplier data integration is essential for Lucy & Yak to leverage AI-driven insights from supplier information, such as production costs, lead times, and quality control measures. This can help the company optimize its supply chain and make more informed purchasing decisions.",
+      "evidence": "The relatively high score in 'technology_infrastructure' (7.87) suggests that Lucy & Yak has a solid foundation for integrating supplier data. However, without further information on their current practices, it is unclear how well they are utilizing this capability to drive business value."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 7.79
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 10,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260728_130602.json"
+  }
+}

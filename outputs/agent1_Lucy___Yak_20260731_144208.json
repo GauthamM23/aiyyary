@@ -1,0 +1,154 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-31T13:42:08.598058+00:00",
+  "company_name": "Lucy & Yak",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.94,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 7.47,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 7.03,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Review widget(s) detected: Judge.me (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 8.03,
+      "stream_b_score": 7.5,
+      "stream_c_reconciled": null,
+      "final_score": 7.87,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Shopify (score=7.0)",
+        "[website] Fast page load: 0.84s (score=8)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 6.91,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.34,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[instagram] Active public Instagram presence (~9,596 posts) (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 5.78,
+      "stream_b_score": 7.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.15,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Privacy policy found at https://lucyandyak.com/pages/privacy-policy (2 governance-relevant mentions) (score=7)",
+        "[website] Cookie consent tool detected: CookieYes (score=7)",
+        "[website] HTTPS enabled; security headers present: ['x-frame-options', 'content-security-policy'] (score=7)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 6.06,
+      "stream_b_score": 6.0,
+      "stream_c_reconciled": null,
+      "final_score": 6.04,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Multiple analytics tools detected: Google Analytics 4, Microsoft Clarity (score=7)",
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)"
+      ],
+      "stream_c_reasoning": null
+    }
+  },
+  "overall_score": 6.73,
+  "readiness_tier": "Mid-Readiness",
+  "verdict": "Lucy & Yak's overall score of 6.73 indicates a mid-readiness position for digital transformation, with strengths in technology infrastructure but challenges in staff digital literacy and governance compliance.",
+  "top_gaps": [
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 6.34,
+      "dominant_stream": "A",
+      "impact": "Inability to upskill staff may hinder Lucy & Yak's ability to fully leverage technology for growth."
+    },
+    {
+      "pillar": "governance_compliance",
+      "score": 6.15,
+      "dominant_stream": "A",
+      "impact": "Weak governance and compliance practices may increase the risk of supply chain disruptions or reputational damage."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 6.04,
+      "dominant_stream": "A",
+      "impact": "Limited AI tool adoption may hinder Lucy & Yak's ability to automate processes and improve efficiency."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "technology_infrastructure",
+      "score": 7.87,
+      "dominant_stream": "A",
+      "advantage": "Lucy & Yak can leverage its strong technology infrastructure to support the growth of e-commerce sales and enhance customer experience."
+    },
+    {
+      "pillar": "process_digitisation",
+      "score": 7.03,
+      "dominant_stream": "A",
+      "advantage": "The company's digitised processes enable efficient order management and inventory control, supporting rapid growth in online sales."
+    }
+  ],
+  "data_confidence_note": "High confidence can be placed in this assessment due to the availability of multiple enrichment sources and no Stream C reconciliations required.",
+  "fashion_signals": [
+    {
+      "signal": "Sizing data structure and management",
+      "relevance": "Fashion retailers need accurate size charts to ensure correct fit, which is critical for customer satisfaction and loyalty. A well-structured sizing data system enables AI-driven recommendations and inventory optimisation.",
+      "evidence": "Lucy & Yak's overall score suggests a good foundation in technology infrastructure (7.87), but the lack of emphasis on staff digital literacy (6.34) may indicate limited expertise in managing complex data structures, such as size charts."
+    },
+    {
+      "signal": "Returns pattern visibility and analysis",
+      "relevance": "Fashion retailers experience high return rates due to fit issues or changing customer preferences. AI can help identify trends and optimise inventory based on returns patterns, but this requires access to detailed return data.",
+      "evidence": "Lucy & Yak's overall score is below the average (6.73), which may indicate a need for improvement in process digitisation (7.03) and governance compliance (6.15). This could suggest limited visibility into returns patterns and analysis capabilities."
+    },
+    {
+      "signal": "Seasonal buying cycle maturity",
+      "relevance": "Fashion retailers operate on tight seasonal cycles, requiring accurate forecasting and inventory management to avoid stockouts or overstocking. AI can help optimise these processes, but this requires a mature understanding of the buying cycle.",
+      "evidence": "Lucy & Yak's overall score suggests a good foundation in technology infrastructure (7.87), but the lack of emphasis on data foundations (6.94) may indicate limited access to historical sales and inventory data, which is critical for seasonal buying cycle analysis."
+    }
+  ],
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "facebook_ads",
+      "instagram"
+    ],
+    "sources_failed": [
+      "google_profile",
+      "companies_house"
+    ],
+    "stream_c_reconciliations": 0,
+    "enrichment_duration_seconds": 5.52
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 10,
+    "llm_calls_made": 2,
+    "output_file": "./outputs\\agent1_Lucy___Yak_20260731_144208.json"
+  }
+}

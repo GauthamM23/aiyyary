@@ -1,0 +1,175 @@
+{
+  "agent": "Agent1_CapabilityAssessment",
+  "schema_version": "2.1",
+  "assessment_timestamp": "2026-08-21T14:49:29.574647+00:00",
+  "company_name": "Birdsong London",
+  "industry": "Fashion and Apparel",
+  "llm_mode": "ollama",
+  "pillar_scores": {
+    "data_foundations": {
+      "stream_a_score": 3.53,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": null,
+      "final_score": 3.97,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] Analytics tool detected: Google Analytics 4 (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "process_digitisation": {
+      "stream_a_score": 2.97,
+      "stream_b_score": 3.33,
+      "stream_c_reconciled": null,
+      "final_score": 3.08,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[google_profile] 2 Google reviews (score=2)",
+        "[google_profile] Most recent review is 325 days old (score=3)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "technology_infrastructure": {
+      "stream_a_score": 4.09,
+      "stream_b_score": 6.5,
+      "stream_c_reconciled": 5.0,
+      "final_score": 4.9,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] E-commerce platform detected: Wix (score=5.0)",
+        "[website] Fast page load: 1.05s (score=8)"
+      ],
+      "stream_c_reasoning": "The owner interview score (Stream A) carries more weight, but the public data (Stream B) provides additional context. The website uses Wix, which is a decent e-commerce platform, but not the most advanced (score=5.0). The page load time is also decent, but not exceptional (score=8). However, considering the owner's perspective, the overall score is adjusted downwards to 5.0, as the owner's internal operational data may not be as robust as the public data suggests."
+    },
+    "staff_digital_literacy": {
+      "stream_a_score": 3.81,
+      "stream_b_score": null,
+      "stream_c_reconciled": null,
+      "final_score": 3.81,
+      "dominant_stream": "A",
+      "stream_b_signals": [],
+      "stream_c_reasoning": null
+    },
+    "governance_compliance": {
+      "stream_a_score": 4.94,
+      "stream_b_score": 4.67,
+      "stream_c_reconciled": null,
+      "final_score": 4.86,
+      "dominant_stream": "A",
+      "stream_b_signals": [
+        "[website] No privacy policy found at common paths (score=2)",
+        "[website] HTTPS enabled; security headers present: none (score=6)",
+        "[companies_house] 8 filings in the last 2 years (score=6)"
+      ],
+      "stream_c_reasoning": null
+    },
+    "ai_tool_experience": {
+      "stream_a_score": 2.41,
+      "stream_b_score": 5.0,
+      "stream_c_reconciled": 3.0,
+      "final_score": 3.25,
+      "dominant_stream": "C",
+      "stream_b_signals": [
+        "[website] Marketing automation tool(s) detected: Klaviyo (score=5)",
+        "[facebook_ads] Active Facebook ads detected (score=5)"
+      ],
+      "stream_c_reasoning": "Stream A (owner interview) score of 2.41 carries more weight due to internal operational data. However, Stream B (public data) score of 5.0 suggests some level of AI tool experience, specifically with Klaviyo and Facebook ads. To reconcile the scores, I've taken a middle ground, considering the owner's self-assessment and the external evidence. The reconciled score of 3.0 reflects a moderate level of AI tool experience, acknowledging both the owner's limitations and the external indicators."
+    }
+  },
+  "overall_score": 3.98,
+  "readiness_tier": "Early-Stage",
+  "verdict": "Birdsong London's overall score of 3.98 indicates a strong foundation for digital transformation, but they must balance online growth with brand values. The company excels in governance and compliance, but faces challenges in process digitisation and AI tool experience. Public data enrichment highlighted a strong online presence, but limited social media engagement.",
+  "top_gaps": [
+    {
+      "pillar": "process_digitisation",
+      "score": 3.08,
+      "dominant_stream": "A",
+      "impact": "Inefficient processes may hinder Birdsong London's ability to scale and adapt to changing customer needs."
+    },
+    {
+      "pillar": "ai_tool_experience",
+      "score": 3.25,
+      "dominant_stream": "C",
+      "impact": "Limited AI tool adoption may hinder Birdsong London's ability to leverage data-driven insights for informed decision-making."
+    },
+    {
+      "pillar": "staff_digital_literacy",
+      "score": 3.81,
+      "dominant_stream": "A",
+      "impact": "Staff may struggle to effectively utilise digital tools and platforms, hindering Birdsong London's ability to drive digital growth."
+    }
+  ],
+  "strengths": [
+    {
+      "pillar": "governance_compliance",
+      "score": 4.86,
+      "dominant_stream": "A",
+      "advantage": "Birdsong London can leverage its strong governance and compliance framework to inform and drive digital transformation initiatives."
+    },
+    {
+      "pillar": "technology_infrastructure",
+      "score": 4.9,
+      "dominant_stream": "C",
+      "advantage": "Birdsong London's robust technology infrastructure provides a solid foundation for future digital growth and innovation."
+    }
+  ],
+  "data_confidence_note": "Due to 2 Stream C reconciliations performed, primarily affecting technology infrastructure and AI tool experience pillars, moderate confidence should be placed in this overall assessment.",
+  "fashion_signals": [
+    {
+      "signal": "Seasonal Buying Cycle Maturity",
+      "relevance": "Fashion retailers with mature seasonal buying cycles can leverage AI to optimize inventory management, reduce waste, and improve sales. AI can analyze historical sales data, weather forecasts, and social media trends to inform buying decisions.",
+      "evidence": "Birdsong London's overall score suggests a high level of digital maturity, but its process digitisation score (3.08) indicates some room for improvement in this area. A more mature seasonal buying cycle would enable more effective AI-driven inventory management and optimisation."
+    },
+    {
+      "signal": "Supplier Data Integration",
+      "relevance": "Fashion retailers often rely on multiple suppliers with varying data structures and quality. AI can help integrate and standardise supplier data, enabling more accurate forecasting, inventory management, and supply chain optimisation.",
+      "evidence": "Birdsong London's technology infrastructure score (4.9) suggests a strong foundation for integrating supplier data. However, its staff digital literacy score (3.81) indicates that there may be some challenges in effectively utilising and integrating supplier data with AI."
+    },
+    {
+      "signal": "Returns Pattern Visibility",
+      "relevance": "Fashion retailers often struggle with returns, which can be a significant cost centre. AI can help identify patterns in returns data, enabling more effective inventory management, pricing strategies, and customer segmentation.",
+      "evidence": "Birdsong London's data foundations score (3.97) suggests a good foundation for collecting and storing returns data. However, its AI tool experience score (3.25) indicates that there may be some challenges in effectively leveraging AI to analyse and act on returns data."
+    }
+  ],
+  "enrichment_structured": {
+    "privacy_policy_found": false,
+    "privacy_policy_mentions_ai": false,
+    "cookie_consent_found": false,
+    "cookie_consent_provider": null,
+    "marketing_automation_detected": true,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "analytics_tools_detected": [
+      "Google Analytics 4"
+    ],
+    "chat_widget_found": false,
+    "chat_widget_provider": null,
+    "ssl_enabled": true,
+    "platform_detected": "Wix",
+    "company_status": "active",
+    "days_since_last_filing": 59,
+    "google_review_count": 2,
+    "has_active_fb_ads": true
+  },
+  "enrichment_summary": {
+    "sources_available": [
+      "website_scrape",
+      "google_profile",
+      "companies_house",
+      "facebook_ads"
+    ],
+    "sources_failed": [
+      "instagram"
+    ],
+    "stream_c_reconciliations": 2,
+    "enrichment_duration_seconds": 42.04
+  },
+  "traceability": {
+    "instrument_answers_count": 24,
+    "enrichment_signals_count": 11,
+    "llm_calls_made": 4,
+    "output_file": "./outputs\\agent1_Birdsong_London_20260821_154929.json"
+  }
+}

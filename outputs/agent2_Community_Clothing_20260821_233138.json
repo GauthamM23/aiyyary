@@ -1,0 +1,179 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-21T22:31:38.075212+00:00",
+  "company_name": "Community Clothing",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.23,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 6,
+  "excluded_count": 2,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "Automated Review Collection is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (process_digitisation) and their primary challenge (Managing rapid growth).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": {
+        "mode": "market_connect",
+        "status": "connected",
+        "deliverables": [
+          {
+            "name": "configuration_guide_yotpo",
+            "type": "markdown",
+            "content": "To configure Yotpo for Community Clothing, navigate to the Yotpo app in the Shopify app store, click 'Install app', and then follow the in-app setup wizard. Set up the review collection workflow by creating a new review campaign, selecting the products and customers you want to target, and customizing the review request email or SMS. Finally, integrate Yotpo with Community Clothing's loyalty program to reward customers for leaving reviews.",
+            "instructions": "Configuration guide for Yotpo, ranked #1 for this business."
+          },
+          {
+            "name": "configuration_guide_trustpilot",
+            "type": "markdown",
+            "content": "To configure Yotpo for Community Clothing, navigate to the Yotpo app in the Shopify app store, click 'Install app', and then follow the in-app setup wizard. Set up the review collection workflow by creating a new review campaign, selecting the products and customers you want to target, and customizing the review request email or SMS. Finally, integrate Yotpo with Community Clothing's loyalty program to reward customers for leaving reviews.",
+            "instructions": "Configuration guide for Trustpilot, ranked #2 for this business."
+          },
+          {
+            "name": "configuration_guide_judge.me",
+            "type": "markdown",
+            "content": "To configure Yotpo for Community Clothing, navigate to the Yotpo app in the Shopify app store, click 'Install app', and then follow the in-app setup wizard. Set up the review collection workflow by creating a new review campaign, selecting the products and customers you want to target, and customizing the review request email or SMS. Finally, integrate Yotpo with Community Clothing's loyalty program to reward customers for leaving reviews.",
+            "instructions": "Configuration guide for Judge.me, ranked #3 for this business."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Install the Yotpo app from the Shopify app store and follow the in-app setup wizard",
+          "Create a new review campaign in Yotpo and select the products and customers you want to target",
+          "Customize the review request email or SMS and integrate Yotpo with Community Clothing's loyalty program"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [
+          {
+            "rank": 1,
+            "tool_name": "Yotpo",
+            "why_this_business": "Yotpo's full-featured reviews and loyalty platform is well-suited to Community Clothing's rapid growth, allowing them to scale their review collection and loyalty programs.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3495",
+            "shopify_native": true
+          },
+          {
+            "rank": 2,
+            "tool_name": "Trustpilot",
+            "why_this_business": "Trustpilot's independent review platform is a great fit for Community Clothing, as it's already recognizable to UK shoppers, which can help build trust with their audience.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a3495",
+            "shopify_native": true
+          },
+          {
+            "rank": 3,
+            "tool_name": "Judge.me",
+            "why_this_business": "Judge.me's lightweight review collection app is a good option for Community Clothing, but its features may not be as comprehensive as Yotpo or Trustpilot, given their established tech budget.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a399",
+            "shopify_native": true
+          }
+        ],
+        "llm_calls_made": 1,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "Returns Reason Capture is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (process_digitisation) and their primary challenge (Managing rapid growth).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_003",
+      "title": "AI Product Description Writing",
+      "justification": "AI Product Description Writing is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (staff_digital_literacy) and their primary challenge (Managing rapid growth).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-100",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "Size Guide Chatbot is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (data_foundations) and their primary challenge (Managing rapid growth).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "justification": "WhatsApp Styling Assistant is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (ai_tool_experience) and their primary challenge (Managing rapid growth).",
+      "effort": "medium",
+      "implementation_weeks": 4,
+      "cost_estimate_gbp": "1500-5000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 6,
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "justification": "Dynamic Pricing Engine is specifically right for Community Clothing right now, referencing their actual pillar score for the relevant prerequisite (technology_infrastructure) and their primary challenge (Managing rapid growth).",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "6000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The specific score gap preventing deployment is a score gap of 0.45 on the data_foundations pillar, which needs to improve to at least 6.0.",
+      "unlock_condition": "data_foundations pillar needs to reach a score of at least 6.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The specific score gap preventing deployment is a score gap of 1.45 on the data_foundations pillar, which needs to improve to at least 7.0.",
+      "unlock_condition": "data_foundations pillar needs to reach a score of at least 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Automated Review Collection (uc_004) this week to immediately improve customer satisfaction and reduce the burden on customer service team.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 1,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 1
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 6,
+    "excluded_by_filter": 2,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Community_Clothing_20260821_233138.json"
+  }
+}

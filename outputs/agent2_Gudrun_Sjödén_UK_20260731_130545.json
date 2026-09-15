@@ -1,0 +1,432 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-07-31T12:05:45.551095+00:00",
+  "company_name": "Gudrun Sj\u00f6d\u00e9n UK",
+  "readiness_tier": "Early-Stage",
+  "overall_score": 4.83,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 3,
+  "excluded_count": 5,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by reducing friction and increasing transparency, which will be beneficial in modernising their digital presence while maintaining loyalty of an older customer base (process_digitisation pillar score: 5.22).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": {
+        "mode": "full_build",
+        "status": "complete",
+        "deliverables": [
+          {
+            "name": "returns_reason_codes",
+            "type": "json",
+            "content": {
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    "Too Small",
+                    "Too Large",
+                    "Runs Small",
+                    "Runs Big"
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Issue",
+                  "sub_reasons": [
+                    "Pilling",
+                    "Shrinkage",
+                    "Uncomfortable Texture",
+                    "Not as Described"
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Mismatch",
+                  "sub_reasons": [
+                    "Darker than Expected",
+                    "Lighter than Expected",
+                    "Different Shade",
+                    "Not as Vibrant"
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style Discrepancy",
+                  "sub_reasons": [
+                    "Not as Described",
+                    "Unflattering Fit",
+                    "Poor Construction",
+                    "Not Suitable for Occasion"
+                  ]
+                },
+                {
+                  "code": "FIT",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    "Too Tight",
+                    "Too Loose",
+                    "Uncomfortable Silhouette",
+                    "Not Flattering"
+                  ]
+                },
+                {
+                  "code": "NEEDLEWORK",
+                  "label": "Needlework Defect",
+                  "sub_reasons": [
+                    "Loose Threads",
+                    "Broken Stitches",
+                    "Poor Quality Embellishments"
+                  ]
+                },
+                {
+                  "code": "BUTTONS",
+                  "label": "Button Issue",
+                  "sub_reasons": [
+                    "Missing Buttons",
+                    "Incorrect Button Type",
+                    "Buttons Not Securely Attached"
+                  ]
+                },
+                {
+                  "code": "ZIPS",
+                  "label": "Zip Issue",
+                  "sub_reasons": [
+                    "Broken Zipper",
+                    "Incorrect Zipper Type",
+                    "Zipper Not Securely Attached"
+                  ]
+                },
+                {
+                  "code": "LABELLING",
+                  "label": "Labelling Error",
+                  "sub_reasons": [
+                    "Missing Care Label",
+                    "Incorrect Size/Colour Label",
+                    "Inaccurate Fabric Content Label"
+                  ]
+                }
+              ]
+            },
+            "instructions": "Import these reason codes into your returns form or helpdesk tool."
+          },
+          {
+            "name": "customer_form_structure",
+            "type": "json",
+            "content": {
+              "title": "Return Reason Form",
+              "description": "Please select the reason for returning your item. We're here to help!",
+              "reason_codes": [
+                {
+                  "code": "SIZE",
+                  "label": "Incorrect Size",
+                  "sub_reasons": [
+                    {
+                      "id": "SIZE_TOO_SMALL",
+                      "label": "Too Small"
+                    },
+                    {
+                      "id": "SIZE_TOO_LARGE",
+                      "label": "Too Large"
+                    },
+                    {
+                      "id": "SIZE_RUNS_SMALL",
+                      "label": "Runs Small"
+                    },
+                    {
+                      "id": "SIZE_RUNS_BIG",
+                      "label": "Runs Big"
+                    }
+                  ]
+                },
+                {
+                  "code": "FABRIC",
+                  "label": "Fabric Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "FABRIC_PILLING",
+                      "label": "Pilling"
+                    },
+                    {
+                      "id": "FABRIC_SHRINKAGE",
+                      "label": "Shrinkage"
+                    },
+                    {
+                      "id": "FABRIC_UNCOMFORTABLE_TEXTURE",
+                      "label": "Uncomfortable Texture"
+                    },
+                    {
+                      "id": "FABRIC_NOT_AS_DESCRIBED",
+                      "label": "Not as Described"
+                    }
+                  ]
+                },
+                {
+                  "code": "COLOUR",
+                  "label": "Colour Mismatch",
+                  "sub_reasons": [
+                    {
+                      "id": "COLOUR_DARKER_THAN_EXPECTED",
+                      "label": "Darker than Expected"
+                    },
+                    {
+                      "id": "COLOUR_LIGHTER_THAN_EXPECTED",
+                      "label": "Lighter than Expected"
+                    },
+                    {
+                      "id": "COLOUR_DIFFERENT_SHAde",
+                      "label": "Different Shade"
+                    },
+                    {
+                      "id": "COLOUR_NOT_AS_VIBRANT",
+                      "label": "Not as Vibrant"
+                    }
+                  ]
+                },
+                {
+                  "code": "STYLE",
+                  "label": "Style Discrepancy",
+                  "sub_reasons": [
+                    {
+                      "id": "STYLE_NOT_AS_DESCRIBED",
+                      "label": "Not as Described"
+                    },
+                    {
+                      "id": "STYLE_UNFLATTERING_FIT",
+                      "label": "Unflattering Fit"
+                    },
+                    {
+                      "id": "STYLE_POOR_CONSTRUCTION",
+                      "label": "Poor Construction"
+                    },
+                    {
+                      "id": "STYLE_NOT_SUITABLE_FOR_OCCASION",
+                      "label": "Not Suitable for Occasion"
+                    }
+                  ]
+                },
+                {
+                  "code": "FIT",
+                  "label": "Fit Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "FIT_TOO_TIGHT",
+                      "label": "Too Tight"
+                    },
+                    {
+                      "id": "FIT_TOO_LOOSE",
+                      "label": "Too Loose"
+                    },
+                    {
+                      "id": "FIT_UNCOMFORTABLE_SILHOUETTE",
+                      "label": "Uncomfortable Silhouette"
+                    },
+                    {
+                      "id": "FIT_NOT_FLATTERING",
+                      "label": "Not Flattering"
+                    }
+                  ]
+                },
+                {
+                  "code": "NEEDLEWORK",
+                  "label": "Needlework Defect",
+                  "sub_reasons": [
+                    {
+                      "id": "NEEDLEWORK_LOOSE_THREADS",
+                      "label": "Loose Threads"
+                    },
+                    {
+                      "id": "NEEDLEWORK_BROKEN_STITCHES",
+                      "label": "Broken Stitches"
+                    },
+                    {
+                      "id": "NEEDLEWORK_POOR_QUALITY_EMBELLISHMENTS",
+                      "label": "Poor Quality Embellishments"
+                    }
+                  ]
+                },
+                {
+                  "code": "BUTTONS",
+                  "label": "Button Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "BUTTONS_MISSING_BUTTONS",
+                      "label": "Missing Buttons"
+                    },
+                    {
+                      "id": "BUTTONS_INCORRECT_BUTTON_TYPE",
+                      "label": "Incorrect Button Type"
+                    },
+                    {
+                      "id": "BUTTONS_NOT_SECURELY_ATTACHED",
+                      "label": "Buttons Not Securely Attached"
+                    }
+                  ]
+                },
+                {
+                  "code": "ZIPS",
+                  "label": "Zip Issue",
+                  "sub_reasons": [
+                    {
+                      "id": "ZIPS_BROKEN_ZIPPER",
+                      "label": "Broken Zipper"
+                    },
+                    {
+                      "id": "ZIPS_INCORRECT_ZIPPER_TYPE",
+                      "label": "Incorrect Zipper Type"
+                    },
+                    {
+                      "id": "ZIPS_NOT_SECURELY_ATTACHED",
+                      "label": "Zipper Not Securely Attached"
+                    }
+                  ]
+                },
+                {
+                  "code": "LABELLING",
+                  "label": "Labelling Error",
+                  "sub_reasons": [
+                    {
+                      "id": "LABELLING_MISSING_CARE_LABEL",
+                      "label": "Missing Care Label"
+                    },
+                    {
+                      "id": "LABELLING_INCORRECT_SIZE_COLOUR_LABEL",
+                      "label": "Incorrect Size/Colour Label"
+                    },
+                    {
+                      "id": "LABELLING_INACCURATE_FABRIC_CONTENT_LABEL",
+                      "label": "Inaccurate Fabric Content Label"
+                    }
+                  ]
+                }
+              ],
+              "submit_button": "Submit Return Reason"
+            },
+            "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+          },
+          {
+            "name": "shopify_integration_guide",
+            "type": "markdown",
+            "content": {
+              "instructions": [
+                "Please note that Shopify is not detected as the platform, but we will provide the default guide.",
+                "To embed a returns reason capture form into a Shopify returns flow, follow these steps:",
+                "1. Go to your Shopify admin interface and navigate to Settings > Checkout.",
+                "2. Scroll down to the 'Additional content' section and click on the '+' icon to add a new script tag.",
+                "3. In the script tag, paste the following code to embed the returns reason capture form: `<form id='returns-reason-form'>...</form>`",
+                "4. Replace `...` with your actual form fields and functionality.",
+                "5. Save the changes by clicking on the 'Save' button.",
+                "6. To trigger the form submission, you will need to add a JavaScript event listener to the form's submit event.",
+                "7. In the Shopify theme editor, navigate to the 'Layouts' section and find the template that contains the returns flow.",
+                "8. Add the following code to the template: `<script>document.getElementById('returns-reason-form').addEventListener('submit', function(event) { ... });</script>`",
+                "9. Replace `...` with your actual form submission logic.",
+                "10. Save the changes by clicking on the 'Save' button."
+              ]
+            },
+            "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+          },
+          {
+            "name": "weekly_summary_template",
+            "type": "markdown",
+            "content": "# Weekly Returns Summary \u2014 Gudrun Sj\u00f6d\u00e9n UK\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+            "instructions": "Use this template for a weekly email reviewing returns data."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Create Typeform account at typeform.com",
+          "Copy the form structure JSON below into a new form",
+          "Add the Shopify embed code to your returns page",
+          "Set up a weekly calendar reminder to review the summary report"
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [],
+        "llm_calls_made": 3,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by reducing manual effort and increasing efficiency, which will be beneficial in modernising their digital presence while maintaining loyalty of an older customer base (process_digitisation pillar score: 5.22).",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Gudrun Sj\u00f6d\u00e9n UK now because it can help improve the digital customer experience by providing a more intuitive and user-friendly interface, which will be beneficial in modernising their digital presence while maintaining loyalty of an older customer base (data_foundations pillar score: 5.78).",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "reason": "The opportunity is currently not executable due to a small score gap in the AI tool experience pillar.",
+      "unlock_condition": "AI tool experience pillar needs to reach at least 3.0"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the data foundations pillar.",
+      "unlock_condition": "Data foundations pillar needs to reach at least 6.0"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a large score gap in the data foundations pillar.",
+      "unlock_condition": "Data foundations pillar needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The opportunity is currently not executable due to a significant score gap in the technology infrastructure pillar.",
+      "unlock_condition": "Technology infrastructure pillar needs to reach at least 7.0"
+    },
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The opportunity is currently not executable due to a large score gap in the AI tool experience pillar.",
+      "unlock_condition": "AI tool experience pillar needs to reach at least 5.0"
+    }
+  ],
+  "quick_win_summary": "Implement Returns Reason Capture (uc_001) this week, which has low effort and can provide immediate benefits in improving the digital customer experience.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 1,
+    "market_connections_made": 0,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 3
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 3,
+    "excluded_by_filter": 5,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Gudrun_Sj\u00f6d\u00e9n_UK_20260731_130545.json"
+  }
+}

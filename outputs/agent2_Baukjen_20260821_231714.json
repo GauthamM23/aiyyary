@@ -1,0 +1,165 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-21T22:17:14.169795+00:00",
+  "company_name": "Baukjen",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.07,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 4,
+  "excluded_count": 4,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_003",
+      "title": "AI Product Description Writing",
+      "justification": "This opportunity is specifically right for Baukjen now because it requires low effort and leverages the existing staff digital literacy (6.34), which is a key area for improvement to enhance digital capability.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-100",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": {
+        "mode": "market_connect",
+        "status": "connected",
+        "deliverables": [
+          {
+            "name": "configuration_guide_claude_api",
+            "type": "markdown",
+            "content": "To configure Claude API for Baukjen, first connect your Shopify store to the Claude API platform, then set up a custom template for product descriptions using the provided fashion content templates. Next, integrate the API with your Shopify product pages to enable automated product description generation. Finally, train the AI model on Baukjen's brand voice and style to ensure high-quality output.",
+            "instructions": "Configuration guide for Claude API, ranked #1 for this business."
+          },
+          {
+            "name": "configuration_guide_jasper",
+            "type": "markdown",
+            "content": "To configure Claude API for Baukjen, first connect your Shopify store to the Claude API platform, then set up a custom template for product descriptions using the provided fashion content templates. Next, integrate the API with your Shopify product pages to enable automated product description generation. Finally, train the AI model on Baukjen's brand voice and style to ensure high-quality output.",
+            "instructions": "Configuration guide for Jasper, ranked #2 for this business."
+          },
+          {
+            "name": "configuration_guide_chatgpt_api",
+            "type": "markdown",
+            "content": "To configure Claude API for Baukjen, first connect your Shopify store to the Claude API platform, then set up a custom template for product descriptions using the provided fashion content templates. Next, integrate the API with your Shopify product pages to enable automated product description generation. Finally, train the AI model on Baukjen's brand voice and style to ensure high-quality output.",
+            "instructions": "Configuration guide for ChatGPT API, ranked #3 for this business."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Connect your Shopify store to the Claude API platform using the provided API key",
+          "Set up a custom template for product descriptions using the provided fashion content templates",
+          "Integrate the API with your Shopify product pages to enable automated product description generation"
+        ],
+        "estimated_activation_time": "this week",
+        "market_tools_recommended": [
+          {
+            "rank": 1,
+            "tool_name": "Claude API",
+            "why_this_business": "Claude API's AI writing assistant is well-suited to Baukjen's nuanced, brand-voice-consistent fashion copy needs.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3200-\u00a3500",
+            "shopify_native": false
+          },
+          {
+            "rank": 2,
+            "tool_name": "Jasper",
+            "why_this_business": "Jasper's marketing-focused AI writing tool with fashion/retail content templates can help Baukjen streamline product description writing.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3150-\u00a3300",
+            "shopify_native": false
+          },
+          {
+            "rank": 3,
+            "tool_name": "ChatGPT API",
+            "why_this_business": "ChatGPT API's general-purpose AI writing capabilities may not be as tailored to Baukjen's specific fashion copy needs as other options.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a3100-\u00a3200",
+            "shopify_native": false
+          }
+        ],
+        "llm_calls_made": 1,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Baukjen now because it requires low effort and builds on the existing process digitisation (7.37), which is already at a high level, further enhancing digital capability.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Baukjen now because it requires low effort and leverages the existing process digitisation (7.37), which is a key area for improvement to enhance digital capability.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Baukjen now because it requires medium effort and addresses the data foundations pillar (5.61), which is a key area for improvement to enhance digital capability.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "reason": "The score gap of 0.36 in AI tool experience is preventing deployment.",
+      "unlock_condition": "Reach a score of 5.0 in AI tool experience"
+    },
+    {
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "reason": "The score gap of 0.39 in data foundations is preventing deployment.",
+      "unlock_condition": "Reach a score of 6.0 in data foundations"
+    },
+    {
+      "id": "uc_010",
+      "title": "Dynamic Pricing Engine",
+      "reason": "The score gap of 0.9 in technology infrastructure is preventing deployment.",
+      "unlock_condition": "Reach a score of 7.0 in technology infrastructure"
+    },
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The score gap of 1.39 in data foundations is preventing deployment.",
+      "unlock_condition": "Reach a score of 7.0 in data foundations"
+    }
+  ],
+  "quick_win_summary": "Baukjen should implement AI Product Description Writing (uc_003) this week, which requires low effort and leverages existing staff digital literacy, a key area for improvement to enhance digital capability.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 1,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 1
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 4,
+    "excluded_by_filter": 4,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Baukjen_20260821_231714.json"
+  }
+}

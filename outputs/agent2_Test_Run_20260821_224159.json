@@ -1,0 +1,186 @@
+{
+  "agent": "Agent2_OpportunityResearch",
+  "schema_version": "2.0",
+  "assessment_timestamp": "2026-08-21T21:41:59.855944+00:00",
+  "company_name": "Test Run",
+  "readiness_tier": "Mid-Readiness",
+  "overall_score": 6.54,
+  "retrieval_method": "chromadb_semantic + prerequisite_filter",
+  "survivors_count": 7,
+  "excluded_count": 1,
+  "recommended": [
+    {
+      "rank": 1,
+      "id": "uc_004",
+      "title": "Automated Review Collection",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their process digitisation score, which is a key area for improvement, and reduce the manual effort required for review collection.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": {
+        "mode": "market_connect",
+        "status": "connected",
+        "deliverables": [
+          {
+            "name": "configuration_guide_judge.me",
+            "type": "markdown",
+            "content": "To set up Judge.me on Test Run's Shopify store, navigate to the Apps section, search for Judge.me, and click 'Add app'. Then, follow the in-app prompts to connect your store and configure the automated review collection sequence.",
+            "instructions": "Configuration guide for Judge.me, ranked #1 for this business."
+          },
+          {
+            "name": "configuration_guide_trustpilot",
+            "type": "markdown",
+            "content": "To set up Judge.me on Test Run's Shopify store, navigate to the Apps section, search for Judge.me, and click 'Add app'. Then, follow the in-app prompts to connect your store and configure the automated review collection sequence.",
+            "instructions": "Configuration guide for Trustpilot, ranked #2 for this business."
+          },
+          {
+            "name": "configuration_guide_yotpo",
+            "type": "markdown",
+            "content": "To set up Judge.me on Test Run's Shopify store, navigate to the Apps section, search for Judge.me, and click 'Add app'. Then, follow the in-app prompts to connect your store and configure the automated review collection sequence.",
+            "instructions": "Configuration guide for Yotpo, ranked #3 for this business."
+          }
+        ],
+        "missing_prerequisites": [],
+        "next_steps": [
+          "Step 1: Install Judge.me from the Shopify App Store and connect your store to the app.",
+          "Step 2: Configure the automated review collection sequence to send emails or SMS to customers at the optimal time.",
+          "Step 3: Set up and publish a review collection campaign to start collecting customer reviews and photos."
+        ],
+        "estimated_activation_time": "today",
+        "market_tools_recommended": [
+          {
+            "rank": 1,
+            "tool_name": "Judge.me",
+            "why_this_business": "Judge.me's lightweight and budget-friendly approach aligns perfectly with Test Run's moderate budget and need for automated review collection.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a329",
+            "shopify_native": true
+          },
+          {
+            "rank": 2,
+            "tool_name": "Trustpilot",
+            "why_this_business": "Trustpilot's independent review focus and recognisability to UK shoppers make it a strong contender for Test Run's needs, despite its slightly higher cost.",
+            "free_tier_available": true,
+            "estimated_monthly_cost_gbp": "\u00a349",
+            "shopify_native": true
+          },
+          {
+            "rank": 3,
+            "tool_name": "Yotpo",
+            "why_this_business": "Yotpo's full-featured approach may be overkill for Test Run's moderate budget and specific challenge, but its Shopify integration and loyalty features could be useful in the future.",
+            "free_tier_available": false,
+            "estimated_monthly_cost_gbp": "\u00a399",
+            "shopify_native": true
+          }
+        ],
+        "llm_calls_made": 1,
+        "error": null
+      },
+      "executable_on_request": false
+    },
+    {
+      "rank": 2,
+      "id": "uc_001",
+      "title": "Returns Reason Capture",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their process digitisation score, which is a key area for improvement, and reduce the manual effort required for returns processing.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-300",
+      "executor_mode": "full_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 3,
+      "id": "uc_003",
+      "title": "AI Product Description Writing",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their staff digital literacy score, which is a key area for improvement, and reduce the time spent on writing product descriptions.",
+      "effort": "low",
+      "implementation_weeks": 1,
+      "cost_estimate_gbp": "0-100",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 4,
+      "id": "uc_005",
+      "title": "Size Guide Chatbot",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their data foundations score, which is a key area for improvement, and provide a better customer experience through a more accessible size guide.",
+      "effort": "medium",
+      "implementation_weeks": 3,
+      "cost_estimate_gbp": "500-2500",
+      "executor_mode": "partial_build",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 5,
+      "id": "uc_006",
+      "title": "Email Marketing Automation Flows",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their AI tool experience score, which is a key area for improvement, and automate email marketing processes.",
+      "effort": "medium",
+      "implementation_weeks": 2,
+      "cost_estimate_gbp": "300-1500",
+      "executor_mode": "market_connect",
+      "executable": true,
+      "executor_result": null,
+      "executable_on_request": true
+    },
+    {
+      "rank": 6,
+      "id": "uc_007",
+      "title": "WhatsApp Styling Assistant",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their AI tool experience score, which is a key area for improvement, and provide a more convenient styling experience for customers.",
+      "effort": "medium",
+      "implementation_weeks": 4,
+      "cost_estimate_gbp": "1500-5000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    },
+    {
+      "rank": 7,
+      "id": "uc_008",
+      "title": "AI Demand Forecasting",
+      "justification": "This opportunity is specifically right for Test Run right now because it can help improve their data foundations score, which is a key area for improvement, and provide more accurate demand forecasts for better business decision-making.",
+      "effort": "high",
+      "implementation_weeks": 8,
+      "cost_estimate_gbp": "5000-20000",
+      "executor_mode": "recommend_only",
+      "executable": false,
+      "executor_result": null,
+      "executable_on_request": false
+    }
+  ],
+  "deferred": [
+    {
+      "id": "uc_009",
+      "title": "Personalised Outfit Recommender",
+      "reason": "The opportunity is currently not executable due to a score gap in the data foundations pillar, which needs to improve to at least 7.0.",
+      "unlock_condition": "data_foundations score >= 7.0"
+    }
+  ],
+  "quick_win_summary": "Implement Automated Review Collection (uc_004) this week to improve process digitisation and reduce manual effort.",
+  "executor_summary": {
+    "total_executors_run": 1,
+    "full_builds_completed": 0,
+    "market_connections_made": 1,
+    "partial_builds": 0,
+    "total_executor_llm_calls": 1
+  },
+  "traceability": {
+    "knowledge_base_entries_total": 10,
+    "semantically_retrieved": 8,
+    "survived_filter": 7,
+    "excluded_by_filter": 1,
+    "llm_calls_made": 1,
+    "output_file": "./outputs\\agent2_Test_Run_20260821_224159.json"
+  }
+}

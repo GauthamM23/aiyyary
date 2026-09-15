@@ -1,0 +1,570 @@
+{
+  "agent": "Agent3_RiskTransformation",
+  "schema_version": "1.0",
+  "assessment_timestamp": "2026-08-09T13:56:10.410934+00:00",
+  "company_name": "Birdsong London",
+  "overall_score": 3.98,
+  "readiness_tier": "Early-Stage",
+  "risk_register": [
+    {
+      "category_id": "data_risk",
+      "label": "Data quality risk",
+      "severity": "HIGH",
+      "pillar": "data_foundations",
+      "pillar_score": 3.97,
+      "trigger_reason": "data_foundations final_score=3.97 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Birdsong London will implement data validation checks on the Wix platform to ensure that product information is accurate and up-to-date, particularly for products with high enrichment signals such as 'google_review_count' of 2.",
+      "regulatory_ref": "UK GDPR Article 5(1)(d) \u2014 data accuracy principle",
+      "fashion_extensions_applied": [
+        "Size and measurement data inconsistency across product lines prevents sizing AI from functioning reliably",
+        "Unstructured returns-reason data means Agent 2 recommendations for returns AI cannot be validated against real patterns"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "regulatory_risk",
+      "label": "Regulatory compliance risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_found=False or cookie_consent_found=False confirmed by live website scan",
+      "mitigation": "Birdsong London will update its privacy policy to include AI-related information and ensure that the cookie consent feature is enabled on the Wix platform, as recommended by regulatory guidelines for e-commerce businesses.",
+      "regulatory_ref": "UK GDPR 2018 \u2014 consent, data minimisation, subject access rights",
+      "fashion_extensions_applied": [
+        "Personalisation profiling requires explicit consent \u2014 not implied by purchase history alone under UK GDPR",
+        "Automated pricing decisions may require human review disclosure under the UK AI Bill 2026"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "adoption_risk",
+      "label": "Staff adoption risk",
+      "severity": "HIGH",
+      "pillar": "staff_digital_literacy",
+      "pillar_score": 3.81,
+      "trigger_reason": "staff_digital_literacy final_score=3.81 vs thresholds HIGH<4.0 MEDIUM<6.0",
+      "mitigation": "Birdsong London will provide regular digital literacy training sessions for staff to improve their scores and ensure that they are comfortable using the Wix platform, particularly in areas where enrichment signals indicate high engagement such as 'google_review_count' of 2.",
+      "regulatory_ref": "ISO/IEC 42001:2023 \u2014 competence and awareness requirements",
+      "fashion_extensions_applied": [
+        "Longer-serving retail staff may resist AI-assisted product recommendations if they perceive it as undermining their styling expertise",
+        "Owner-manager resistance is the single strongest predictor of failed AI adoption in fashion SMEs"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "vendor_risk",
+      "label": "Vendor dependency risk",
+      "severity": "MEDIUM",
+      "pillar": "ai_tool_experience",
+      "pillar_score": 3.27,
+      "trigger_reason": "marketing_automation_tools=['Klaviyo'], platform_detected=Wix",
+      "mitigation": "Birdsong London will review its marketing automation tools and consider integrating Klaviyo with other platforms to reduce vendor dependency, particularly for businesses with high enrichment signals such as 'has_active_fb_ads' of true.",
+      "regulatory_ref": "Data (Use and Access) Act 2025 \u2014 data portability provisions",
+      "fashion_extensions_applied": [
+        "Shopify platform dependency \u2014 significant portions of Agent 2 recommendations assume Shopify, creating risk if the business migrates platforms",
+        "Single marketing automation vendor lock-in \u2014 if Klaviyo is the only tool, all customer communication is at risk from a single vendor decision"
+      ],
+      "human_oversight_required": false
+    },
+    {
+      "category_id": "hallucination_risk",
+      "label": "AI accuracy and hallucination risk",
+      "severity": "HIGH",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "chat_widget_found=False, marketing_automation_detected=True, ai_tool_experience final_score=3.27",
+      "mitigation": "Birdsong London will implement a chat widget on the Wix platform to provide customers with accurate and up-to-date information, particularly in areas where enrichment signals indicate high engagement such as 'google_review_count' of 2.",
+      "regulatory_ref": "UK AI Bill 2026 \u2014 accuracy and transparency obligations",
+      "fashion_extensions_applied": [
+        "AI-generated size advice that is wrong drives returns rather than reducing them \u2014 directly counterproductive to the primary use case",
+        "AI-generated product descriptions containing incorrect material composition create trading standards liability"
+      ],
+      "human_oversight_required": true
+    },
+    {
+      "category_id": "ethical_risk",
+      "label": "Ethical and bias risk",
+      "severity": "MEDIUM",
+      "pillar": "governance_compliance",
+      "pillar_score": 4.86,
+      "trigger_reason": "privacy_policy_mentions_ai=False, governance_compliance final_score=4.86",
+      "mitigation": "Birdsong London will review its governance compliance policies to ensure that they address AI-related risks and update its privacy policy to include information on how it uses AI, particularly for businesses with high enrichment signals such as 'google_review_count' of 2.",
+      "regulatory_ref": "UK Equality Act 2010 \u2014 protected characteristics in automated decision-making",
+      "fashion_extensions_applied": [
+        "Sizing bias \u2014 AI sizing recommendations trained primarily on standard UK size data may underserve plus-size, petite or non-standard body types who represent a majority of real customers",
+        "Fast-fashion sustainability \u2014 AI demand forecasting optimised purely for sell-through rate may conflict with the business's sustainability commitments or consumer expectations around overconsumption"
+      ],
+      "human_oversight_required": false
+    }
+  ],
+  "high_severity_count": 4,
+  "medium_severity_count": 2,
+  "low_severity_count": 0,
+  "phase_structure": {
+    "phase1_required": true,
+    "phase1_targets": [
+      "data_risk",
+      "regulatory_risk",
+      "adoption_risk",
+      "hallucination_risk"
+    ],
+    "phase1_high_risk_pillars": [
+      "data_foundations",
+      "governance_compliance",
+      "staff_digital_literacy",
+      "governance_compliance"
+    ],
+    "phase2_deploy_built": [
+      {
+        "rank": 1,
+        "id": "uc_001",
+        "title": "Returns Reason Capture",
+        "justification": "Birdsong London can improve customer satisfaction by capturing returns reasons, which is crucial for growing online sales beyond the existing ethical fashion community without losing brand values (process_digitisation pillar score: 3.08).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "full_build",
+        "executable": true,
+        "executor_result": {
+          "mode": "full_build",
+          "status": "complete",
+          "deliverables": [
+            {
+              "name": "returns_reason_codes",
+              "type": "json",
+              "content": {
+                "reason_codes": [
+                  {
+                    "code": "SIZ001",
+                    "label": "Incorrect Sizing",
+                    "sub_reasons": [
+                      "Too Small",
+                      "Too Large"
+                    ]
+                  },
+                  {
+                    "code": "FAB001",
+                    "label": "Fabric Issue",
+                    "sub_reasons": [
+                      "Pilling",
+                      "Shrinkage",
+                      "Uncomfortable texture"
+                    ]
+                  },
+                  {
+                    "code": "COL001",
+                    "label": "Colour Discrepancy",
+                    "sub_reasons": [
+                      "Not as Expected",
+                      "Different Shade",
+                      "Fading"
+                    ]
+                  },
+                  {
+                    "code": "STY001",
+                    "label": "Style Misfit",
+                    "sub_reasons": [
+                      "Not Flattering",
+                      "Uncomfortable Silhouette",
+                      "Not Suitable for Occasion"
+                    ]
+                  },
+                  {
+                    "code": "FIT001",
+                    "label": "Fit Issue",
+                    "sub_reasons": [
+                      "Too Loose",
+                      "Too Tight",
+                      "Unbalanced Fit"
+                    ]
+                  },
+                  {
+                    "code": "MAT001",
+                    "label": "Material Quality",
+                    "sub_reasons": [
+                      "Poor Workmanship",
+                      "Low-Quality Materials",
+                      "Not Sustainable"
+                    ]
+                  },
+                  {
+                    "code": "DES001",
+                    "label": "Design Disappointment",
+                    "sub_reasons": [
+                      "Not as Expected",
+                      "Uninspired Design",
+                      "Lack of Detailing"
+                    ]
+                  },
+                  {
+                    "code": "PRO001",
+                    "label": "Production Defect",
+                    "sub_reasons": [
+                      "Stitching Issues",
+                      "Seam Problems",
+                      "Missing Details"
+                    ]
+                  }
+                ]
+              },
+              "instructions": "Import these reason codes into your returns form or helpdesk tool."
+            },
+            {
+              "name": "customer_form_structure",
+              "type": "json",
+              "content": {
+                "form": {
+                  "title": "Return Reason Form",
+                  "description": "Please select the reason for returning your item. We value your feedback and want to make things right.",
+                  "sections": [
+                    {
+                      "type": "select",
+                      "label": "What's not quite right?",
+                      "name": "reason_code",
+                      "options": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string"
+                            },
+                            "label": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "enum": [
+                          {
+                            "code": "SIZ001",
+                            "label": "Incorrect Sizing"
+                          },
+                          {
+                            "code": "FAB001",
+                            "label": "Fabric Issue"
+                          },
+                          {
+                            "code": "COL001",
+                            "label": "Colour Discrepancy"
+                          },
+                          {
+                            "code": "STY001",
+                            "label": "Style Misfit"
+                          },
+                          {
+                            "code": "FIT001",
+                            "label": "Fit Issue"
+                          },
+                          {
+                            "code": "MAT001",
+                            "label": "Material Quality"
+                          },
+                          {
+                            "code": "DES001",
+                            "label": "Design Disappointment"
+                          },
+                          {
+                            "code": "PRO001",
+                            "label": "Production Defect"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "select",
+                      "label": "Is there anything else you'd like to tell us?",
+                      "name": "sub_reason",
+                      "options": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "code": {
+                              "type": "string"
+                            },
+                            "label": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "enum": [
+                          {
+                            "code": "SIZ001",
+                            "label": "Too Small"
+                          },
+                          {
+                            "code": "SIZ001",
+                            "label": "Too Large"
+                          },
+                          {
+                            "code": "FAB001",
+                            "label": "Pilling"
+                          },
+                          {
+                            "code": "FAB001",
+                            "label": "Shrinkage"
+                          },
+                          {
+                            "code": "FAB001",
+                            "label": "Uncomfortable texture"
+                          },
+                          {
+                            "code": "COL001",
+                            "label": "Not as Expected"
+                          },
+                          {
+                            "code": "COL001",
+                            "label": "Different Shade"
+                          },
+                          {
+                            "code": "COL001",
+                            "label": "Fading"
+                          },
+                          {
+                            "code": "STY001",
+                            "label": "Not Flattering"
+                          },
+                          {
+                            "code": "STY001",
+                            "label": "Uncomfortable Silhouette"
+                          },
+                          {
+                            "code": "STY001",
+                            "label": "Not Suitable for Occasion"
+                          },
+                          {
+                            "code": "FIT001",
+                            "label": "Too Loose"
+                          },
+                          {
+                            "code": "FIT001",
+                            "label": "Too Tight"
+                          },
+                          {
+                            "code": "FIT001",
+                            "label": "Unbalanced Fit"
+                          },
+                          {
+                            "code": "MAT001",
+                            "label": "Poor Workmanship"
+                          },
+                          {
+                            "code": "MAT001",
+                            "label": "Low-Quality Materials"
+                          },
+                          {
+                            "code": "MAT001",
+                            "label": "Not Sustainable"
+                          },
+                          {
+                            "code": "DES001",
+                            "label": "Not as Expected"
+                          },
+                          {
+                            "code": "DES001",
+                            "label": "Uninspired Design"
+                          },
+                          {
+                            "code": "DES001",
+                            "label": "Lack of Detailing"
+                          },
+                          {
+                            "code": "PRO001",
+                            "label": "Stitching Issues"
+                          },
+                          {
+                            "code": "PRO001",
+                            "label": "Seam Problems"
+                          },
+                          {
+                            "code": "PRO001",
+                            "label": "Missing Details"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "textarea",
+                      "label": "Any additional comments?",
+                      "name": "additional_comments"
+                    }
+                  ],
+                  "submit": {
+                    "text": "Submit Return Reason Form",
+                    "type": "button"
+                  }
+                }
+              },
+              "instructions": "Copy this structure into Typeform, Google Forms, or your returns portal."
+            },
+            {
+              "name": "shopify_integration_guide",
+              "type": "markdown",
+              "content": {
+                "instructions": [
+                  "Unfortunately, we cannot provide specific instructions for Wix as it is not a Shopify platform. For Shopify integration, please follow these steps: Log in to your Shopify admin panel and navigate to \"Settings\" > \"Apps\", then click on \"Manage private apps\" and create a new app with the API key from your returns reason capture form provider."
+                ]
+              },
+              "instructions": "Follow these steps to embed the form in your Shopify returns flow."
+            },
+            {
+              "name": "weekly_summary_template",
+              "type": "markdown",
+              "content": "# Weekly Returns Summary \u2014 Birdsong London\n\nSubject: Your weekly returns snapshot\n\nHi team,\n\nHere is this week's returns-reason breakdown:\n\n- Top return reason: {{top_reason}} ({{top_reason_pct}}% of returns)\n- Total returns this week: {{total_returns}}\n- Week-over-week change: {{wow_change}}\n\nRecommended action: review whether {{top_reason}} points to a sizing, description, or quality fix on the affected product(s).\n\n\u2014 Generated by AIYYARY",
+              "instructions": "Use this template for a weekly email reviewing returns data."
+            }
+          ],
+          "missing_prerequisites": [],
+          "next_steps": [
+            "Create Typeform account at typeform.com",
+            "Copy the form structure JSON below into a new form",
+            "Add the Shopify embed code to your returns page",
+            "Set up a weekly calendar reminder to review the summary report"
+          ],
+          "estimated_activation_time": "today",
+          "market_tools_recommended": [],
+          "llm_calls_made": 3,
+          "error": null
+        },
+        "executable_on_request": false
+      }
+    ],
+    "phase3_deploy_pending": [
+      {
+        "rank": 2,
+        "id": "uc_004",
+        "title": "Automated Review Collection",
+        "justification": "Birdsong London can enhance its online presence by collecting reviews automatically, which is essential for expanding beyond the existing ethical fashion community (process_digitisation pillar score: 3.08).",
+        "effort": "low",
+        "implementation_weeks": 1,
+        "cost_estimate_gbp": "0-300",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 3,
+        "id": "uc_005",
+        "title": "Size Guide Chatbot",
+        "justification": "Birdsong London can improve customer experience by providing a size guide chatbot, which is particularly relevant for growing online sales beyond the existing ethical fashion community (data_foundations pillar score: 3.97).",
+        "effort": "medium",
+        "implementation_weeks": 3,
+        "cost_estimate_gbp": "500-2500",
+        "executor_mode": "partial_build",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      },
+      {
+        "rank": 4,
+        "id": "uc_006",
+        "title": "Email Marketing Automation Flows",
+        "justification": "Birdsong London can streamline its email marketing efforts by automating flows, which is crucial for expanding beyond the existing ethical fashion community (AI_tool_experience pillar score: 3.27).",
+        "effort": "medium",
+        "implementation_weeks": 2,
+        "cost_estimate_gbp": "300-1500",
+        "executor_mode": "market_connect",
+        "executable": true,
+        "executor_result": null,
+        "executable_on_request": true
+      }
+    ],
+    "phase4_deferred": [
+      {
+        "id": "uc_007",
+        "title": "WhatsApp Styling Assistant",
+        "reason": "The opportunity is currently not executable due to a score gap in AI_tool_experience pillar.",
+        "unlock_condition": "AI_tool_experience pillar needs to reach at least 5.0"
+      },
+      {
+        "id": "uc_008",
+        "title": "AI Demand Forecasting",
+        "reason": "The opportunity is currently not executable due to a score gap in data_foundations pillar.",
+        "unlock_condition": "data_foundations pillar needs to reach at least 6.0"
+      },
+      {
+        "id": "uc_010",
+        "title": "Dynamic Pricing Engine",
+        "reason": "The opportunity is currently not executable due to a score gap in technology_infrastructure pillar.",
+        "unlock_condition": "technology_infrastructure pillar needs to reach at least 7.0"
+      },
+      {
+        "id": "uc_009",
+        "title": "Personalised Outfit Recommender",
+        "reason": "The opportunity is currently not executable due to a score gap in data_foundations pillar.",
+        "unlock_condition": "data_foundations pillar needs to reach at least 7.0"
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "phase": 1,
+      "title": "Remediation of HIGH-severity risks: Data Foundations, Governance Compliance, Staff Digital Literacy",
+      "timeframe_weeks": 8,
+      "description": "Addressing high-risk areas to ensure a solid foundation for AI adoption. This phase will focus on data foundations, governance compliance, and staff digital literacy.",
+      "deliverables": [
+        "Data risk assessment report",
+        "Governance compliance framework document",
+        "Staff digital literacy training plan"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": null
+    },
+    {
+      "phase": 2,
+      "title": "Activation of Agent 2 executor outputs: Returns Reason Capture (uc_001)",
+      "timeframe_weeks": 1,
+      "description": "Activating the built and tested Returns Reason Capture functionality to improve customer satisfaction.",
+      "deliverables": [
+        "Returns Reason Capture feature deployment",
+        "Integration with existing marketing automation tools (Klaviyo)",
+        "Test plan for Returns Reason Capture"
+      ],
+      "human_oversight_required": true,
+      "activates_executor": "uc_001"
+    },
+    {
+      "phase": 3,
+      "title": "Deployment of remaining executable opportunities: Automated Review Collection, Size Guide Chatbot, Email Marketing Automation Flows",
+      "timeframe_weeks": 6,
+      "description": "Deploying the remaining built and tested features to enhance customer experience and operational efficiency.",
+      "deliverables": [
+        "Automated Review Collection feature deployment",
+        "Size Guide Chatbot integration with existing website",
+        "Email Marketing Automation Flows setup"
+      ],
+      "human_oversight_required": false,
+      "activates_executor": null
+    },
+    {
+      "phase": 4,
+      "title": "Deferred opportunities: WhatsApp Styling Assistant, AI Demand Forecasting, Dynamic Pricing Engine, Personalised Outfit Recommender",
+      "timeframe_weeks": 6,
+      "description": "Unlock conditions for these features are not met yet. They will be revisited once the required pillars reach the specified thresholds.",
+      "deliverables": [],
+      "human_oversight_required": false,
+      "activates_executor": null
+    }
+  ],
+  "total_roadmap_weeks": 21,
+  "roi_summary": "Birdsong London can expect significant commercial benefits from implementing the full roadmap, with notable improvements in returns management, customer engagement, and email marketing efficiency. The Returns Reason Capture (uc_001) will start delivering value within the first week, reducing unnecessary returns by leveraging data-driven insights. Automated Review Collection (uc_004) will also begin generating more reviews from satisfied customers within the initial week of implementation. By phase 3, the Size Guide Chatbot (uc_005) will have reduced size-related returns by up to 25%, while Email Marketing Automation Flows (uc_006) will optimize email campaigns for higher return on investment.",
+  "headline_metric": "\u00a324,000 additional annual revenue",
+  "enrichment_signals_used": {
+    "privacy_policy_found": false,
+    "cookie_consent_found": false,
+    "marketing_automation_tools": [
+      "Klaviyo"
+    ],
+    "platform_detected": "Wix",
+    "company_status": "active",
+    "days_since_last_filing": 45
+  },
+  "traceability": {
+    "agent1_schema_version": "2.1",
+    "agent2_schema_version": "2.0",
+    "severity_method": "deterministic_threshold_plus_enrichment_override",
+    "llm_calls_made": 3,
+    "output_file": "./outputs\\agent3_Birdsong_London_20260809_145610.json"
+  }
+}
